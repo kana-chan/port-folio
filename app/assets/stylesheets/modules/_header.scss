@@ -1,0 +1,17 @@
+.header{
+  height: 100px;
+  width: 100%;
+  position: fixed;
+    top:0;
+  font-size: 30px;
+  background:rgba(0,0,0,0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .myName{
+    padding-left: 30px;
+  }
+  .menuIcon{
+    padding-right: 30px;
+  }
+}
