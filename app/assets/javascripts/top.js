@@ -7,16 +7,15 @@ $(function(){
       $('.wellcomeBox')
         .css('background-color','rgba(0,0,0,0.1)')
         .css('transition','1.0s')
-
       $('.wellcomeBox__message')
         .css('color','white')
         .css('transition','2.0s');
       $('.wellcomeBox__linkBtn')
         .css('background-color','black')
         .css('transition','2.0s');
-      $('a')
+      $('.wellcomeBtn')
         .css('color','white')
-        .css('transition','2.0s')
+        .css('transition','2.0s');
     },
     'mouseleave':function(){
       $('.topContent')
@@ -31,7 +30,7 @@ $(function(){
       $('.wellcomeBox__linkBtn')
         .css('background-color','rgba(0,0,0,0)')
         .css('transition','0.8s')
-      $('a')
+      $('.wellcomeBtn')
         .css('color','rgba(0,0,0,0)')
         .css('transition','0.8s')
     }
