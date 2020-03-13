@@ -1,0 +1,39 @@
+$(function(){
+  $('.wellcomeBox').on({
+    'mouseover':function(){
+      $('.topContent')
+        .css('color','rgba(0,0,0,0)')
+        .css('transition','0.8s');
+      $('.wellcomeBox')
+        .css('background-color','rgba(0,0,0,0.1)')
+        .css('transition','1.0s')
+
+      $('.wellcomeBox__message')
+        .css('color','white')
+        .css('transition','2.0s');
+      $('.wellcomeBox__linkBtn')
+        .css('background-color','black')
+        .css('transition','2.0s');
+      $('a')
+        .css('color','white')
+        .css('transition','2.0s')
+    },
+    'mouseleave':function(){
+      $('.topContent')
+        .css('color','black')
+        .css('transition','2.0s');
+      $('.wellcomeBox')
+        .css('background-color','rgba(0,0,0,0)')
+        .css('transition','1.0s');
+      $('.wellcomeBox__message')
+        .css('color','rgba(0,0,0,0)')
+        .css('transition','0.8s');
+      $('.wellcomeBox__linkBtn')
+        .css('background-color','rgba(0,0,0,0)')
+        .css('transition','0.8s')
+      $('a')
+        .css('color','rgba(0,0,0,0)')
+        .css('transition','0.8s')
+    }
+  });
+});
