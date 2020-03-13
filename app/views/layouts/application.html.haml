@@ -11,4 +11,5 @@
       = render "layouts/header"
     = yield
     %footer
+    - if request.path != '/'
       = render "layouts/footer"
