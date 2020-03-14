@@ -1,7 +1,7 @@
 $(function(){
   $('.topContent').on('mouseover',function(){
       $('.topContent').fadeOut();
-      $('.wellcomeBox').fadeIn();
+      $('.wellcomeBox').fadeIn(1000);
       $('.wellcomeBox__message').fadeIn();
       $('.wellcomeBox__linkBtn').fadeIn();
       $('.wellcomeBtn').fadeIn();
