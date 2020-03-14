@@ -1,16 +1,16 @@
 $(function(){
   $('.topContent').on('mouseover',function(){
-      $('.topContent').fadeOut();
-      $('.wellcomeBox').fadeIn(1000);
-      $('.wellcomeBox__message').fadeIn();
-      $('.wellcomeBox__linkBtn').fadeIn();
-      $('.wellcomeBtn').fadeIn();
-    });
+    $('.topContent').fadeOut(100);
+    $('.wellcomeBox').fadeIn();
+    $('.wellcomeBox__message').fadeIn();
+    $('.wellcomeBox__linkBtn').fadeIn();
+    $('.wellcomeBtn').fadeIn();
+  });
   $('.wellcomeBox').on('mouseleave',function(){
     $('.topContent').fadeIn();
-    $('.wellcomeBox').fadeOut();
-    $('.wellcomeBox__message').fadeOut();
-    $('.wellcomeBox__linkBtn').fadeOut();
-    $('.wellcomeBtn').fadeOut();
+    $('.wellcomeBox').fadeOut(100);
+    $('.wellcomeBox__message').fadeOut(100);
+    $('.wellcomeBox__linkBtn').fadeOut(100);
+    $('.wellcomeBtn').fadeOut(100);
   });
 });
