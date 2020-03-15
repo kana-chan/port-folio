@@ -16,7 +16,7 @@
   width: 550px;
   height: 550px;
   border-radius: 100%;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.05);
   display: none;
   position: absolute;
     top: 50%;
@@ -45,10 +45,11 @@
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: black;
-    .wellcomeBtn{
-      font-weight: bold;
-      color: white;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    font-weight: bold;
+    &:hover{
+      background-color:rgba(50, 50, 50, 0.5);
     }
   }
 }

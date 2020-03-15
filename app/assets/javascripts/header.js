@@ -7,4 +7,8 @@ $(function(){
     $('.menuModal').fadeOut();
     $('.menuModalWrapper').fadeOut();
   });
+  $('dt').on('click',function(){
+    $('dd').not($(this).next()).slideUp();
+    $(this).next().slideToggle();
+  });
 });

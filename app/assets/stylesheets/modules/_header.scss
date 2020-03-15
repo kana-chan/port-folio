@@ -19,7 +19,7 @@
 }
 
 .menuModalWrapper{
-  background-color: rgba(136, 136, 136, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
     top: 0;
   display: none;
@@ -29,22 +29,42 @@
   .menuModal{
     z-index: 100;
     border-radius: 50px;
-    position: fixed;
+    position: relative;
       top: 50%;
       left: 50%;
       transform: translateY(-50%)translateX(-50%);
-    background-color:black;
-    height: 70vh;
-    width: 70vh;
-    display: none;
-    .closeIcon{
-      position: absolute;
-        top: 5%;
-        left: 90%;
+    background-color:rgba(27, 27, 27, 0.95);
+    height: 55vh;
+    width: 55vh;
+    display: flex;
+    justify-content: space-between;
+    .goTop,.closeIcon{
+      margin: 6% 6% 0;
+      font-size: 1.5em;
       color: white;
-      font-size:2.0em;
       &:hover{
         color:gray;
+      }
+    }
+    dl{
+      color: white;
+      width: 40%;
+      position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-40%);
+      dt{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 20px;
+        margin-top: 50px;
+        &:hover{
+          color: gray;
+        }
+      }
+      dd{
+        display: none;
       }
     }
   }

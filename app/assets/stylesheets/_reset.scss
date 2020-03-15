@@ -36,15 +36,16 @@ html {
 a{
 	font-family: 'Sen', sans-serif;
 	text-decoration: none;
+	color: inherit;
 }
 
 body {
 	line-height: 1;
-	/* 付け足した */
 	font-size: 1.4rem;
 }
-ol, ul {
+ol, ul, li{
 	list-style: none;
+	color: inherit;
 }
 blockquote, q {
 	quotes: none;

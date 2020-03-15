@@ -4,5 +4,27 @@
 
 .menuModalWrapper
   .menuModal
+    = link_to('Top',root_path,class:"goTop")
     = icon('fa', 'close',class:"closeIcon")
-
+    %dl
+      %dt.menu__login
+        login
+        =icon('fa','caret-down')
+      %dd.menu__login__form
+        form
+      %dt.menu__products
+        Products
+        =icon('fa','caret-down')
+      %dd.menu__productsLinks
+        %li.menu__productsLinks--shopSite
+          = link_to('ShopSite','#')
+        %li.menu__productsLinks--Application
+          = link_to('Application','#')
+      %dt.menu__about
+        About
+        =icon('fa','caret-down')
+      %dd.menu__aboutLinks
+        %li.menu__aboutLinks--profile
+          = link_to('Profile','#')
+        %li.menu__aboutLinks--resume
+          = link_to('Resume','#')
