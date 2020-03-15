@@ -59,7 +59,7 @@
         justify-content: space-between;
         width: 100%;
         font-size: 20px;
-        margin-top: 50px;
+        margin-top: 40px;
         &:hover{
           color: gray;
         }
@@ -68,5 +68,25 @@
         display: none;
       }
     }
+  }
+}
+.menu__login__form{
+  margin-left: -35%;
+  margin-top: 10px;
+  width: 300px;
+  height: 200px;
+  border-radius: 25px;
+  background-color:rgba($color: gray, $alpha: 0.2);
+}
+.tab{
+  width: 100%;
+  height:40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 30px;
+  margin-top: 10px;
+  background-color: rgba($color: gray, $alpha: 0.2);
+  &:hover{
+    color:gray;
   }
 }

@@ -11,20 +11,19 @@
         login
         =icon('fa','caret-down')
       %dd.menu__login__form
-        form
       %dt.menu__products
         Products
         =icon('fa','caret-down')
       %dd.menu__productsLinks
-        %li.menu__productsLinks--shopSite
+        %li.menu__productsLinks--shopSite.tab
           = link_to('ShopSite','#')
-        %li.menu__productsLinks--Application
+        %li.menu__productsLinks--Application.tab
           = link_to('Application','#')
       %dt.menu__about
         About
         =icon('fa','caret-down')
       %dd.menu__aboutLinks
-        %li.menu__aboutLinks--profile
+        %li.menu__aboutLinks--profile.tab
           = link_to('Profile','#')
-        %li.menu__aboutLinks--resume
+        %li.menu__aboutLinks--resume.tab
           = link_to('Resume','#')

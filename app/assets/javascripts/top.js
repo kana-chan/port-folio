@@ -1,13 +1,13 @@
 $(function(){
   $('.topContent').on('mouseover',function(){
     $('.topContent').fadeOut(100);
-    $('.wellcomeBox').fadeIn();
-    $('.wellcomeBox__message').fadeIn();
-    $('.wellcomeBox__linkBtn').fadeIn();
-    $('.wellcomeBtn').fadeIn();
+    $('.wellcomeBox').fadeIn(500);
+    $('.wellcomeBox__message').fadeIn(500);
+    $('.wellcomeBox__linkBtn').fadeIn(500);
+    $('.wellcomeBtn').fadeIn(500);
   });
   $('.wellcomeBox').on('mouseleave',function(){
-    $('.topContent').fadeIn();
+    $('.topContent').fadeIn(500);
     $('.wellcomeBox').fadeOut(100);
     $('.wellcomeBox__message').fadeOut(100);
     $('.wellcomeBox__linkBtn').fadeOut(100);
