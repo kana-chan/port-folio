@@ -18,24 +18,18 @@
   width: 80vw;
   height: 100vh;
   font-size: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex_direction_center;
   &__profile{
     background-color: rgb(134, 69, 69);
     width: 100%;
     height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex_direction_center;
   }
   &__skills{
     background-color: rgb(122, 27, 27);
     width: 100%;
     height: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex_direction_center;
   }
 }
 // works================================================
