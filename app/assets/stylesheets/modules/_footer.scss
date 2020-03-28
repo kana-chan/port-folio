@@ -5,15 +5,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .linkList{
-    width: 100%;
-    color: gray;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 100px 20% 0;
-  }
+// ================================================
+.linkList{
+  width: 100%;
+  color: gray;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 100px 20% 0;
 }
-
 ul{
   font-size: 30px;
   display: flex;
@@ -30,4 +29,6 @@ ul{
   padding: 50px 0;
   font-size: 20px;
   color:gray;
+}
+// ================================================
 }
