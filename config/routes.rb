@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: "contents#top"
+  root to: "contents#index"
   resources :contents, only: :index
 end
