@@ -6,12 +6,41 @@
       .about__profile--headding
         Profile
       #line
+      .about__profile--textUpper
+      .about__profile--textMiddle
+      .about__profile--textLower
+      = link_to("#",class:"about__profile__linkBox") do 
+        .about__profile__linkBox--text
+          more...
+        .about__profile__linkBox--icon
     .about__skills
       .about__skills--headding
         Skills
       #line
+      %ul.about__skills__boxes
+        %li.about__skills__boxes__box
+          .about__skills__boxes__box--icon
+            HTML
+        %li.about__skills__boxes__box
+          .about__skills__boxes__box--icon
+            css
+        %li.about__skills__boxes__box
+          .about__skills__boxes__box--icon
+            ruby
+        %li.about__skills__boxes__box
+          .about__skills__boxes__box--icon
+            rails
+        %li.about__skills__boxes__box
+          .about__skills__boxes__box--icon
+            JS
+        %li.about__skills__boxes__box
+          .about__skills__boxes__box--icon
+            SQL
+
   .works
     .works__applications
-      Applications
+      .works__applications--headding
+        Applications
     .works__websites
-      Websites
+      .works__websites--headding
+        Websites
