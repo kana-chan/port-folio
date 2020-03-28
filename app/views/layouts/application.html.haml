@@ -9,8 +9,9 @@
     %link(href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet")
   %body
     %header
+    -if request.path != root_path 
       = render "layouts/header"
     = yield
     %footer
-    - if request.path != '/'
+    - if request.path != root_path
       = render "layouts/footer"
