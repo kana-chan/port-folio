@@ -29,16 +29,15 @@ footer, header, hgroup, menu, nav, section {
 }
 
 html {
-	font-family: 'Sen', sans-serif;
   font-size: 62.5%;
 }
 a{
-	font-family: 'Sen', sans-serif;
 	text-decoration: none;
 	color: inherit;
 }
 
 body {
+	color: $black;
 	font-family: hare;
 	line-height: 1;
 	font-size: 1.4rem;

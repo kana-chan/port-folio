@@ -11,6 +11,7 @@
     @include position-center;
     &--engineer{
       font-size: 20px;
+      color: $gray;
     }
     &--myName{
       margin-top: 10px;
