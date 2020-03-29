@@ -1,4 +1,5 @@
 @import "reset";
+
 @import "config/mixin";
 @import "config/colors";
 @import "config/scroll";
@@ -7,3 +8,8 @@
 // ================================================
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+@font-face {
+  font-family: 'hare';
+  src: asset_url('Harenosora.otf') format('opentype');
+}
