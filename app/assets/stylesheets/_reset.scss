@@ -21,7 +21,6 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -30,16 +29,23 @@ footer, header, hgroup, menu, nav, section {
 }
 
 html {
+	font-family: 'Sen', sans-serif;
   font-size: 62.5%;
+}
+a{
+	font-family: 'Sen', sans-serif;
+	text-decoration: none;
+	color: inherit;
 }
 
 body {
+	font-family: hare;
 	line-height: 1;
-	/* 付け足した */
 	font-size: 1.4rem;
 }
-ol, ul {
+ol, ul, li{
 	list-style: none;
+	color: inherit;
 }
 blockquote, q {
 	quotes: none;
@@ -52,4 +58,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+*{
+	box-sizing: border-box;
 }

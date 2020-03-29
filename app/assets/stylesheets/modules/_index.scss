@@ -1,0 +1,118 @@
+#index{
+  width: 80vw;
+  margin: 0 auto;
+// top-contents================================================
+.top{
+  scroll-snap-align: start;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  &__nameBox{
+    @include position-center;
+    &--engineer{
+      font-size: 20px;
+    }
+    &--myName{
+      margin-top: 10px;
+      font-size: 35px;
+    }
+  }
+}
+// profile================================================
+.profile{
+  scroll-snap-align: start;
+  padding-top: 8vh;
+  width: 100%;
+  // hedding------------------------------------------------
+  &__hedding{
+    width: 100%;
+    height: 6vh;
+    line-height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    &--left{
+      font-size: 3vh;
+    }
+    &--right{
+      font-size: 2vh;
+    }
+  }
+  // main------------------------------------------------
+  &__main{
+    margin:0 auto;
+    width:80%;
+    line-height: 4vh;
+    font-size: 2vh;
+    &__box{
+      margin-bottom: 2vh;
+      &--hedding{
+        font-weight: bold;
+      }
+    }
+  }
+}
+// slills================================================
+.skills{
+  padding-top: 8vh;
+  scroll-snap-align: start;
+  // background-color: red;
+  width: 100%;
+  &__hedding{
+    // background-color: blue;
+    width: 100%;
+    height: 6vh;
+    font-size: 3vh;
+    line-height: 6vh;
+  }
+  &__topText{
+    width: 80%;
+    margin: 0 auto;
+    // background-color: pink;
+    margin-bottom: 2vh;
+    line-height: 4vh;
+    font-size: 2vh;
+  }
+  &__box{
+    background-color: green;
+    margin: 5vh auto 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__content{
+      background-color: gray;
+      color: white;
+      border-radius: 10px;
+      width: 15vh;
+      height: 15vh;
+      margin: 5vh 0;
+      display: flex;
+      align-items: center;
+      &--name{
+        margin: 0 auto;
+      }
+    }
+    &__content1{
+      background-color: gray;
+      color: white;
+      border-radius: 10px;
+      width: 25vh;
+      height: 25vh;
+    }
+  }
+}
+
+// works================================================
+.works{
+  scroll-snap-align: start;
+  padding-top: 8vh;
+  width: 100%;
+  height: 100vh;
+  background-color:rgb(138, 214, 157);
+  &__hedding{
+    width: 100%;
+    font-size: 3vh;
+  }
+}
+// ================================================
+}
