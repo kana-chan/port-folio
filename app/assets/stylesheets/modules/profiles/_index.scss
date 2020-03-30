@@ -4,14 +4,9 @@
     top: 0;
     left: 15vw;
   width: 70vw;
-  .upper{
-    background-color: $blue;
-    height: 47vh;
-  }
-  .lower{
-    background-color: $l_gray;
-    height: 53vh;
-  }
+  height: 50vh;
+  background-color: $l_gray;
+
 }
 
 #plofile{
@@ -32,6 +27,7 @@
 }
 // main================================================
 .main{
+  margin-bottom: 18vh;
   width: 100%;
   &__textBlock{
     padding-bottom: 30vh;
