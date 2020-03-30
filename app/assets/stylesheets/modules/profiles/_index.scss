@@ -3,14 +3,14 @@
     z-index: -1;
     top: 0;
     left: 15vw;
-    width: 70vw;
+  width: 70vw;
   .upper{
     background-color: $blue;
-    height: 45vh;
+    height: 25vh;
   }
   .lower{
     background-color: $l_gray;
-    height: 55vh;
+    height: 75vh;
   }
 }
 
@@ -37,7 +37,6 @@
     padding-bottom: 30vh;
     width: 100%;
     background-color:white;
-    
     &--text{
     text-align: center;
     line-height: 6vh;
@@ -47,10 +46,12 @@
   &__contentsBlock{
     height: 60vh;
     width: 100%;
+    line-height: 4vh;
+    font-size: 2vh;
     position: relative;
     &--upperBtn{
       position: absolute;
-        top: -1px;
+        top: -3px;
         left: 5.5%;
       height: 5vh;
       width: 5vh;
@@ -63,12 +64,14 @@
       display: flex;
       justify-content: space-between;
       &__leftBox{
-        background-color: white;
+        // background-color: rgb(253, 251, 150);
+        background-color: #fff;
         width: 6.85%;
         height: 100%;
       }
       &__rightBox{
-        background-color:white;
+        // background-color:rgb(252, 209, 90);
+        background-color: #fff;
         width: 92.5%;
         height: 100%;
       }
