@@ -11,6 +11,7 @@
     @include position-center;
     &--engineer{
       font-size: 20px;
+      color: $gray;
     }
     &--myName{
       margin-top: 10px;
@@ -55,10 +56,8 @@
 .skills{
   padding-top: 8vh;
   scroll-snap-align: start;
-  // background-color: red;
   width: 100%;
   &__hedding{
-    // background-color: blue;
     width: 100%;
     height: 6vh;
     font-size: 3vh;
@@ -67,20 +66,18 @@
   &__topText{
     width: 80%;
     margin: 0 auto;
-    // background-color: pink;
     margin-bottom: 2vh;
     line-height: 4vh;
     font-size: 2vh;
   }
   &__box{
-    background-color: green;
     margin: 5vh auto 0;
     width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     &__content{
-      background-color: gray;
+      background-color: $gray;
       color: white;
       border-radius: 10px;
       width: 15vh;
@@ -108,10 +105,52 @@
   padding-top: 8vh;
   width: 100%;
   height: 100vh;
-  background-color:rgb(138, 214, 157);
+  // background-color:rgb(138, 214, 157);
   &__hedding{
     width: 100%;
     font-size: 3vh;
+  }
+  &__contentsBox{
+    margin: 3vh auto 10vh;
+    width: 80%;
+    height: 60vh;
+    background-color: green;
+    filter: grayscale(100%);
+    position: relative;
+    &:hover{
+      filter:grayscale(0)
+    }
+    &__textBlock{
+      position: absolute;
+        top: 10%;
+        right: 5%;
+      // background-color: red;
+      width: 35%;
+      height: 80%;
+      &--contentHedding{
+        // background-color: pink;
+        width: 100%;
+        height: 8vh;
+        line-height: 8vh;
+        font-size: 3vh;
+      }
+      &--contentCategory{
+        // background-color: brown;
+        width: 100%;
+        height: 4vh;
+        line-height: 4vh;
+        padding-left: 2vw;
+      }
+      &--contentText{
+        // background-color: blue;
+        padding: 3vh 0 0 2vh;
+        width: 100%;
+        height: 70%;
+        font-size: 2vh;
+        line-height: 4vh;
+        word-break: break-all;
+      }
+    }
   }
 }
 // ================================================

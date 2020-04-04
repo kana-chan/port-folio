@@ -12,8 +12,7 @@
       .profile__hedding
         .profile__hedding--left
           Profile
-        .profile__hedding--right
-          and more
+        =link_to("more...",profiles_path, class:"profile__hedding--right")
       .profile__main
         .profile__main__box
           .profile__main__box--hedding
@@ -65,8 +64,8 @@
         .skills__box__content
           .skills__box__content--name
             javascript
-          .skills__box__content--text
-            
+          .skills__box__content--tex
+
         .skills__box__content
           .skills__box__content--name
             ruby
@@ -80,4 +79,13 @@
     -# works================================================
     .works
       .works__hedding
-        works
+        Works
+      =link_to("#")do
+        .works__contentsBox
+          .works__contentsBox__textBlock
+            .works__contentsBox__textBlock--contentHedding
+              フリーマーケットアプリ
+            .works__contentsBox__textBlock--contentCategory
+              Rails, jquery, html, css
+            .works__contentsBox__textBlock--contentText
+              あああああああああああああああああああああああああああああああああああああああああああああ

@@ -1,15 +1,13 @@
-@import "reset";
-
 @import "config/mixin";
 @import "config/colors";
+@import "reset";
 @import "config/scroll";
+@import "config/fonts";
 // ================================================
-@import "modules/index";
+@import "modules/contents/index";
+@import "modules/profiles/index";
 // ================================================
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@font-face {
-  font-family: 'hare';
-  src: asset_url('Harenosora.otf') format('opentype');
-}
+
