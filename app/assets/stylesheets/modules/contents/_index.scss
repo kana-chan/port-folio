@@ -56,10 +56,8 @@
 .skills{
   padding-top: 8vh;
   scroll-snap-align: start;
-  // background-color: red;
   width: 100%;
   &__hedding{
-    // background-color: blue;
     width: 100%;
     height: 6vh;
     font-size: 3vh;
@@ -68,20 +66,18 @@
   &__topText{
     width: 80%;
     margin: 0 auto;
-    // background-color: pink;
     margin-bottom: 2vh;
     line-height: 4vh;
     font-size: 2vh;
   }
   &__box{
-    background-color: green;
     margin: 5vh auto 0;
     width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     &__content{
-      background-color: gray;
+      background-color: $gray;
       color: white;
       border-radius: 10px;
       width: 15vh;
