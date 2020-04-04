@@ -1,0 +1,13 @@
+#footer
+  -if request.path == root_path 
+    .footerLinks
+      .footerLinks--profile
+        Profile
+      .footerLinks--skills
+        Skills
+      .footerLinks--works
+        Works
+  - else
+    .footerLinks
+      =link_to("Back",root_path,class:"footerLinks--back")
+
