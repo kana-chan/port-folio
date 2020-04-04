@@ -1,0 +1,14 @@
+#footer
+  -if request.path == root_path 
+    .footerLinks
+      .footerLinks--profile
+        Profile
+      .footerLinks--skills
+        Skills
+      .footerLinks--works
+        Works
+  - else
+    .footerLinks
+      .footerLinks--back
+        Back
+

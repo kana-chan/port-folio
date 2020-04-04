@@ -1,0 +1,23 @@
+#footer{
+  scroll-snap-align: end;
+  border-top: 1px solid $black;
+  margin: 0 auto ;
+  width: 20vw;
+  height: 25vh;
+  padding: 5vh;
+  color: $black;
+  font-size: 2vh;
+  position: relative;
+  // ================================================
+.footerLinks{
+  @include position_center;
+  width: 120%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  &--back{
+  margin: 0 auto;
+  }
+}
+  // ================================================
+}
