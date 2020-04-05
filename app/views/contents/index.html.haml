@@ -81,7 +81,8 @@
     .works
       .works__hedding
         Works
-      =link_to(content_path(1))do
+      = render @contents
+      =link_to(content_path(@contents.id))do
         .works__contentsBox
           .works__contentsBox__textBlock
             .works__contentsBox__textBlock--contentHedding
