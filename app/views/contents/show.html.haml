@@ -16,7 +16,7 @@
         = @content.text
       .main__contentsWrapper
         - @content.infomation.each do |info|
-          = render partial: "content",locals: {info: info}
+          = render partial: "infomation",locals: {info: info}
   -# footer================================================
   = render "/templates/footer"
 
