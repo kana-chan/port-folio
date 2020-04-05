@@ -11,9 +11,9 @@
         .main__heading--left
           = @content.name
         .main__heading--right
-          show App
+          = link_to("show App",@content.link)
       .main__text
-        ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+        = @content.texts.first.text
       .main__contentsWrapper
         .main__contentsWrapper__content
           .main__contentsWrapper__content--imageHeading
