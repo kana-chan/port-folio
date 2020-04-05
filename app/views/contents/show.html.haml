@@ -11,12 +11,12 @@
         .main__heading--left
           = @content.name
         .main__heading--right
-          = link_to("show App",@content.link)
+          = link_to("Link",@content.link)
       .main__text
         = @content.text
       .main__contentsWrapper
-        - @content.infomation.each do |info|
-          = render partial: "content",locals: {info: info}
+        - @content.infomations.each do |info|
+          = render partial: "infomation",locals: {info: info}
   -# footer================================================
   = render "/templates/footer"
 
