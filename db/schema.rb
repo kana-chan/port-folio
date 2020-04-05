@@ -37,17 +37,17 @@ ActiveRecord::Schema.define(version: 20200404124807) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "infomations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image",      null: false
     t.string   "text",       null: false
     t.string   "heading",    null: false
     t.integer  "content_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["content_id"], name: "index_images_on_content_id", using: :btree
+    t.index ["content_id"], name: "index_infomations_on_content_id", using: :btree
   end
 
   add_foreign_key "content_categories", "categories"
   add_foreign_key "content_categories", "contents"
-  add_foreign_key "images", "contents"
+  add_foreign_key "infomations", "contents"
 end
