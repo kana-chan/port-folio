@@ -13,40 +13,10 @@
         .main__heading--right
           = link_to("show App",@content.link)
       .main__text
-        = @content.texts.first.text
+        = @content.text
       .main__contentsWrapper
-        .main__contentsWrapper__content
-          .main__contentsWrapper__content--imageHeading
-            ログイン画面
-          .main__contentsWrapper__content--image
-          .main__contentsWrapper__content--textHeading
-            ウィザード形式での新規登録
-          .main__contentsWrapper__content--text
-            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-        .main__contentsWrapper__content
-          .main__contentsWrapper__content--imageHeading
-            ログイン画面
-          .main__contentsWrapper__content--image
-          .main__contentsWrapper__content--textHeading
-            ウィザード形式での新規登録
-          .main__contentsWrapper__content--text
-            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-        .main__contentsWrapper__content
-          .main__contentsWrapper__content--imageHeading
-            ログイン画面
-          .main__contentsWrapper__content--image
-          .main__contentsWrapper__content--textHeading
-            ウィザード形式での新規登録
-          .main__contentsWrapper__content--text
-            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-        .main__contentsWrapper__content
-          .main__contentsWrapper__content--imageHeading
-            ログイン画面
-          .main__contentsWrapper__content--image
-          .main__contentsWrapper__content--textHeading
-            ウィザード形式での新規登録
-          .main__contentsWrapper__content--text
-            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+        - @content.infomation.each do |info|
+          = render partial: "content",locals: {info: info}
   -# footer================================================
   = render "/templates/footer"
 
