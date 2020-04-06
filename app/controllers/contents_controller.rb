@@ -9,6 +9,7 @@ class ContentsController < ApplicationController
 
   def new
     @content = Content.new
+    @content.infomations.new
   end
 
   def create
@@ -25,6 +26,7 @@ class ContentsController < ApplicationController
       :text,
       :link,
       category_ids:[],
+      infomations_attributes:[:image,:text,:heading]
     )
   end
 end
