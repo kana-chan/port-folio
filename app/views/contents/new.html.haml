@@ -1,18 +1,18 @@
 =form_with model: @content, local: true do |f|
-  = f.label "名前"
-  = f.text_field :name 
-  = f.label "リンク"
-  = f.text_field :link
-
   .top
-    = f.label "テキスト"
+    = f.label "名前"
+    = f.text_field :name 
+    = f.label "リンク"
+    = f.text_field :link
+    = f.label "トップテキスト"
     = f.text_area :text
     = f.label "トップイメージ"
     = f.file_field :image
+  .category
     = f.label "カテゴリー"
     = f.collection_check_boxes :category_ids, Category.all, :id, :name
   .sub
-
+    
 
   .submit
     = f.submit
