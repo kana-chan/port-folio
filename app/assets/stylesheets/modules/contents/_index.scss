@@ -113,11 +113,16 @@
     margin: 3vh auto 10vh;
     width: 80%;
     height: 60vh;
-    background-color: green;
     filter: grayscale(100%);
     position: relative;
     &:hover{
       filter:grayscale(0)
+    }
+    &__photoBlock{
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
     }
     &__textBlock{
       position: absolute;
