@@ -12,9 +12,25 @@
     = f.label "カテゴリー"
     = f.collection_check_boxes :category_ids, Category.all, :id, :name
   .sub
-    = f.fields_for :infomations do |i|
-      = i.file_field :image
-      = i.text_area :text
-      = i.text_field :heading
+    = f.fields_for :infomations do |i_1|
+      = i_1.file_field :image
+      = i_1.text_area :text
+      = i_1.text_field :heading
+  .sub
+    = f.fields_for :infomations do |i_2|
+      = i_2.file_field :image
+      = i_2.text_area :text
+      = i_2.text_field :heading
+  .sub
+    = f.fields_for :infomations do |i_3|
+      = i_3.file_field :image
+      = i_3.text_area :text
+      = i_3.text_field :heading
+  .sub
+    = f.fields_for :infomations do |i_4|
+      = i_4.file_field :image
+      = i_4.text_area :text
+      = i_4.text_field :heading
+      
   .submit
     = f.submit
