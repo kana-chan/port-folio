@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   def index
-    @contents = Content.all
+    @contents = Content.all.order("id DESC")
   end
 
   def show
