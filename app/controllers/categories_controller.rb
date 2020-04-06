@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
 
   private
   def category_params
-    params.require(:category).parmit(
+    params.require(:category).permit(
       :name,
       :color
     )
