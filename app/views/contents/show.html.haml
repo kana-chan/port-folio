@@ -19,6 +19,8 @@
           = render partial: "infomation",locals: {info: info}
   -# footer================================================
   = render "/templates/footer"
+  =link_to("アプリ編集",edit_content_path(params[:id]))
+  =link_to("アプリ削除",content_path(params[:id]),method: :delete)
 
 
 

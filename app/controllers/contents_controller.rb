@@ -28,6 +28,11 @@ class ContentsController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    content = Content.find(params[:id])
+    content.destroy
+    redirect_to root_path
+  end
 
 # ================================================
   private
