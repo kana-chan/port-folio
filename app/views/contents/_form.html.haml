@@ -1,0 +1,54 @@
+#contentForm
+  =form_with model: @content, local: true do |f|
+    .top
+      .top__left
+      .top__right
+        .top__right--image
+          = f.file_field :image
+        .top__right--name
+          = f.text_field :name ,placeholder:"アプリケーション名"
+        .top__right--link
+          = f.url_field :link,placeholder:"http:..."
+        .top__right--text
+          = f.text_area :text,placeholder:"アプリケーション概要"
+    .category
+      = f.collection_check_boxes :category_ids, Category.all, :id, :name
+    .infomation
+      = f.fields_for :infomations do |i_0|
+        .infomation__box
+          .infomation__box--preview
+          .infomation__box--image
+            = i_0.file_field :image
+          .infomation__box--heading
+            = i_0.text_field :heading, placeholder: "タイトル0"
+          .infomation__box--text
+            = i_0.text_area :text, placeholder: "説明文0"
+      = f.fields_for :infomations do |i_1|
+        .infomation__box
+          .infomation__box--preview
+          .infomation__box--image
+            = i_1.file_field :image
+          .infomation__box--heading
+            = i_1.text_field :heading, placeholder: "タイトル1"
+          .infomation__box--text
+            = i_1.text_area :text, placeholder: "説明文1"
+      = f.fields_for :infomations do |i_2|
+        .infomation__box
+          .infomation__box--preview
+          .infomation__box--image
+            = i_2.file_field :image
+          .infomation__box--heading
+            = i_2.text_field :heading, placeholder: "タイトル2"
+          .infomation__box--text
+            = i_2.text_area :text, placeholder: "説明文2"
+      = f.fields_for :infomations do |i_3|
+        .infomation__box
+          .infomation__box--preview
+          .infomation__box--image
+            = i_3.file_field :image
+          .infomation__box--heading
+            = i_3.text_field :heading, placeholder: "タイトル3"
+          .infomation__box--text
+            = i_3.text_area :text, placeholder: "説明文3"
+    .submit
+      = f.submit
