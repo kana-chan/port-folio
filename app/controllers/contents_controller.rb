@@ -19,13 +19,12 @@ class ContentsController < ApplicationController
   end
 
   def edit
-    @content = Content.new(params[:id])
-    @content.infomations.new(params[:id])
+    @content = Content.find(params[:id])
   end
 
   def update
     @content = Content.find(params[:id])
-    @content.update
+    @content.update(content_params)
     redirect_to root_path
   end
 
@@ -39,7 +38,7 @@ class ContentsController < ApplicationController
       :text,
       :link,
       category_ids:[],
-      infomations_attributes:[:image,:text,:heading]
+      infomations_attributes:[:image,:text,:heading,:destroy,:id]
     )
   end
 end
