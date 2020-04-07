@@ -18,6 +18,14 @@ class ContentsController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+  end
+
+  def update
+  end
+
+
+# ================================================
   private
   def content_params
     params.require(:content).permit(
