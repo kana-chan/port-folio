@@ -19,9 +19,14 @@ class ContentsController < ApplicationController
   end
 
   def edit
+    @content = Content.new(params[:id])
+    @content.infomations.new(params[:id])
   end
 
   def update
+    @content = Content.find(params[:id])
+    @content.update
+    redirect_to root_path
   end
 
 
