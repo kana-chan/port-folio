@@ -82,8 +82,9 @@
     flex-wrap: wrap;
     align-items: center;
     &__content{
-      background-color: $gray;
-      color: white;
+      background-color: white;
+      border: 1px solid $black;
+      color: $black;
       border-radius: 10px;
       width: 15vh;
       height: 15vh;
@@ -97,6 +98,8 @@
         width: 20vh;
         height: 20vh;
         margin: 0;
+        font-size: 4vh;
+        border: 3px solid $black;
       }
     }
   }
