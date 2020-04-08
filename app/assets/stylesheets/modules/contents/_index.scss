@@ -57,24 +57,24 @@
   padding-top: 8vh;
   scroll-snap-align: start;
   width: 100%;
-  background-color: red;
+  // background-color: red;
   &__hedding{
-    background-color: gray;
+    // background-color: gray;
     width: 100%;
     height: 6vh;
     font-size: 3vh;
     line-height: 6vh;
   }
   &__topText{
-    background-color: blue;
+    // background-color: blue;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2vh;
-    line-height: 4vh;
+    line-height: 6vh;
     font-size: 2vh;
   }
   &__box{
-    background-color:green;
+    // background-color:green;
     margin: 5vh auto 0;
     width: 70%;
     display: flex;
