@@ -11,3 +11,5 @@
         = f.color_field :color
     .submit
       = f.submit
+      -if @category.persisted?
+        =link_to("削除する",category_path(@category.id),method: :delete)
