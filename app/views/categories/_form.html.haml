@@ -1,0 +1,14 @@
+#categoryForm
+  = form_with model: @category, local: true do |f|
+    .form__box
+      .form__box--heading
+        カテゴリ名
+      .form__box--value
+        = f.text_field :name
+    .form__box
+      .form__box--heading
+        アイコンカラー
+      .form__box--value
+        = f.color_field :color
+    .form__submit
+      = f.submit

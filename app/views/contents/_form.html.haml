@@ -29,6 +29,9 @@
                 = i.text_field :heading
               .infomation__inputBox--text
                 = i.text_area :text
+      .submit
+        = f.submit
+      =link_to("アプリ削除",content_path(params[:id]),method: :delete)
     -else
       .infomation
         .infomation__previewBox
@@ -78,6 +81,5 @@
                 = i.text_field :heading,placeholder:"画像5"
               .infomation__inputBox--text
                 = i.text_area :text,placeholder:"説明5"
-    -# ================================================================================================
-    .submit
-      = f.submit
+      .submit
+        = f.submit
