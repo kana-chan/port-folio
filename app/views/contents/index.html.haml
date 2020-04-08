@@ -43,7 +43,7 @@
             カメラ　最近始めたばかり。現像作業の勉強を開始。
     -# skills================================================
     .skills
-      .skills__hedding
+      =link_to(new_category_path,class:"skills__hedding") do
         Skills
       .skills__topText
         2020年。エンジニアへの転職を決意し、
@@ -56,7 +56,7 @@
               = category.name
     -# works================================================
     .works
-      .works__hedding
+      =link_to(new_content_path,class:"works__hedding") do
         Works
       = render @contents
   -# footer================================================
