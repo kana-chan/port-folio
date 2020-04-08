@@ -13,7 +13,7 @@
         .main__heading--right
           = link_to("Link",@content.link)
       .main__text
-        = @content.text
+      -#   = @content.infomatios
       .main__contentsWrapper
         - @content.infomations.each do |info|
           = render partial: "infomation",locals: {info: info}

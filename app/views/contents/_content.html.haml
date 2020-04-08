@@ -1,6 +1,6 @@
 =link_to(content_path(content.id))do
   .works__contentsBox
-    =image_tag content.image.to_s,class:"works__contentsBox__photoBlock"
+    =image_tag content.infomations.first.image.to_s,class:"works__contentsBox__photoBlock"
     .works__contentsBox__textBlock
       .works__contentsBox__textBlock--contentHedding
         = content.name
@@ -9,4 +9,4 @@
           .works__contentsBox__textBlock__categoryWrapper--category{style:"background-color:#{category.color.insert(-1,"99")}"}
             = category.name
       .works__contentsBox__textBlock--contentText
-        = content.text
+        = content.infomations.first.text
