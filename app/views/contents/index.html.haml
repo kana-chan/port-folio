@@ -47,36 +47,13 @@
         Skills
       .skills__topText
         2020年。エンジニアへの転職を決意し、
-      .skills__topText
-        プログラミング学習に取り組んできました。
-      .skills__topText
+        %br プログラミング学習に取り組んできました。
         未経験ではありますが、現時点での "オカヤマ カナタ" のスキルです。
       .skills__box
-        .skills__box__content
-          .skills__box__content--name
-            HTML5
-          .skills__box__content--text
-            
-        .skills__box__content
-          .skills__box__content--name
-            CSS
-          .skills__box__content--text
-            
-        .skills__box__content
-          .skills__box__content--name
-            javascript
-          .skills__box__content--tex
-
-        .skills__box__content
-          .skills__box__content--name
-            ruby
-          .skills__box__content--text
-
-        .skills__box__content
-          .skills__box__content--name
-            Other
-          .skills__box__content--text
-            
+        - @categories.each do |category|
+          .skills__box__content
+            .skills__box__content--name
+              = category.name
     -# works================================================
     .works
       .works__hedding

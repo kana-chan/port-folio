@@ -1,0 +1,86 @@
+#contentForm
+  =form_with model: @content, local: true do |f|
+    -if @content.persisted?
+      .top
+        = image_tag(@content.image.to_s,class:"top__left")
+        .top__right
+          .top__right--image
+            = f.file_field :image
+          .top__right--name
+            = f.text_field :name ,placeholder:"アプリケーション名"
+          .top__right--link
+            = f.url_field :link,placeholder:"http:..."
+          .top__right--text
+            = f.text_area :text,placeholder:"アプリケーション概要"
+      .category
+        = f.collection_check_boxes :category_ids, Category.all, :id, :name
+      .infomation
+        .infomation__previewBox
+          -@content.infomations.each do |info|
+            = image_tag(info.image.to_s,class:"infomation__previewBox--display")
+        .infomation__inputBox
+          = f.fields_for :infomations do |i|
+            .infomation__inputBox--form
+              .infomation__inputBox--image
+                = i.file_field :image
+              .infomation__inputBox--heading
+                = i.text_field :heading
+              .infomation__inputBox--text
+                = i.text_area :text
+      .submit
+        = f.submit
+    -else
+      .top
+        = image_tag(@content.image.to_s,class:"top__left")
+        .top__right
+          .top__right--image
+            = f.file_field :image
+          .top__right--name
+            = f.text_field :name ,placeholder:"アプリケーション名"
+          .top__right--link
+            = f.url_field :link,placeholder:"http:..."
+          .top__right--text
+            = f.text_area :text,placeholder:"アプリケーション概要"
+      .category
+        = f.collection_check_boxes :category_ids, Category.all, :id, :name
+      .infomation
+        .infomation__previewBox
+          .infomation__previewBox--display
+          .infomation__previewBox--display
+          .infomation__previewBox--display
+          .infomation__previewBox--display
+        .infomation__inputBox
+          = f.fields_for :infomations do |i|
+            .infomation__inputBox--form
+              .infomation__inputBox--image
+                = i.file_field :image
+              .infomation__inputBox--heading
+                = i.text_field :heading
+              .infomation__inputBox--text
+                = i.text_area :text
+          = f.fields_for :infomations do |i|
+            .infomation__inputBox--form
+              .infomation__inputBox--image
+                = i.file_field :image
+              .infomation__inputBox--heading
+                = i.text_field :heading
+              .infomation__inputBox--text
+                = i.text_area :text
+          = f.fields_for :infomations do |i|
+            .infomation__inputBox--form
+              .infomation__inputBox--image
+                = i.file_field :image
+              .infomation__inputBox--heading
+                = i.text_field :heading
+              .infomation__inputBox--text
+                = i.text_area :text
+          = f.fields_for :infomations do |i|
+            .infomation__inputBox--form
+              .infomation__inputBox--image
+                = i.file_field :image
+              .infomation__inputBox--heading
+                = i.text_field :heading
+              .infomation__inputBox--text
+                = i.text_area :text
+      .submit
+        = f.submit

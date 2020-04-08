@@ -1,0 +1,76 @@
+#contentForm{
+  width: 80vw;
+  padding-top: 2vh;
+  margin: 0 auto;
+// ================================================
+  .top{
+    background-color: $l_gray;
+    height: 37vh;
+    padding: 1vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    &__left{
+      width: 50%;
+      height: 100%;
+      background-color: $gray;
+    }
+    &__right{
+      width: 40%;
+      height: 100%;
+      input{
+        width: 100%;
+        height: 3vh;
+        margin: 0.5vh 0;
+      }
+      textarea{
+        margin-top: 0.5vh;
+        width: 100%;
+        height: 20vh;
+      }
+    }
+  }
+  .category{
+    height: 3vh;
+    line-height: 3vh;
+    background-color: $l_gray;
+    margin: 1vh 0;
+  }
+.infomation{
+  padding:2vh 0;
+  width: 100%;
+  height: 50vh;
+  background-color: $l_gray;
+  margin-bottom: 2vh;
+  &__previewBox{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2vh;
+    &--display{
+      width: 21%;
+      height: 95%;
+      background-color: $gray;
+    }
+  }
+  &__inputBox{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: space-evenly;
+    input{
+      width: 75%;
+      margin: 0.5vh 0 0.5vh 3vw;
+    }
+    textarea{
+    margin-left: 3vw;
+    width: 75%;
+    height: 14vh;
+    }
+  }
+}
+.submit{
+  text-align: center;
+}
+// ================================================
+}
