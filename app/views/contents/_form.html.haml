@@ -31,7 +31,7 @@
                 = i.text_area :text
       .submit
         = f.submit
-      =link_to("アプリ削除",content_path(params[:id]),method: :delete)
+      =link_to("アプリ削除",content_path(params[:id]),method: :delete, data: { confirm: '本当に削除しますか?' } )
     -else
       .infomation
         .infomation__previewBox

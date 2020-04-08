@@ -11,5 +11,6 @@
         = f.color_field :color
     .submit
       = f.submit
-      -if @category.persisted?
-        =link_to("削除する",category_path(@category.id),method: :delete)
+    -if @category.persisted?
+      =link_to(category_path(@category.id),method: :delete, class: "deleteBtn", data: { confirm:"本当に削除しますか?"}) do
+        削除する
