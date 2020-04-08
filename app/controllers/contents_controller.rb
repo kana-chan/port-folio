@@ -40,9 +40,8 @@ class ContentsController < ApplicationController
   def content_params
     params.require(:content).permit(
       :name,
-      :image,
-      :text,
       :link,
+      :git,
       category_ids:[],
       infomations_attributes:[:image,:text,:heading,:destroy,:id]
     )
