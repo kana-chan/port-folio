@@ -1,5 +1,5 @@
 #contentForm{
-  width: 80vw;
+  width: 90vw;
   padding-top: 2vh;
   margin: 0 auto;
 // ================================================
@@ -10,17 +10,22 @@
     display: flex;
     justify-content: space-evenly;
     &__left{
-      width: 50%;
+      width: 40%;
       height: 100%;
       background-color: $gray;
     }
     &__right{
       width: 40%;
       height: 100%;
+      &--category{
+        height: 5vh;
+        line-height: 3vh;
+        margin: 1vh 0;
+      }
       input{
         width: 100%;
-        height: 3vh;
-        margin: 0.5vh 0;
+        height: 4vh;
+        margin: 1vh 0;
       }
       textarea{
         margin-top: 0.5vh;
@@ -29,12 +34,7 @@
       }
     }
   }
-  .category{
-    height: 3vh;
-    line-height: 3vh;
-    background-color: $l_gray;
-    margin: 1vh 0;
-  }
+// ------------------------------------------------
 .infomation{
   padding:2vh 0;
   width: 100%;
@@ -46,26 +46,29 @@
     height: 45%;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 2vh;
     &--display{
-      width: 21%;
+      width: 18%;
       height: 95%;
       background-color: $gray;
     }
   }
   &__inputBox{
     width: 100%;
-    height: 55%;
+    height: 60%;
     display: flex;
     justify-content: space-evenly;
-    input{
-      width: 75%;
-      margin: 0.5vh 0 0.5vh 3vw;
-    }
-    textarea{
-    margin-left: 3vw;
-    width: 75%;
-    height: 14vh;
+    &--form{
+      width:19%;
+      height:100%;
+      text-align: center;
+      input{
+        width: 90%;
+        margin-bottom: 1vh;
+      }
+      textarea{
+        width: 90%;
+        height: 19vh;
+      }
     }
   }
 }
