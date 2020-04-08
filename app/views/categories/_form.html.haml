@@ -1,0 +1,16 @@
+#categoryForm
+  = form_with model: @category, local: true do |f|
+    .skill
+      .skill--name
+        = f.label :name,"スキル名"
+        %br
+        = f.text_field :name,placeholder:"スキル名"
+      .skill--color
+        = f.label :color,"カラー"
+        %br
+        = f.color_field :color
+    .submit
+      = f.submit
+    -if @category.persisted?
+      =link_to(category_path(@category.id),method: :delete, class: "deleteBtn", data: { confirm:"本当に削除しますか?"}) do
+        削除する
