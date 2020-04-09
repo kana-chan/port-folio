@@ -4,15 +4,27 @@
   position: relative;
 // ================================================================================================
 .header{
-  width:100%;
+  width:90%;
   height:10vh;
+  margin: 0 auto;
   font-size: 3vh;
-  padding: 3vh 0 0 2vw;
-  // background-color: red;
+  line-height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  &--name{
+    margin-right: auto;
+  }
+  &--link,&--git{
+    margin-left: 2vw;
+    height: 7vh;
+    &:hover{
+      border-bottom: solid 1px $black;
+    }
+  }
 }
 // ------------------------------------------------
 .slide{
-  width: 90vw;
+  width: 85vw;
   margin:0 auto;
   display: flex;
   justify-content: space-between;
@@ -29,15 +41,19 @@
 }
 // ------------------------------------------------
 .contentBox{
-  height: 80vh;
-  width: 100vw;
-  // background-color:blue;
+  height: 70vh;
+  width: 90vw;
+  margin: 2vh auto;
   &__image{
     display: none;
-    box-shadow: 0 0 5px $gray;
-    margin: 0 auto;
-    height: 100%;
+    box-shadow: 0 0 15px $gray;
     width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    img{
+    height: 100%;
+    width: 100%;
+    }
   }
   .active{
     display: block;
@@ -45,7 +61,7 @@
 }
 // ------------------------------------------------
 .btnWrapper{
-  margin: 0 auto;
+  margin: 4vh auto 1vh;
   width: 8vw;
   height: 10vh;
   display: flex;

@@ -2,19 +2,27 @@
   .header
     .header--name
       = @content.name
+    =link_to("Link",@content.link,class:"header--link")
+    =link_to("git",@content.git,class:"header--git")
   .slide
-    =fa_icon "chevron-left next"
-    =fa_icon "chevron-right back"
-
+    =fa_icon "chevron-left",class:"back"
+    =fa_icon "chevron-right",class:"next"
   %ul.contentBox
-    %li=image_tag(@content.infomations.first.image.to_s ,class:"contentBox__image active")
-    %li=image_tag(@content.infomations.second.image.to_s ,class:"contentBox__image")
-    %li=image_tag(@content.infomations.third.image.to_s ,class:"contentBox__image")
-    %li=image_tag(@content.infomations.fourth.image.to_s ,class:"contentBox__image")
-    %li=image_tag(@content.infomations.fifth.image.to_s ,class:"contentBox__image")
+    %li.contentBox__image.active
+      =image_tag(@content.infomations.first.image.to_s)
+    %li.contentBox__image
+      =image_tag(@content.infomations.second.image.to_s)
+    %li.contentBox__image
+      =image_tag(@content.infomations.third.image.to_s)
+    %li.contentBox__image
+      =image_tag(@content.infomations.fourth.image.to_s)
+    %li.contentBox__image
+      =image_tag(@content.infomations.fifth.image.to_s)
   %ul.btnWrapper
     %li.btnWrapper--btn.active
     %li.btnWrapper--btn
     %li.btnWrapper--btn
     %li.btnWrapper--btn
     %li.btnWrapper--btn
+  -# ================================================
+  =render "/templates/footer"
