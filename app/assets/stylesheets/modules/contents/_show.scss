@@ -27,8 +27,14 @@
   width: 85vw;
   margin:0 auto;
   display: flex;
-  justify-content: space-between;
   @include position_center;
+  .back{
+    margin :0 auto 0 0;
+    display: none;
+  }
+  .next{
+    margin: 0 0 0 auto;
+  }
   i{
     font-size: 4em;
     color:$gray;
