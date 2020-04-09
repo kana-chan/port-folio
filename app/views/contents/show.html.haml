@@ -1,4 +1,11 @@
 #show
+  .header
+    .header--name
+      = @content.name
+    .header--back
+      back
+    .header--next
+      next
   .contentBox
     =image_tag(@content.infomations.first.image.to_s ,class:"contentBox__image contentBox__active")
     =image_tag(@content.infomations.second.image.to_s ,class:"contentBox__image")

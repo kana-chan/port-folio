@@ -1,17 +1,18 @@
 #show{
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: space-around;
 // ================================================
+.header{
+  width:100%;
+  height:10vh;
+}
 .contentBox{
   height: 80vh;
   width: 100vw;
-  margin-top:10vh;
   // background-color:blue;
   &__image{
     display: none;
-    box-shadow: 0 0 10px $gray;
+    box-shadow: 0 0 5px $gray;
     margin: 0 auto;
     height: 100%;
     width: 80%;
