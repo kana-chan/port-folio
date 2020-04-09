@@ -1,11 +1,23 @@
 #show{
   height: 100vh;
   width: 100vw;
-// ================================================
+  position: relative;
+// ================================================================================================
 .header{
   width:100%;
   height:10vh;
 }
+// ------------------------------------------------
+.slide{
+  width: 90vw;
+  font-size: 4em;
+  -webkit-text-stroke: 0.15em white;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  @include position_center;
+}
+// ------------------------------------------------
 .contentBox{
   height: 80vh;
   width: 100vw;
@@ -17,25 +29,31 @@
     height: 100%;
     width: 80%;
   }
-  #active{
+  .active{
     display: block;
   }
 }
+// ------------------------------------------------
 .btnWrapper{
   margin: 0 auto;
-  width: 10vw;
+  width: 8vw;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   &--btn{
-    width: 2vh;
-    height: 2vh;
+    width: 1.5vh;
+    height: 1.5vh;
     border-radius: 100%;
-    background-color: $gray;
+    background-color: $l_gray;
+    transition-duration: 0.5s;
+    &:hover{
+      background-color: $gray;
+    }
   }
-  #selected{
+  .active{
     background-color: $black;
+    transition-duration: 0.5s;
     width: 3.5vh;
     height: 3.5vh;
   }
