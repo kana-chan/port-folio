@@ -4,16 +4,17 @@
       .top__left
       .top__right
         .top__right--name
-          = f.label :name, "アプリケーション名"
+          %p アプリケーション名
           = f.text_field :name ,placeholder:"アプリケーション名"
         .top__right--link
-          = f.label :link, "Wab-page"
+          %p web-link
           = f.url_field :link,placeholder:"http:..."
-        .top__right--link
-          = f.label :git, "Git-hub"
+        .top__right--git
+          %p Git-hub
           = f.url_field :git,placeholder:"http:..."
         .top__right--category
-          = f.label :catefory_ids, "カテゴリー選択"
+          %p カテゴリー選択
+          = f.collection_check_boxes :category_ids, Category.all, :id, :name
     -# ================================================================================================
     -if @content.persisted?
       .infomation
