@@ -2,14 +2,19 @@
   .header
     .header--name
       = @content.name
-    .header--back
+    .header__slide#back
       back
-    .header--next
+    .header__slide#next
       next
-  .contentBox
-    =image_tag(@content.infomations.first.image.to_s ,class:"contentBox__image contentBox__active")
-    =image_tag(@content.infomations.second.image.to_s ,class:"contentBox__image")
-    =image_tag(@content.infomations.third.image.to_s ,class:"contentBox__image")
-    =image_tag(@content.infomations.fourth.image.to_s ,class:"contentBox__image")
-    =image_tag(@content.infomations.fifth.image.to_s ,class:"contentBox__image")
-
+  %ul.contentBox
+    %li=image_tag(@content.infomations.first.image.to_s ,class:"contentBox__image",id:"active")
+    %li=image_tag(@content.infomations.second.image.to_s ,class:"contentBox__image")
+    %li=image_tag(@content.infomations.third.image.to_s ,class:"contentBox__image")
+    %li=image_tag(@content.infomations.fourth.image.to_s ,class:"contentBox__image")
+    %li=image_tag(@content.infomations.fifth.image.to_s ,class:"contentBox__image")
+  %ul.btnWrapper
+    %li.btnWrapper--btn#selected
+    %li.btnWrapper--btn
+    %li.btnWrapper--btn
+    %li.btnWrapper--btn
+    %li.btnWrapper--btn
