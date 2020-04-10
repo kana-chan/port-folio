@@ -1,12 +1,11 @@
 $(function(){
-  if(window.location.href.match(/\//)){
+  if(window.location.href.match(/\/$/)) {
 // ================================================
-    $.when(
-      $('.top').fadeIn(3000)
-    ).done(function(){
-
-    })
-
+  $.when(
+    $('.top__nameBox').fadeIn(6000)
+  ).done(function(){
+    $('.main').show();
+  });
 // ================================================
   }
 });

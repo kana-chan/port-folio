@@ -1,5 +1,5 @@
 $(function(){
-  if(window.location.href.match(/profiles$/))
+  if (window.location.href.match(/profiles$/)) {
   // ================================================
   $.when(
     $('.top__profile').fadeIn(3000)
@@ -10,4 +10,5 @@ $(function(){
     $('.main').show()
   });
   // ================================================
+  }
 });
