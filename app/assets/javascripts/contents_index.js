@@ -2,7 +2,7 @@ $(function(){
   if(window.location.href.match(/\/$/)) {
 // ================================================
   $.when(
-    $('.top__nameBox').fadeIn(6000)
+    $('.top__nameBox').fadeIn(3000)
   ).done(function(){
     $('.main').show();
   });
