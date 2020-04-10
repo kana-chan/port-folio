@@ -1,8 +1,8 @@
 $(function(){
-  if(window.location.href.match(/\/$/)){
+  if(window.location.href.match(/\//)){
 // ================================================
     $.when(
-      $('.top__nameBox').fadeIn(3000)
+      $('.top').fadeIn(3000)
     ).done(function(){
 
     })
