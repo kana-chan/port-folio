@@ -1,28 +1,38 @@
-#scroll
-  = render "/templates/header"
-  #show
-    -# top================================================ 
-    .top
-      .top--appName
-        = @content.name
-    -# main================================================
-    .main
-      .main__heading
-        .main__heading--left
-          = @content.name
-        .main__heading--right
-          = link_to("Link",@content.link)
-      .main__text
-      -#   = @content.infomatios
-      .main__contentsWrapper
-        - @content.infomations.each do |info|
-          = render partial: "infomation",locals: {info: info}
-  -# footer================================================
-  =link_to("アプリ編集",edit_content_path(params[:id]))
-  = render "/templates/footer"
-
-
-
-
-
-
+#show
+  .header
+    .header--name
+      = @content.name
+    =link_to("Link",@content.link,class:"header--link")
+    =link_to("git",@content.git,class:"header--git")
+  .slide
+    =fa_icon "chevron-left",class:"back"
+    =fa_icon "chevron-right",class:"next"
+  %ul.contentBox
+    %li.contentBox__info.active
+      -# .contentBox__info--heading
+      -#   = @content.infomations.first.heading
+      =image_tag(@content.infomations.first.image.to_s)
+    %li.contentBox__info
+      -# .contentBox__info--heading
+      -#   = @content.infomations.second.heading
+      =image_tag(@content.infomations.second.image.to_s)
+    %li.contentBox__info
+      -# .contentBox__info--heading
+      -#   = @content.infomations.third.heading
+      =image_tag(@content.infomations.third.image.to_s)
+    %li.contentBox__info
+      -# .contentBox__info--heading
+      -#   = @content.infomations.fourth.heading
+      =image_tag(@content.infomations.fourth.image.to_s)
+    %li.contentBox__info
+      -# .contentBox__info--heading
+      -#   = @content.infomations.fifth.heading
+      =image_tag(@content.infomations.fifth.image.to_s)
+  %ul.btnWrapper
+    %li.btnWrapper--btn.active
+    %li.btnWrapper--btn
+    %li.btnWrapper--btn
+    %li.btnWrapper--btn
+    %li.btnWrapper--btn
+  -# ================================================
+  =render "/templates/footer"
