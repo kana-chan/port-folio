@@ -44,20 +44,26 @@
               カメラ　最近始めたばかり。現像作業の勉強を開始。
       -# skills================================================
       .skills
-        =link_to(new_category_path,class:"skills__hedding") do
+        .skills__hedding
           Skills
         .skills__topText
           2020年。エンジニアへの転職を決意し、
           %br プログラミング学習に取り組んできました。
           未経験ではありますが、現時点での "オカヤマ カナタ" のスキルです。
         .skills__box
-          - @categories.each do |category|
-            =link_to(edit_category_path(category.id),class:"skills__box__content") do
-              .skills__box__content--name
-                = category.name
+          -if user_signed_in?
+            - @categories.each do |category|
+              =link_to(edit_category_path(category.id),class:"skills__box__content") do
+                .skills__box__content--name
+                  = category.name
+          -else
+            - @categories.each do |category|
+              .skills__box__content
+                .skills__box__content--name
+                  = category.name
       -# works================================================
       .works
-        =link_to(new_content_path,class:"works__hedding") do
+        .works__hedding
           Works
         = render @contents
       -# footer================================================

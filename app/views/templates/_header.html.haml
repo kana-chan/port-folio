@@ -1,5 +1,16 @@
 #header
-  = fa_icon "bars"
-.links
-  =link_to("ユーザー登録","#")
-  =link_to("ユーザー編集","#")
+  .login
+    -if !User.exists?
+      =link_to("サインアップ",new_user_registration_path,class:"login--signedOut")
+    -elsif !user_signed_in?
+      =link_to("ログイン",new_user_session_path,class:"login--signedOut")
+    -else
+      =link_to("ログアウト",destroy_user_session_path,method: :delete, class:"login--signedIn")
+  -if user_signed_in?
+    .menu
+      .menu--category
+        =link_to("カテゴリー",new_category_path)
+      .menu--contents
+        =link_to("コンテンツ",new_content_path)
+
+
