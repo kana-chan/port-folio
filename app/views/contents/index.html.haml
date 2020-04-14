@@ -1,5 +1,5 @@
 #scroll
-  = render "/templates/login"
+  = render "/templates/header"
   #index
     -# top================================================
     .top
@@ -44,7 +44,7 @@
               カメラ　最近始めたばかり。現像作業の勉強を開始。
       -# skills================================================
       .skills
-        =link_to(new_category_path,class:"skills__hedding") do
+        .skills__hedding
           Skills
         .skills__topText
           2020年。エンジニアへの転職を決意し、
@@ -57,7 +57,7 @@
                 = category.name
       -# works================================================
       .works
-        =link_to(new_content_path,class:"works__hedding") do
+        .works__hedding
           Works
         = render @contents
       -# footer================================================
