@@ -7,9 +7,14 @@
   .login{
     transform: rotate(45deg);
     margin: 5vh 0;
-    &:hover{
-      font-weight: bold;
-      background-color: $gray;
+    &--signedOut{
+      color: white;
+    }
+    &--signedIn{
+      &:hover{
+        font-weight: bold;
+        background-color: $gray;
+      }
     }
   }
   .menu{
