@@ -59,3 +59,4 @@ gem 'haml-rails'
 gem "font-awesome-rails"
 gem 'font-awesome-sass'
 gem 'carrierwave'
+gem 'fog'
