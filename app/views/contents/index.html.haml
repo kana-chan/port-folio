@@ -1,70 +1,69 @@
-#scroll
-  = render "/templates/header"
-  #index
-    -# top================================================
-    .top
-      .top__nameBox
-        .top__nameBox--engineer
-          engineer
-        .top__nameBox--myName
-          オカヤマ カナタ
-    -# main================================================
-    .main
-      .profile
-        .profile__hedding
-          .profile__hedding--left
-            Profile
-          =link_to("more...",profiles_path, class:"profile__hedding--right")
-        .profile__main
-          .profile__main__box
-            .profile__main__box--hedding
-              オカヤマ カナタ
-            .profile__main__box--birthDay
-              1992年6月9日生まれ、B型、双子座。
-          .profile__main__box
-            .profile__main__box--hedding
-              出身
-            .profile__main__box--from
-              大阪府大阪市西成区
-          .profile__main__box
-            .profile__main__box--hedding
-              略歴
-            .profile__main__box--Content1
-              2018年　同志社大学心理学部心理学科 卒業。
-            .profile__main__box--Content2
-              2018年　日本郵便株式会社 入社。
-            .profile__main__box--Content3
-              2020年　エンジニアを目指し学習開始。
-          .profile__main__box
-            .profile__main__box--hedding
-              趣味
-            .profile__main__box--hoby1
-              コーヒー　抽出だけでなく、焙煎やラテアートも。
-            .profile__main__box--hoby2
-              カメラ　最近始めたばかり。現像作業の勉強を開始。
-      -# skills================================================
-      .skills
-        .skills__hedding
-          Skills
-        .skills__topText
-          2020年。エンジニアへの転職を決意し、
-          %br プログラミング学習に取り組んできました。
-          未経験ではありますが、現時点での "オカヤマ カナタ" のスキルです。
-        .skills__box
-          -if user_signed_in?
-            - @categories.each do |category|
-              =link_to(edit_category_path(category.id),class:"skills__box__content") do
-                .skills__box__content--name
-                  = category.name
-          -else
-            - @categories.each do |category|
-              .skills__box__content
-                .skills__box__content--name
-                  = category.name
-      -# works================================================
-      .works
-        .works__hedding
-          Works
-        = render @contents
-      -# footer================================================
-      = render "/templates/footer"
+= render "/templates/header"
+#index
+  -# top================================================
+  .top
+    .top__nameBox
+      .top__nameBox--engineer
+        engineer
+      .top__nameBox--myName
+        オカヤマ カナタ
+  -# main================================================
+  .main
+    .profile
+      .profile__hedding
+        .profile__hedding--left
+          Profile
+        =link_to("more...",profiles_path, class:"profile__hedding--right")
+      .profile__main
+        .profile__main__box
+          .profile__main__box--hedding
+            オカヤマ カナタ
+          .profile__main__box--birthDay
+            1992年6月9日生まれ、B型、双子座。
+        .profile__main__box
+          .profile__main__box--hedding
+            出身
+          .profile__main__box--from
+            大阪府大阪市西成区
+        .profile__main__box
+          .profile__main__box--hedding
+            略歴
+          .profile__main__box--Content1
+            2018年　同志社大学心理学部心理学科 卒業。
+          .profile__main__box--Content2
+            2018年　日本郵便株式会社 入社。
+          .profile__main__box--Content3
+            2020年　エンジニアを目指し学習開始。
+        .profile__main__box
+          .profile__main__box--hedding
+            趣味
+          .profile__main__box--hoby1
+            コーヒー　抽出だけでなく、焙煎やラテアートも。
+          .profile__main__box--hoby2
+            カメラ　最近始めたばかり。現像作業の勉強を開始。
+    -# skills================================================
+    .skills
+      .skills__hedding
+        Skills
+      .skills__topText
+        2020年。エンジニアへの転職を決意し、
+        %br プログラミング学習に取り組んできました。
+        未経験ではありますが、現時点での "オカヤマ カナタ" のスキルです。
+      .skills__box
+        -if user_signed_in?
+          - @categories.each do |category|
+            =link_to(edit_category_path(category.id),class:"skills__box__content") do
+              .skills__box__content--name
+                = category.name
+        -else
+          - @categories.each do |category|
+            .skills__box__content
+              .skills__box__content--name
+                = category.name
+    -# works================================================
+    .works
+      .works__hedding
+        Works
+      = render @contents
+    -# footer================================================
+    = render "/templates/footer"
