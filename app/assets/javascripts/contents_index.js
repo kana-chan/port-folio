@@ -27,9 +27,11 @@ $(function(){
   $('.works__contentsBox').hover(
     function(){
       $('.works__contentsBox__textBlock').animate({right:"0"});
+      $('.works__contentsBox__photoBlock').css('filter','blur(5px) grayscale(99%)')
     },
     function(){
       $('.works__contentsBox__textBlock').animate({right:"-35%"});
+      $('.works__contentsBox__photoBlock').css('filter','');
     }
     )
 // ================================================
