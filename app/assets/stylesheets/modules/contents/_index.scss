@@ -7,9 +7,7 @@
   height: 100vh;
   position: relative;
   &__nameBox{
-    animation-name: blur-anime;
-    animation-duration: 5s;
-    display: none;
+    @include animation-blur;
     @include position-center;
     &--engineer{
       font-size: 20px;
