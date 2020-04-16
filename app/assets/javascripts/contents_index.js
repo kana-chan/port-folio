@@ -29,6 +29,7 @@ $(function(){
     function(){
       $(this).children('.works__contentsBox__filter').show()
       $(this).children('.works__contentsBox__photoBlock').css('filter','blur(5px) grayscale(99%)')
+      $(this).children().children('.works__contentsBox__filter--more').show();
     },
     function(){
       $(this).children('.works__contentsBox__filter')
@@ -39,6 +40,7 @@ $(function(){
     })
     // more click------------------------------------------------
     $('.works__contentsBox__filter--more').on('click',function(){
+      $(this).hide();
       $(this).parents('.works__contentsBox__filter').animate({width:'55%'})
       $(this).parents().siblings('.works__contentsBox__textBlock').animate({right:"0"});
     })
