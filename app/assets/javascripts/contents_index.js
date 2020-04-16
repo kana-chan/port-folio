@@ -2,7 +2,7 @@ $(function(){
   if(window.location.href.match(/\/$/)) {
 // topの画像が読み込まれてから、スクロール可に(ログインボタンも消す)================================================
   $.when(
-    $('.top__nameBox').fadeIn(3000)
+    $('.top__nameBox').fadeIn(4000)
   ).done(function(){
     $('.main').show();
     $('.login').hide();
