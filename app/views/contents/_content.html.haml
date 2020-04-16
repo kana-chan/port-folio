@@ -5,14 +5,12 @@
       = "- #{content.name} -"
     .works__contentsBox__filter--more
       more
-
-
-  -# .works__contentsBox__textBlock
-  -#   .works__contentsBox__textBlock--contentHedding
-  -#     = content.name
-  -#   .works__contentsBox__textBlock__categoryWrapper
-  -#     - content.categories.each do |category|
-  -#       .works__contentsBox__textBlock__categoryWrapper--category{style:"background-color:#{category.color.insert(-1,"99")}"}
-  -#         = category.name
-  -#   .works__contentsBox__textBlock--contentText
-  -#     = content.infomations.first.text
+  .works__contentsBox__textBlock
+    .works__contentsBox__textBlock--contentHedding
+      = content.name
+    .works__contentsBox__textBlock__categoryWrapper
+      - content.categories.each do |category|
+        .works__contentsBox__textBlock__categoryWrapper--category{style:"background-color:#{category.color.insert(-1,"99")}"}
+          = category.name
+    .works__contentsBox__textBlock--contentText
+      = content.infomations.first.text

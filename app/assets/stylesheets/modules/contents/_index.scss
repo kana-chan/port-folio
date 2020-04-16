@@ -137,7 +137,7 @@
       &--name{
         @include position-center;
         text-align: center;
-        padding-top: 25%;
+        padding-top: 25vh;
         width: 96%;
         height: 95%;
         border: solid 3px white;
@@ -148,17 +148,13 @@
           right: 4%;
       }
     }
-
-
-
-
     &__textBlock{
       position: absolute;
         top: 0;
-        right: -35%;
-      width: 35%;
+        right: -45%;
+      width: 45%;
       height: 100%;
-      background-color: rgba(#ffffff , 0.9);
+      background-color:white;
       padding-left: 1vw;
       &--contentHedding{
         width: 100%;
