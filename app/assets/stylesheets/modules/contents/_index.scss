@@ -119,20 +119,18 @@
     filter: grayscale(30%);
     position: relative;
     box-shadow: 0 0 5px $l_gray;
+    overflow: hidden;
     &__photoBlock{
-      background-size: cover;
-      background-position: center;
       width: 100%;
       height: 100%;
     }
     &__textBlock{
       position: absolute;
-        top: 10%;
-        right: 5%;
+        top: 0;
+        right: -35%;
       width: 35%;
-      height: 80%;
+      height: 100%;
       background-color: rgba(#ffffff , 0.9);
-      border-radius: 5%;
       padding-left: 1vw;
       &--contentHedding{
         width: 100%;

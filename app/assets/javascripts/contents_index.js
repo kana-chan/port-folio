@@ -2,7 +2,7 @@ $(function(){
   if(window.location.href.match(/\/$/)) {
 // topの画像が読み込まれてから、スクロール可に(ログインボタンも消す)================================================
   $.when(
-    $('.top__nameBox').fadeIn(4000)
+    // $('.top__nameBox').fadeIn(4000)
   ).done(function(){
     $('.main').show();
     $('.login').hide();
@@ -23,6 +23,15 @@ $(function(){
     var works = $('.works').offset().top;
     $('html,body').animate({scrollTop:works})
   });
+// contentsにhoverで...================================================
+  $('.works__contentsBox').hover(
+    function(){
+      $('.works__contentsBox__textBlock').animate({right:"0"});
+    },
+    function(){
+      $('.works__contentsBox__textBlock').animate({right:"-35%"});
+    }
+    )
 // ================================================
   }
 });
