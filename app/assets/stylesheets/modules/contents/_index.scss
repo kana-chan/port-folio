@@ -116,13 +116,9 @@
     margin: 3vh auto 10vh;
     width: 80%;
     height: 65vh;
-    filter: grayscale(90%);
+    filter: grayscale(30%);
     position: relative;
     box-shadow: 0 0 5px $l_gray;
-    &:hover{
-      filter:grayscale(30%);
-      box-shadow: 0 0 10px $gray;
-    }
     &__photoBlock{
       background-size: cover;
       background-position: center;
