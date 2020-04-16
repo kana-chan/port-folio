@@ -17,6 +17,11 @@
   &--back{
   margin: 0 auto;
   }
+  &--back,&--profile,&--skills,&--works{
+    &:hover{
+      border-bottom: 1px solid $black;
+    }
+  }
 }
   // ================================================
 }
