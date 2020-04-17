@@ -1,17 +1,16 @@
 .works__contentsBox
-  =image_tag content.infomations.first.image.to_s,class:"works__contentsBox__photoBlock"
-  .works__contentsBox__filter
-    .works__contentsBox__filter--name
-      = "- #{content.name} -"
-    .works__contentsBox__filter--more
-      CLICK
-  .works__contentsBox__textBlock
-    .works__contentsBox__textBlock__categoryWrapper
-      - content.categories.each do |category|
-        .works__contentsBox__textBlock__categoryWrapper--category{style:"background-color:#{category.color.insert(-1,"99")}"}
-          = category.name
-    .works__contentsBox__textBlock--contentText
-      = content.infomations.first.text
-    .works__contentsBox__textBlock--show
-      =link_to("view more",content_path(content.id))
+  .works__contentsBox__photoBlock
+    =link_to(content_path(content.id)) do
+      =image_tag(content.infomations.first.image.to_s)
+    .works__contentsBox__photoBlock__label
+      .works__contentsBox__photoBlock__label--appName
+        = content.name
+      .works__contentsBox__photoBlock__label--language
+        Language
+      .works__contentsBox__photoBlock__label__categoryBox
+        - content.categories.each do |icon|
+          .works__contentsBox__photoBlock__label__categoryBox--icon{style: "background-color:#{icon.color}"}
+.works__linkBox
+  CLICK
+  =fa_icon "chevron-right"
 

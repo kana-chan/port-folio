@@ -57,16 +57,13 @@
 .skills{
   padding-top: 8vh;
   width: 100%;
-  // background-color: red;
   &__hedding{
-    // background-color: gray;
     width: 100%;
     height: 6vh;
     font-size: 3vh;
     line-height: 6vh;
   }
   &__topText{
-    // background-color: blue;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2vh;
@@ -74,7 +71,6 @@
     font-size: 2vh;
   }
   &__box{
-    // background-color:green;
     margin: 5vh auto 0;
     width: 70%;
     display: flex;
@@ -108,87 +104,86 @@
 .works{
   padding-top: 8vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__hedding{
     width: 100%;
     font-size: 3vh;
+    margin-bottom:5vh ;
   }
   &__contentsBox{
-    margin: 3vh auto 10vh;
     width: 70%;
     height: 55vh;
     filter: grayscale(20%);
-    position: relative;
-    overflow: hidden;
     &__photoBlock{
       width: 100%;
-      height: 100%;
-      transition-duration: .3s;
-    }
-    &__filter{
-      display: none;
-      position: absolute;
-        top: 0;
-      width:100%;
-      height: 100%;
-      color: $black;
-      font-size: 3vh;
-      &--name{
-        @include position-center;
-        text-align: center;
-        padding-top: 25vh;
-        width: 96%;
-        height: 95%;
-        // border: solid 3px white;
-        background-color: rgba(white,0.8);
-      }
-      &--more{
-        position: absolute;
-          bottom: 3%;
-          right: 4%;
-      }
-    }
-    &__textBlock{
-      position: absolute;
-        top: 0;
-        right: -45%;
-      width: 45%;
-      height: 100%;
-      background-color: rgba($black,0.7);
-      padding: 1vh;
-      color: white;
-      &__categoryWrapper{
+      height: 55vh;
+      position: relative;
+      overflow: hidden;
+      img{
         width: 100%;
-        height: 4vh;
-        line-height: 4vh;
-        display: flex;
-        justify-content: start;
-        &--category{
-          background-color: #fff;
-          border-radius: 5px;
-          margin-right: 3%;
-          text-align: center;
-          width: 20%;
-          height: 100%;
+        height: 100%;
+      }
+      &__label{
+        position: absolute;
+          bottom: -20vh;
+          left: 5%;
+        width: 30%;
+        height: 20vh;
+        padding: 2vh;
+        background-color: white;
+        &--appName{
+          font-size: 20px;
+          padding-left: 1vh;
+          border-bottom: 1px black solid;
+          width: 100%;
+          height: 7vh;
+          line-height: 7vh;
+        }
+        &--language{
+          width: 100%;
+          height: 5vh;
+          line-height: 5vh;
+        }
+        &__categoryBox{
+          width: 100%;
+          height:5vh;
+          display: flex;
+            justify-content: flex-start;
+          &--icon{
+            width: 20px;
+            height: 20px;
+            margin-right: 1vh;
+            border-radius: 50%;
+            background-color: red;
+            position: relative;
+            &::after{
+              content: "";
+              @include position-center;
+              width: 23px;
+              height: 23px;
+              border-radius: 50%;
+              border: solid $gray 1px;
+            }
+          }
         }
       }
-      &--contentText{
-        // background-color: blue;
-        padding: 2vh 1vh 0;
-        width: 100%;
-        height: 70%;
-        font-size: 2vh;
-        line-height: 4vh;
-        word-break: break-all;
-      }
-      &--show{
-        position: absolute;
-        border: white solid 2px;
-          bottom: 0;
-          right: 0;;
-        width: 40%;
-        height: 5%;
-        font-size: 20px;
-      }
+    }
+  }
+  &__linkBox{
+    width: 20vw;
+    height: 8vh;
+    line-height: 8vh;
+    border: solid black 2px;
+    margin:5vh 0 10vh;
+    padding: 0 2vw;
+    position: relative;
+    i{
+      position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
     }
   }
 }
