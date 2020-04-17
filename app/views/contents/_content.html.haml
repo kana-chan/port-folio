@@ -10,7 +10,7 @@
       .works__contentsBox__photoBlock__label__categoryBox
         - content.categories.each do |icon|
           .works__contentsBox__photoBlock__label__categoryBox--icon{style: "background-color:#{icon.color}"}
-.works__linkBox
+=link_to(content_path(content.id),class:"works__linkBox") do
   CLICK
   =fa_icon "chevron-right"
 
