@@ -4,7 +4,7 @@
     .works__contentsBox__filter--name
       = "- #{content.name} -"
     .works__contentsBox__filter--more
-      more
+      CLICK
   .works__contentsBox__textBlock
     .works__contentsBox__textBlock__categoryWrapper
       - content.categories.each do |category|
@@ -13,5 +13,5 @@
     .works__contentsBox__textBlock--contentText
       = content.infomations.first.text
     .works__contentsBox__textBlock--show
-      =link_to("show more",content_path(content.id))
+      =link_to("view more",content_path(content.id))
 
