@@ -11,9 +11,8 @@
   .main
     .profile
       .profile__hedding
-        .profile__hedding--left
-          Profile
-        =link_to("more...",profiles_path, class:"profile__hedding--right")
+        Profile
+        -# =link_to("more...",profiles_path, class:"profile__hedding--right")
       .profile__main
         .profile__main__box
           .profile__main__box--hedding
@@ -46,9 +45,8 @@
       .skills__hedding
         Skills
       .skills__topText
-        2020年。エンジニアへの転職を決意し、
-        %br プログラミング学習に取り組んできました。
-        未経験ではありますが、現時点での "オカヤマ カナタ" のスキルです。
+        2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。
+        %br 実務経験はまだありませんが、現時点での "オカヤマ カナタ" のスキルです。
       .skills__box
         -if user_signed_in?
           - @categories.each do |category|
