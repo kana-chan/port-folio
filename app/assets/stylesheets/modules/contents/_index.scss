@@ -19,20 +19,23 @@
     }
   }
 }
+.main{
+  display: none;
 // profile------------------------------------------------
 .profile{
-  padding-top: 8vh;
   width: 100%;
   // hedding------------------------------------------------
   &__hedding{
+    text-align: center;
     width: 100%;
     height: 6vh;
     line-height: 6vh;
     font-size: 5vh;
-    text-align: center;
+    margin-bottom: 5vh;
   }
   // main------------------------------------------------
   &__main{
+    text-align: center;
     margin:0 auto;
     width:80%;
     line-height: 4vh;
@@ -44,9 +47,13 @@
       }
     }
   }
+  &__moreBtn{
+    width: 18vw;
+    height:10vh;
+    margin-left: auto;
+    position: relative;
+  }
 }
-.main{
-  display: none;
 // slills================================================
 .skills{
   padding-top: 8vh;
@@ -140,10 +147,9 @@
     &__textBlock{
       width: 100%;
       height: 20vh;
-      display: flex;
       display: none;
       &__left{
-        width: 70%;
+        width: 73.5%;
         &--name{
           height:12vh;
           line-height: 12vh;
@@ -164,39 +170,8 @@
         }
       }
       &__right{
-        width: 30%;
+        width: 26.5%;
         position: relative;
-        &__moreBtn{
-          position: absolute;
-            bottom: 0;
-            right: 0;
-          width: 18vw;
-          height: 7.5vh;
-          line-height: 7.5vh;
-          padding: 0 1vw;
-          border: solid 0.1px $black;
-          p{
-            font-size: 1vh;
-          }
-          &--icon{
-            position: absolute;
-              top: 50%;
-              right: 0%;
-              transform:translateY(-50%);
-              // background-color: black;
-            width: 15%;
-            height: 100%;
-            font-size: 2em;
-            overflow: hidden;
-            i{
-              -webkit-text-stroke: 3.3px white;
-              position: absolute;
-                top: 50%;
-                right: 30%;
-                transform: translateY(-50%);
-            }
-          }
-        }
       }
     }
   }
@@ -210,4 +185,36 @@
 // ================================================
 }
 // ================================================
+}
+
+.linkBtn{
+  position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  width: 18vw;
+  height: 7.5vh;
+  line-height: 7.5vh;
+  padding: 0 1vw;
+  border: solid 0.1px $black;
+  p{
+    font-size: 1vh;
+  }
+  .arrow{
+    position: absolute;
+      top: 50%;
+      right: 0%;
+      transform:translateY(-50%);
+    width: 15%;
+    height: 100%;
+    font-size: 2em;
+    overflow: hidden;
+    i{
+      -webkit-text-stroke: 3.3px white;
+      position: absolute;
+        top: 50%;
+        right: 30%;
+        transform: translateY(-50%);
+    }
+  }
 }

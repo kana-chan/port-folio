@@ -5,8 +5,8 @@ $(function(){
     // $('.top__nameBox').fadeIn(4000)
   ).done(function(){
     $('.main').show();
-    $('#footer').show();
     $('.login').hide();
+    $('#footer').show();
   });
 
 // contents================================================

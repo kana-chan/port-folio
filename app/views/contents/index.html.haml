@@ -12,7 +12,6 @@
     .profile
       .profile__hedding
         Profile
-        -# =link_to("more...",profiles_path, class:"profile__hedding--right")
       .profile__main
         .profile__main__box
           .profile__main__box--hedding
@@ -40,6 +39,12 @@
             コーヒー　抽出だけでなく、焙煎やラテアートも。
           .profile__main__box--hoby2
             カメラ　最近始めたばかり。現像作業の勉強を開始。
+      .profile__moreBtn
+        =link_to(profiles_path) do
+          .profile__moreBtn--text.linkBtn
+            %p SHOW MORE
+            .profile__moreBtn--icon.arrow
+              =fa_icon "long-arrow-right"
     -# skills================================================
     .skills
       .skills__hedding
