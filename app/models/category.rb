@@ -4,4 +4,6 @@ class Category < ApplicationRecord
 
   validates :name,                      uniqueness: true
   validates :color,                     uniqueness: true
+  validates :number,                    uniqueness: true
+  validates :icon,                      uniqueness: true
 end
