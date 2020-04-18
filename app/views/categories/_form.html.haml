@@ -2,12 +2,16 @@
   = form_with model: @category, local: true do |f|
     .skill
       .skill--name
-        = f.label :name,"スキル名"
-        %br
+        %p スキル
         = f.text_field :name,placeholder:"スキル名"
+      .skill--number
+        %p 番号
+        = f.number_field :number,placeholder:"半角数字"
+      .skill--icon
+        %p アイコン
+        = f.text_field :icon, placeholder:"アイコンクラス"
       .skill--color
-        = f.label :color,"カラー"
-        %br
+        %p カラー
         = f.color_field :color
     .submit
       = f.submit

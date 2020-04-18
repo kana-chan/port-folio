@@ -1,12 +1,12 @@
 .works__contentsBox
   .works__contentsBox__photoBlock
-    =image_tag(content.infomations.first.image.to_s)
+    =image_tag(content.overview.to_s)
     .works__contentsBox__photoBlock--filter.filter
       =content.name
   .works__contentsBox__textBlock
     .works__contentsBox__textBlock__left
       .works__contentsBox__textBlock__left--name
-        =content.name
+        =content.catchcopy
       %table.works__contentsBox__textBlock__left__info
         %tr
           %th DATE
@@ -19,7 +19,7 @@
     .works__contentsBox__textBlock__right
       =link_to(content_path(content.id)) do
         .works__contentsBox__textBlock__right__moreBtn.linkBtn
-          %p SHOW MORE
+          %p DITAIL
           .works__contentsBox__textBlock__right__moreBtn--icon.arrow
             =fa_icon "long-arrow-right"
 .separateLine

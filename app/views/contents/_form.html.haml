@@ -6,6 +6,9 @@
         .top__right--name
           %p アプリケーション名
           = f.text_field :name ,placeholder:"アプリケーション名"
+        .top__right--catchcopy
+          %p キャッチコピー
+          = f.text_field :catchcopy ,placeholder:"キャッチコピー"
         .top__right--link
           %p web-link
           = f.url_field :link,placeholder:"http:..."
@@ -15,6 +18,9 @@
         .top__right--category
           %p カテゴリー選択
           = f.collection_check_boxes :category_ids, Category.all, :id, :name
+        .top__right--overview
+          %p トップ画像
+          = f.file_field :overview 
     -# ================================================================================================
     -if @content.persisted?
       .infomation
