@@ -100,7 +100,7 @@
     }
   }
 }
-// works------------------------------------------------
+// works================================================================================================
 .works{
   padding-top: 8vh;
   width: 100%;
@@ -109,84 +109,84 @@
   align-items: center;
   &__hedding{
     width: 100%;
-    font-size: 3vh;
-    margin-bottom:5vh ;
+    text-align: center;
+    font-size: 5vh;
   }
   &__contentsBox{
-    width: 70%;
-    height: 55vh;
-    filter: grayscale(20%);
+    margin-top: 5vh;
+    width: 85%;
+    // photoblock------------------------------------------------
     &__photoBlock{
       width: 100%;
-      height: 55vh;
+      height: 50vh;
       position: relative;
-      overflow: hidden;
       img{
-        width: 100%;
-        height: 100%;
+        width:100%;
+        height:100%;
       }
-      &__label{
-        position: absolute;
-          bottom: -20vh;
-          left: 5%;
+    }
+    // textblock------------------------------------------------
+    &__textBlock{
+      width: 100%;
+      height: 20vh;
+      display: flex;
+      // display: none;
+      &__left{
+        width: 70%;
+        &--name{
+          height:12vh;
+          line-height: 12vh;
+          font-size: 2.7vh;
+          font-weight: bold;
+        }
+        table{
+          width: 100%;
+          height: 8vh;
+          font-size: 1.5vh;
+          th{
+            text-align: start;
+            width: 20%;
+          }
+          td{
+            color: $gray;
+          }
+        }
+      }
+      &__right{
         width: 30%;
-        height: 20vh;
-        padding: 2vh;
-        background-color: white;
-        &--appName{
-          font-size: 20px;
-          padding-left: 1vh;
-          border-bottom: 1px black solid;
-          width: 100%;
-          height: 7vh;
-          line-height: 7vh;
-        }
-        &--language{
-          width: 100%;
-          height: 5vh;
-          line-height: 5vh;
-        }
-        &__categoryBox{
-          width: 100%;
-          height:5vh;
-          display: flex;
-            justify-content: flex-start;
+        position: relative;
+        &__moreBtn{
+          position: absolute;
+            bottom: 0;
+            right: 0;
+          width: 18vw;
+          height: 7.5vh;
+          line-height: 7.5vh;
+          padding: 0 1vw;
+          border: solid 0.1px $black;
+          p{
+            font-size: 1vh;
+          }
           &--icon{
-            width: 20px;
-            height: 20px;
-            margin-right: 1vh;
-            border-radius: 50%;
-            background-color: red;
-            position: relative;
-            &::after{
-              content: "";
-              @include position-center;
-              width: 23px;
-              height: 23px;
-              border-radius: 50%;
-              border: solid $gray 1px;
-            }
+            position: absolute;
+              top: 50%;
+              right: 0%;
+              transform:translateY(-50%);
+            width: 15%;
+            height: 100%;
+            font-size: 2em;
+            -webkit-text-stroke: 3.3px white;
           }
         }
       }
     }
   }
-  &__linkBox{
-    width: 20vw;
-    height: 8vh;
-    line-height: 8vh;
-    border: solid black 2px;
-    margin:5vh 0 10vh;
-    padding: 0 2vw;
-    position: relative;
-    transition-duration: .5s;
-    i{
-      position: absolute;
-        right: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-  }
+}
+.separateLine{
+  width: 100vw;
+  height: 1px;
+  background-color: $gray;
+  margin-top: 5vh;
 }
 // ================================================
 }

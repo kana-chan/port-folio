@@ -1,16 +1,23 @@
 .works__contentsBox
   .works__contentsBox__photoBlock
-    =link_to(content_path(content.id)) do
-      =image_tag(content.infomations.first.image.to_s)
-    .works__contentsBox__photoBlock__label
-      .works__contentsBox__photoBlock__label--appName
-        = content.name
-      .works__contentsBox__photoBlock__label--language
-        Language
-      .works__contentsBox__photoBlock__label__categoryBox
-        - content.categories.each do |icon|
-          .works__contentsBox__photoBlock__label__categoryBox--icon{style: "background-color:#{icon.color}"}
-=link_to(content_path(content.id),class:"works__linkBox") do
-  CLICK
-  =fa_icon "chevron-right"
+    =image_tag(content.infomations.first.image.to_s)
+  .works__contentsBox__textBlock
+    .works__contentsBox__textBlock__left
+      .works__contentsBox__textBlock__left--name
+        =content.name
+      %table.works__contentsBox__textBlock__left__info
+        %tr
+          %th DATE
+          %td="#{content.created_at.strftime('%Y.%m')}"
+        %tr
+          %th LANGUAGE
+          %td 
+            -content.categories.each do|language|
+              ="#{language.name}"
+    .works__contentsBox__textBlock__right
+      .works__contentsBox__textBlock__right__moreBtn
+        %p SHOW MORE
+        .works__contentsBox__textBlock__right__moreBtn--icon
+          =fa_icon "long-arrow-right"
+.separateLine
 
