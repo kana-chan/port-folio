@@ -1,7 +1,7 @@
 class ContentsController < ApplicationController
   def index
     @contents = Content.all.order("id DESC")
-    @categories = Category.all
+    @categories = Category.all.order("number ASC")
   end
 
   def show
@@ -42,6 +42,8 @@ class ContentsController < ApplicationController
       :name,
       :link,
       :git,
+      :overview,
+      :catchcopy,
       category_ids:[],
       infomations_attributes:[:image,:text,:heading,:destroy,:id]
     )
