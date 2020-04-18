@@ -113,16 +113,18 @@
     font-size: 5vh;
   }
   &__contentsBox{
-    margin-top: 5vh;
+    margin-top: 8vh;
     width: 85%;
     // photoblock------------------------------------------------
     &__photoBlock{
       width: 100%;
       height: 50vh;
       position: relative;
+      overflow: hidden;
       img{
         width:100%;
         height:100%;
+        @include position-center;
       }
     }
     // textblock------------------------------------------------
@@ -194,7 +196,7 @@
   width: 100vw;
   height: 1px;
   background-color: $gray;
-  margin-top: 5vh;
+  margin-top: 8vh;
 }
 // ================================================
 }

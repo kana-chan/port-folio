@@ -10,12 +10,22 @@ $(function(){
   });
 
 // contents================================================
+  $('.works__contentsBox__photoBlock').hover(
+    function(){
+      $(this).children()
+        .animate({width:'103%',height:'103%'})
+    },
+    function(){
+      $(this).children()
+      .animate({width:'100%',height:'100%'})
+    });
+// show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){
       $(this).children().children()
-        .animate({right:'-100%'},500)
+        .animate({right:'-100%'},300)
         .animate({right:'100%'},0)
-        .animate({right:'30%'},500)
+        .animate({right:'30%'},300)
     },
       function(){});
 // ================================================
