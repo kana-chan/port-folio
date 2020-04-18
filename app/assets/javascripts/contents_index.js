@@ -23,6 +23,20 @@ $(function(){
       $(this).children('.filter')
         .fadeOut();
     });
+// filer------------------------------------------------
+    $('.filter').on('click',function(){
+      var $terget = $(this).parents().siblings('.works__contentsBox__textBlock')
+      if ($terget.hasClass('open')){
+        $terget
+          .removeClass('open')
+          .slideUp(300);
+      }else{
+        $terget
+          .addClass('open')
+          .slideDown(300)
+          .css('display','flex');
+      }
+    });
 // show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){
