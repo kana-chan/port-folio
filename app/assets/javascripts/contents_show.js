@@ -30,7 +30,7 @@ $(function(){
       $('.btnWrapper--btn')
         .removeClass('active')
         .eq(btnIndex).addClass('active');
-      $('.contentBox__image')
+      $('.contentBox__info')
         .removeClass('active')
         .eq(btnIndex).addClass('active');
       if (btnIndex == 0){

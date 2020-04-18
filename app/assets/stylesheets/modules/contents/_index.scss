@@ -1,14 +1,13 @@
 #index{
   width: 80vw;
   margin: 0 auto;
-// top-contents------------------------------------------------
+// top-contents================================================================================================
 .top{
-  scroll-snap-align: start;
   width: 100%;
   height: 100vh;
   position: relative;
   &__nameBox{
-    display: none;
+    @include animation-blur;
     @include position-center;
     &--engineer{
       font-size: 20px;
@@ -20,64 +19,64 @@
     }
   }
 }
-// profile------------------------------------------------
+// main================================================================================================
+.main{
+  display: none;
+// profile================================================
 .profile{
-  scroll-snap-align: start;
-  padding-top: 8vh;
   width: 100%;
   // hedding------------------------------------------------
   &__hedding{
+    padding-top: 8vh;
+    text-align: center;
     width: 100%;
     height: 6vh;
     line-height: 6vh;
-    display: flex;
-    justify-content: space-between;
-    &--left{
-      font-size: 3vh;
-    }
-    &--right{
-      font-size: 2vh;
-    }
+    font-size: 5vh;
   }
-  // main------------------------------------------------
-  &__main{
-    margin:0 auto;
-    width:80%;
+  // tables------------------------------------------------
+  &__tables{
+    padding-top: 10vh;
+    width:100%;
     line-height: 4vh;
     font-size: 2vh;
-    &__box{
-      margin-bottom: 2vh;
-      &--hedding{
-        font-weight: bold;
-      }
+    text-align: center;
+    // background-color: gray;
+    table{
+      width: 40%;
+      margin: 3vh auto;
+    }
+    th{
+      font-weight: bold;
     }
   }
+  &__moreBtn{
+    width: 18vw;
+    height:10vh;
+    margin-left: auto;
+    position: relative;
+  }
 }
-.main{
-  display: none;
 // slills================================================
 .skills{
   padding-top: 8vh;
-  scroll-snap-align: start;
   width: 100%;
-  // background-color: red;
+  text-align: center;
   &__hedding{
-    // background-color: gray;
     width: 100%;
     height: 6vh;
-    font-size: 3vh;
+    font-size: 5vh;
     line-height: 6vh;
+    margin-bottom: 5vh;
   }
   &__topText{
-    // background-color: blue;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2vh;
-    line-height: 6vh;
+    line-height: 4vh;
     font-size: 2vh;
   }
   &__box{
-    // background-color:green;
     margin: 5vh auto 0;
     width: 70%;
     display: flex;
@@ -107,74 +106,118 @@
     }
   }
 }
-// works------------------------------------------------
+// works================================================================================================
 .works{
-  scroll-snap-align: start;
   padding-top: 8vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__hedding{
     width: 100%;
-    font-size: 3vh;
+    text-align: center;
+    font-size: 5vh;
   }
   &__contentsBox{
-    margin: 3vh auto 10vh;
-    width: 80%;
-    height: 65vh;
-    filter: grayscale(90%);
-    position: relative;
-    box-shadow: 0 0 5px $l_gray;
-    &:hover{
-      filter:grayscale(30%);
-      box-shadow: 0 0 10px $gray;
-    }
+    margin-top: 8vh;
+    width: 85%;
+    // photoblock------------------------------------------------
     &__photoBlock{
-      background-size: cover;
-      background-position: center;
       width: 100%;
-      height: 100%;
-    }
-    &__textBlock{
-      position: absolute;
-        top: 10%;
-        right: 5%;
-      width: 35%;
-      height: 80%;
-      background-color: rgba(#ffffff , 0.9);
-      border-radius: 5%;
-      padding-left: 1vw;
-      &--contentHedding{
-        width: 100%;
-        height: 8vh;
-        line-height: 8vh;
-        font-size: 3vh;
+      height: 50vh;
+      position: relative;
+      overflow: hidden;
+      img{
+        width:100%;
+        height:100%;
+        @include position-center;
       }
-      &__categoryWrapper{
-        width: 100%;
-        height: 4vh;
-        line-height: 4vh;
-        display: flex;
-        justify-content: start;
-        &--category{
-          border-radius: 5px;
-          margin-right: 3%;
-          text-align: center;
-          width: 20%;
-          height: 100%;
-          color: white;
+      &--filter{
+        display: none;
+        @include position-center;
+        width: 45vh;
+        height: 45vh;
+        line-height: 45vh;
+        text-align: center;
+        cursor: pointer;
+        font-size: 3vh;
+        color: $black;
+        background-color: rgba($color: white, $alpha: 0.95);
+        border: $black solid 0.5px;
+      }
+    }
+    // textblock------------------------------------------------
+    &__textBlock{
+      width: 100%;
+      height: 20vh;
+      display: none;
+      &__left{
+        width: 73.5%;
+        &--name{
+          height:12vh;
+          line-height: 12vh;
+          font-size: 2.7vh;
+          font-weight: bold;
+        }
+        table{
+          width: 100%;
+          height: 8vh;
+          font-size: 1.5vh;
+          th{
+            text-align: start;
+            width: 20%;
+          }
+          td{
+            color: $gray;
+          }
         }
       }
-      &--contentText{
-        padding: 2vh 1vh 0;
-        width: 100%;
-        height: 70%;
-        font-size: 2vh;
-        line-height: 4vh;
-        word-break: break-all;
+      &__right{
+        width: 26.5%;
+        position: relative;
       }
     }
   }
 }
+.separateLine{
+  width: 100vw;
+  height: 1px;
+  background-color: $gray;
+  margin-top: 8vh;
+}
 // ================================================
 }
 // ================================================
+}
+
+.linkBtn{
+  position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  width: 18vw;
+  height: 7.5vh;
+  line-height: 7.5vh;
+  padding: 0 1vw;
+  border: solid 0.1px $black;
+  p{
+    font-size: 1vh;
+  }
+  .arrow{
+    position: absolute;
+      top: 50%;
+      right: 0%;
+      transform:translateY(-50%);
+    width: 15%;
+    height: 100%;
+    font-size: 2em;
+    overflow: hidden;
+    i{
+      -webkit-text-stroke: 3.3px white;
+      position: absolute;
+        top: 50%;
+        right: 30%;
+        transform: translateY(-50%);
+    }
+  }
 }

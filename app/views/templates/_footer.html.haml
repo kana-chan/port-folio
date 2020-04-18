@@ -1,13 +1,18 @@
 #footer
   -if request.path == root_path 
     .footerLinks
-      .footerLinks--profile
-        Profile
-      .footerLinks--skills
-        Skills
-      .footerLinks--works
-        Works
+      .footerLinks--profile.jumpBtn
+        PROFILE
+        .footerLinks--line
+      .footerLinks--skills.jumpBtn
+        SKILLS
+        .footerLinks--line
+      .footerLinks--works.jumpBtn
+        WORKS
+        .footerLinks--line
   - else
     .footerLinks
-      =link_to("Back",root_path,class:"footerLinks--back")
+      .footerLinks--back.jumpBtn
+        =link_to("BACK",root_path)
+        .footerLinks--line
 
