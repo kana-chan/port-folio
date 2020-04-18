@@ -7,9 +7,9 @@
 // ================================================
 .skill{
   padding: 15% 0;
-  &--name{
+  &--name,&--number,&--icon{
     height: 5vh;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
   }
   &--color{
     input{
