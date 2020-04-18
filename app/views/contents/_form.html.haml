@@ -6,6 +6,12 @@
         .top__right--name
           %p アプリケーション名
           = f.text_field :name ,placeholder:"アプリケーション名"
+        .top__right--catchcopy
+          %p キャッチコピー
+          = f.text_field :catchcopy ,placeholder:"キャッチコピー"
+        .top__right--overview
+          %p キャッチコピー
+          = f.file_field :overview ,placeholder:"トップ画像"
         .top__right--link
           %p web-link
           = f.url_field :link,placeholder:"http:..."
