@@ -10,54 +10,14 @@ $(function(){
   });
 
 // contents================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   $('.works__contentsBox__photoBlock').hover(
-//     function(){
-//       $(this).children('.works__contentsBox__photoBlock__label').animate({bottom:'0'},200)
-//       $(this).parents().next('.works__linkBox')
-//         .css('backgroundColor','black')
-//         .css('color','white')
-//     },
-//     function(){
-//       $(this).children('.works__contentsBox__photoBlock__label').animate({bottom:'-20vh'},200)
-//       $(this).parents().next('.works__linkBox')
-//       .css('backgroundColor','white')
-//       .css('color','black')
-//     });
-// // links================================================
-//   $('.works__linkBox').hover(
-//     function(){
-//       $(this)
-//         .css('backgroundColor','black')
-//         .css('color','white')
-//     },
-//     function(){
-//       $(this)
-//         .css('backgroundColor','white')
-//         .css('color','black')
-//   });
+  $('.linkBtn').hover(
+    function(){
+      $(this).children().children()
+        .animate({right:'-100%'},500)
+        .animate({right:'100%'},0)
+        .animate({right:'30%'},500)
+    },
+      function(){});
 // ================================================
   }
 });
