@@ -13,13 +13,15 @@ $(function(){
   $('.works__contentsBox__photoBlock').hover(
     function(){
       $(this).children('img')
-        .animate({width:'103%',height:'103%'})
+        .animate({width:'102%',height:'102%'})
+        .css('filter','blur(2px)')
       $(this).children('.filter')
         .fadeIn();
     },
     function(){
       $(this).children('img')
         .animate({width:'100%',height:'100%'})
+        .css('filter','blur(0)')
       $(this).children('.filter')
         .fadeOut();
     });
