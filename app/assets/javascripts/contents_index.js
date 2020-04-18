@@ -12,12 +12,16 @@ $(function(){
 // contents================================================
   $('.works__contentsBox__photoBlock').hover(
     function(){
-      $(this).children()
+      $(this).children('img')
         .animate({width:'103%',height:'103%'})
+      $(this).children('.filter')
+        .fadeIn();
     },
     function(){
-      $(this).children()
-      .animate({width:'100%',height:'100%'})
+      $(this).children('img')
+        .animate({width:'100%',height:'100%'})
+      $(this).children('.filter')
+        .fadeOut();
     });
 // show moreボタン------------------------------------------------
   $('.linkBtn').hover(

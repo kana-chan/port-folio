@@ -126,13 +126,26 @@
         height:100%;
         @include position-center;
       }
+      &--filter{
+        display: none;
+        @include position-center;
+        width: 45vh;
+        height: 45vh;
+        line-height: 45vh;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 3vh;
+        color: $gray;
+        background-color: rgba($color:white, $alpha: 0.9);
+      }
     }
     // textblock------------------------------------------------
     &__textBlock{
       width: 100%;
       height: 20vh;
       display: flex;
-      // display: none;
+      display: none;
       &__left{
         width: 70%;
         &--name{

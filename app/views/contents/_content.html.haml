@@ -1,6 +1,8 @@
 .works__contentsBox
   .works__contentsBox__photoBlock
     =image_tag(content.infomations.first.image.to_s)
+    .works__contentsBox__photoBlock--filter.filter
+      =content.name
   .works__contentsBox__textBlock
     .works__contentsBox__textBlock__left
       .works__contentsBox__textBlock__left--name
