@@ -1,7 +1,7 @@
 #index{
   width: 80vw;
   margin: 0 auto;
-// top-contents------------------------------------------------
+// top-contents================================================================================================
 .top{
   width: 100%;
   height: 100vh;
@@ -19,32 +19,35 @@
     }
   }
 }
+// main================================================================================================
 .main{
   display: none;
-// profile------------------------------------------------
+// profile================================================
 .profile{
   width: 100%;
   // hedding------------------------------------------------
   &__hedding{
+    padding-top: 8vh;
     text-align: center;
     width: 100%;
     height: 6vh;
     line-height: 6vh;
     font-size: 5vh;
-    margin-bottom: 5vh;
   }
-  // main------------------------------------------------
-  &__main{
-    text-align: center;
-    margin:0 auto;
-    width:80%;
+  // tables------------------------------------------------
+  &__tables{
+    padding-top: 10vh;
+    width:100%;
     line-height: 4vh;
     font-size: 2vh;
-    &__box{
-      margin-bottom: 2vh;
-      &--hedding{
-        font-weight: bold;
-      }
+    text-align: center;
+    // background-color: gray;
+    table{
+      width: 40%;
+      margin: 3vh auto;
+    }
+    th{
+      font-weight: bold;
     }
   }
   &__moreBtn{

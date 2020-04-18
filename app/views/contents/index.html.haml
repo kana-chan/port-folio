@@ -12,33 +12,38 @@
     .profile
       .profile__hedding
         Profile
-      .profile__main
-        .profile__main__box
-          .profile__main__box--hedding
-            オカヤマ カナタ
-          .profile__main__box--birthDay
-            1992年6月9日生まれ、B型、双子座。
-        .profile__main__box
-          .profile__main__box--hedding
-            出身
-          .profile__main__box--from
-            大阪府大阪市西成区
-        .profile__main__box
-          .profile__main__box--hedding
-            略歴
-          .profile__main__box--Content1
-            2018年　同志社大学心理学部心理学科 卒業。
-          .profile__main__box--Content2
-            2018年　日本郵便株式会社 入社。
-          .profile__main__box--Content3
-            2020年　エンジニアを目指し学習開始。
-        .profile__main__box
-          .profile__main__box--hedding
-            趣味
-          .profile__main__box--hoby1
-            コーヒー　抽出だけでなく、焙煎やラテアートも。
-          .profile__main__box--hoby2
-            カメラ　最近始めたばかり。現像作業の勉強を開始。
+      .profile__tables
+        %table
+          %tr
+            %th オカヤマ カナタ
+          %tr
+            %td 1992年6月9日生まれ、B型、双子座。
+        %table
+          %tr
+            %th 出身
+          %tr
+            %td 大阪府大阪市西成区
+        %table
+          %tr
+            %th{colspan:2} 略歴
+          %tr
+            %td 2018年
+            %td 同志社大学心理学部心理学科 卒業。
+          %tr
+            %td 2018年
+            %td 日本郵便株式会社 入社。
+          %tr
+            %td 2020年
+            %td エンジニアを目指し学習開始。
+        %table
+          %tr
+            %th{colspan:2} 趣味
+          %tr
+            %td コーヒー
+            %td 抽出だけでなく、焙煎やラテアートも。
+          %tr
+            %td カメラ
+            %td 最近始めたばかり。現像作業の勉強を開始。
       .profile__moreBtn
         =link_to(profiles_path) do
           .profile__moreBtn--text.linkBtn
