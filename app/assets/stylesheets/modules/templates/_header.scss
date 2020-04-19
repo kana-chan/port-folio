@@ -10,17 +10,11 @@
     &--signedOut{
       color: white;
     }
-    &--signedIn{
-      &:hover{
-        font-weight: bold;
-        background-color: $gray;
-      }
-    }
   }
   .menu{
     display: flex;
     flex-direction: column;
-    &--contents,&--category{
+    &--contents,&--category,&--logout,&--edit{
       transform: rotate(45deg);
       margin-top: 5vh;
       &:hover{
