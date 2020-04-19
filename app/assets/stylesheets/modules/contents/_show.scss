@@ -32,7 +32,7 @@
 }
 // lower================================================
 .lowerBlock{
-  // display: none;
+  display: none;
   width: 100vw;
   height: 100vh;
   &__imagesBlock{
@@ -96,15 +96,23 @@
     width: 100vw;
     height: 40vh;
     padding: 0 15vh;
+    position: relative;
     &__infoBlock{
+      display: none;
       // background-color: red;
-      margin: 0 auto;
+      position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
       width: 60vw;
       height: 20vh;
     }
     &__linkBlock{
       // background-color: blue;
-      margin-left: 30vw;
+      position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
       width:45vw;
       height: 20vh;
       display: flex;

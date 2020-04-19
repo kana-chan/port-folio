@@ -13,18 +13,19 @@
       .lowerBlock__imagesBlock--bigDisplay
         .lowerBlock__imagesBlock--bigDisplay--wrapper.bigImage
           - @content.infomations.each_with_index do |info,i|
-            =image_tag(info.image.to_s,class:"image#{i}")
+            =image_tag(info.image.to_s,class:"index#{i}")
       .lowerBlock__imagesBlock--smallDisplay
         - @content.infomations.each_with_index do |info,i|
           .lowerBlock__imagesBlock--smallDisplay--wrapper.smallImage
-            =image_tag(info.image.to_s,class:"image#{i}")
+            =image_tag(info.image.to_s,class:"index#{i}")
             .viewing
               VIEWING
-    .lowerBlock__textBlock
-      %table.lowerBlock__textBlock__infoBlock
-        %tr
-          %th=@content.infomations.first.heading
-          %td=@content.infomations.first.text
+    .lowerBlock__textBlock.infomation
+      -@content.infomations.each_with_index do |info,i|
+        %table.lowerBlock__textBlock__infoBlock{class:"index#{i}"}
+          %tr
+            %th=info.heading
+            %td=info.text
       .lowerBlock__textBlock__linkBlock
         =link_to(@content.link)do
           .lowerBlock__textBlock__linkBlock--app
