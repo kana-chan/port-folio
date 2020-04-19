@@ -18,9 +18,12 @@
         .top__right--category
           %p カテゴリー選択
           = f.collection_check_boxes :category_ids, Category.all, :id, :name
-        .top__right--overview
+        .top__right--topImage
           %p トップ画像
-          = f.file_field :overview 
+          = f.file_field :topImage
+        .top__right--topText
+          %p トップテキスト
+          = f.text_field :topText ,placeholder:"トップテキスト"
     -# ================================================================================================
     -if @content.persisted?
       .infomation
@@ -42,7 +45,6 @@
     -else
       .infomation
         .infomation__previewBox
-          .infomation__previewBox--display
           .infomation__previewBox--display
           .infomation__previewBox--display
           .infomation__previewBox--display
@@ -80,13 +82,5 @@
                 = i.text_field :heading,placeholder:"画像4"
               .infomation__inputBox--text
                 = i.text_area :text,placeholder:"説明4"
-          = f.fields_for :infomations do |i|
-            .infomation__inputBox--form
-              .infomation__inputBox--image
-                = i.file_field :image
-              .infomation__inputBox--heading
-                = i.text_field :heading,placeholder:"画像5"
-              .infomation__inputBox--text
-                = i.text_area :text,placeholder:"説明5"
       .submit
         = f.submit

@@ -34,7 +34,8 @@ ActiveRecord::Schema.define(version: 2020_04_14_041825) do
     t.string "name", null: false
     t.string "link", null: false
     t.string "git", null: false
-    t.string "overview", null: false
+    t.string "topImage", null: false
+    t.string "topText", null: false
     t.string "catchcopy", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
