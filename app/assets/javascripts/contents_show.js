@@ -1,7 +1,8 @@
 $(function(){
   if (window.location.href.match(/\/contents\/\d+$/)) {
+// 初期値------------------------------------------------
     $('.smallImage').children('.image0').siblings('.viewing').show();
-    $('.smallImage').children('.image0').css('filter','blur(2px)')
+    $('.smallImage').children('.image0').css('filter','blur(2px)');
 // app名、画像が読み込まれてからスクロール可================================================
   // $('.upperBlock__name').fadeIn(3000)
   // setTimeout(function(){
