@@ -42,7 +42,8 @@ class ContentsController < ApplicationController
       :name,
       :link,
       :git,
-      :overview,
+      :topImage,
+      :topText,
       :catchcopy,
       category_ids:[],
       infomations_attributes:[:image,:text,:heading,:destroy,:id]

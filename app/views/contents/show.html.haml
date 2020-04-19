@@ -1,38 +1,47 @@
 #show
-  .header
-    .header--name
-      = @content.name
-    =link_to("Link",@content.link,class:"header--link")
-    =link_to("git",@content.git,class:"header--git")
-  .slide
-    =fa_icon "chevron-left",class:"back"
-    =fa_icon "chevron-right",class:"next"
-  %ul.contentBox
-    %li.contentBox__info.active
-      -# .contentBox__info--heading
-      -#   = @content.infomations.first.heading
-      =image_tag(@content.infomations.first.image.to_s)
-    %li.contentBox__info
-      -# .contentBox__info--heading
-      -#   = @content.infomations.second.heading
-      =image_tag(@content.infomations.second.image.to_s)
-    %li.contentBox__info
-      -# .contentBox__info--heading
-      -#   = @content.infomations.third.heading
-      =image_tag(@content.infomations.third.image.to_s)
-    %li.contentBox__info
-      -# .contentBox__info--heading
-      -#   = @content.infomations.fourth.heading
-      =image_tag(@content.infomations.fourth.image.to_s)
-    %li.contentBox__info
-      -# .contentBox__info--heading
-      -#   = @content.infomations.fifth.heading
-      =image_tag(@content.infomations.fifth.image.to_s)
-  %ul.btnWrapper
-    %li.btnWrapper--btn.active
-    %li.btnWrapper--btn
-    %li.btnWrapper--btn
-    %li.btnWrapper--btn
-    %li.btnWrapper--btn
-  -# ================================================
-  =render "/templates/footer"
+  .upperBlock
+    .upperBlock__name
+      =@content.name
+    .upperBlock__overview
+      =image_tag(@content.topImage.to_s)
+    %table.upperBlock__contentBox
+      %tr
+        %th=@content.name
+        %td=@content.topText
+  .lowerBlock
+    .lowerBlock__imagesBlock
+      .lowerBlock__imagesBlock--bigDisplay
+        .lowerBlock__imagesBlock--bigDisplay--wrapper.bigImage
+          - @content.infomations.each_with_index do |info,i|
+            =image_tag(info.image.to_s,class:"index#{i}")
+      .lowerBlock__imagesBlock--smallDisplay
+        - @content.infomations.each_with_index do |info,i|
+          .lowerBlock__imagesBlock--smallDisplay--wrapper.smallImage
+            =image_tag(info.image.to_s,class:"index#{i}")
+            .viewing
+              VIEWING
+    .lowerBlock__textBlock.infomation
+      -@content.infomations.each_with_index do |info,i|
+        %table.lowerBlock__textBlock__infoBlock{class:"index#{i}"}
+          %tr
+            %th=info.heading
+            %td=info.text
+      .lowerBlock__textBlock__linkBlock
+        =link_to(@content.link)do
+          .lowerBlock__textBlock__linkBlock--app
+            .lowerBlock__textBlock__linkBlock--app--text.linkBtn
+              %p VIEW SITE
+              .lowerBlock__textBlock__linkBlock--app--icon.arrow
+                =fa_icon "long-arrow-right"
+        .lowerBlock__textBlock__linkBlock--git
+          =link_to(@content.git)do
+            .lowerBlock__textBlock__linkBlock--git--text.linkBtn
+              %p VIEW GIT
+              .lowerBlock__textBlock__linkBlock--git--icon.arrow
+                =fa_icon "long-arrow-right"
+-# ================================================
+= render "/templates/footer"
+
+
+
+

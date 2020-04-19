@@ -1,49 +1,54 @@
 $(function(){
   if (window.location.href.match(/\/contents\/\d+$/)) {
-// ------------------------------------------------
-    $('.next').on('click',function(){
-      var nowActive = $('.active')
-      nowActive
-        .removeClass('active')
-        .next().addClass('active');
-      if (nowActive.index() == 0 ){
-        $('.back').fadeIn();
-      }else if(nowActive.index() == 3){
-        $('.next').hide();
-      };
+// 初期値------------------------------------------------
+    $('.smallImage').children('.index0').siblings('.viewing').show();
+    $('.smallImage').children('.index0').css('filter','blur(2px)');
+    $('.infomation').children('.index0').show();
+// app名、画像が読み込まれてからスクロール可================================================
+  $('.upperBlock__name').fadeIn(3000)
+  setTimeout(function(){
+    $.when(
+      $('.upperBlock__name').fadeOut(2000),
+      $('.upperBlock__overview').fadeIn(3000),
+      $('.upperBlock__contentBox').fadeIn(3000)
+    ).done(function(){
+      $('.lowerBlock').show();
+      $('#footer').show();
     });
-// ------------------------------------------------
-    $('.back').on('click',function(){
-      var nowActive = $('.active')
-      nowActive
-        .removeClass('active')
-        .prev().addClass('active');
-      if (nowActive.index() == 4){
-        $('.next').fadeIn();
-      } else if (nowActive.index() == 1){
-        $('.back').hide();
-      }
+  },3000);
+// image hover================================================
+  $('.smallImage').hover(
+    function(){
+      $(this).children('img').animate({height:'13.5vw'})
+    },
+    function(){
+      $(this).children('img').animate({height:'13vw'})
     });
-// ------------------------------------------------
-    $('.btnWrapper--btn').on('click',function(){
-      var btnIndex = $(this).index();
-      $('.btnWrapper--btn')
-        .removeClass('active')
-        .eq(btnIndex).addClass('active');
-      $('.contentBox__info')
-        .removeClass('active')
-        .eq(btnIndex).addClass('active');
-      if (btnIndex == 0){
-        $('.back').fadeOut();
-        $('.next').fadeIn();
-      }else if (btnIndex == 4){
-        $('.back').fadeIn();
-        $('.next').fadeOut();
-      } else{
-        $('.back').fadeIn();
-        $('.next').fadeIn();
-      }
-    });
+// click でフィルターの表示等================================================
+    $('.smallImage').on('click',function(){
+      $('.viewing').hide()
+      $('.smallImage').children('img').css('filter','blur(0)')
+      $(this).children('.viewing').show();
+      $(this).children('img').css('filter','blur(2px)')
+      $('.infomation').children('table').hide();
+// click でbigDisplayにうつされる------------------------------------------------
+      var imageName = $(this).children('img').attr('class')
+      var tergetPosition = $('.bigImage').children(`.${imageName}`).offset().left;
+      var basePosition = $('.bigImage').children('.index0').offset().left;
+      var imagePosition = basePosition - tergetPosition
+      $('.bigImage').animate({left:imagePosition})
+// click でinfomationが切り替わる------------------------------------------------
+      $('.infomation').children(`.${imageName}`).fadeIn();
+    })
+// show moreボタン================================================
+  $('.linkBtn').hover(
+    function(){
+        $(this).children().children()
+          .animate({right:'-100%'},300)
+          .animate({right:'100%'},0)
+          .animate({right:'30%'},300)
+      },
+      function(){});
 // ------------------------------------------------
   }
-})
+});

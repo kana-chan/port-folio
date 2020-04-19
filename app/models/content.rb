@@ -1,5 +1,5 @@
 class Content < ApplicationRecord
-  mount_uploader :overview, ImageUploader
+  mount_uploader :topImage, ImageUploader
 
   has_many :infomations,dependent: :delete_all 
     accepts_nested_attributes_for :infomations,allow_destroy: true
