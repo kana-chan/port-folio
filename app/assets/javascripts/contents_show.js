@@ -44,6 +44,15 @@ $(function(){
         $('.next').fadeIn();
       }
     });
+// show moreボタン------------------------------------------------
+  $('.linkBtn').hover(
+    function(){
+      $(this).children().children()
+        .animate({right:'-100%'},300)
+        .animate({right:'100%'},0)
+        .animate({right:'30%'},300)
+    },
+      function(){});
 // ------------------------------------------------
   }
 })

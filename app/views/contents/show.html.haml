@@ -4,9 +4,10 @@
       =@content.name
     .upperBlock__overview
       =image_tag(@content.topImage.to_s)
-  .middleBlock
-    .middleBlock--contentBox
-      =@content.topText
+    %table.upperBlock__contentBox
+      %tr
+        %th=@content.name
+        %td=@content.topText
   .lowerBlock
     .lowerBlock__imagesBlock
       .lowerBlock__imagesBlock--bigDisplay
@@ -17,5 +18,27 @@
         - @content.infomations.each_with_index do |info,i|
           .lowerBlock__imagesBlock--smallDisplay--wrapper
             =image_tag(info.image.to_s,class:"image#{i}")
+    .lowerBlock__textBlock
+      %table.lowerBlock__textBlock__infoBlock
+        %tr
+          %th=@content.infomations.first.heading
+          %td=@content.infomations.first.text
+      .lowerBlock__textBlock__linkBlock
+        =link_to(@content.link)do
+          .lowerBlock__textBlock__linkBlock--app
+            .lowerBlock__textBlock__linkBlock--app--text.linkBtn
+              %p Go APP
+              .lowerBlock__textBlock__linkBlock--app--icon.arrow
+                =fa_icon "long-arrow-right"
+        .lowerBlock__textBlock__linkBlock--git
+          =link_to(@content.git)do
+            .lowerBlock__textBlock__linkBlock--git--text.linkBtn
+              %p GO GIT
+              .lowerBlock__textBlock__linkBlock--git--icon.arrow
+                =fa_icon "long-arrow-right"
   -# ================================================
-  =render "/templates/footer"
+  = render "/templates/footer"
+
+
+
+
