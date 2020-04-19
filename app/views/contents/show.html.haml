@@ -3,61 +3,19 @@
     .upperBlock__name
       =@content.name
     .upperBlock__overview
-      =image_tag(@content.overview.to_s)
+      =image_tag(@content.topImage.to_s)
   .middleBlock
     .middleBlock--contentBox
-      あああああああああああああああああああああああああああああああああああああああああああああああああああ
+      =@content.topText
   .lowerBlock
     .lowerBlock__imagesBlock
       .lowerBlock__imagesBlock--bigDisplay
         .lowerBlock__imagesBlock--bigDisplay--wrapper
-          - @content.infomations.each do |info|
-            =image_tag(info.image.to_s)
+          - @content.infomations.each_with_index do |info,i|
+            =image_tag(info.image.to_s,class:"image#{i}")
       .lowerBlock__imagesBlock--smallDisplay
-        .lowerBlock__imagesBlock--smallDisplay--wrapper
-        .lowerBlock__imagesBlock--smallDisplay--wrapper
-        .lowerBlock__imagesBlock--smallDisplay--wrapper
-        .lowerBlock__imagesBlock--smallDisplay--wrapper
-
-
-
-
-
-
-
-
-
-
-        
-    -# .slide
-      =fa_icon "chevron-left",class:"back"
-      =fa_icon "chevron-right",class:"next"
-    -# %ul.contentBox
-      %li.contentBox__info.active
-        .contentBox__info--heading
-          = @content.infomations.first.heading
-        =image_tag(@content.infomations.first.image.to_s)
-      %li.contentBox__info
-        .contentBox__info--heading
-          = @content.infomations.second.heading
-        =image_tag(@content.infomations.second.image.to_s)
-      %li.contentBox__info
-        .contentBox__info--heading
-          = @content.infomations.third.heading
-        =image_tag(@content.infomations.third.image.to_s)
-      %li.contentBox__info
-        .contentBox__info--heading
-          = @content.infomations.fourth.heading
-        =image_tag(@content.infomations.fourth.image.to_s)
-      %li.contentBox__info
-        .contentBox__info--heading
-          = @content.infomations.fifth.heading
-        =image_tag(@content.infomations.fifth.image.to_s)
-    -# %ul.btnWrapper
-      %li.btnWrapper--btn.active
-      %li.btnWrapper--btn
-      %li.btnWrapper--btn
-      %li.btnWrapper--btn
-      %li.btnWrapper--btn
+        - @content.infomations.each_with_index do |info,i|
+          .lowerBlock__imagesBlock--smallDisplay--wrapper
+            =image_tag(info.image.to_s,class:"image#{i}")
   -# ================================================
   =render "/templates/footer"
