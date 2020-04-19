@@ -2,6 +2,12 @@
   =form_with model: @content, local: true do |f|
     .top
       .top__left
+        .top__left--topImage
+          %p トップ画像
+          = f.file_field :topImage
+        .top__left--topText
+          %p トップテキスト
+          = f.text_area :topText ,placeholder:"トップテキスト"
       .top__right
         .top__right--name
           %p アプリケーション名
@@ -18,12 +24,6 @@
         .top__right--category
           %p カテゴリー選択
           = f.collection_check_boxes :category_ids, Category.all, :id, :name
-        .top__right--topImage
-          %p トップ画像
-          = f.file_field :topImage
-        .top__right--topText
-          %p トップテキスト
-          = f.text_field :topText ,placeholder:"トップテキスト"
     -# ================================================================================================
     -if @content.persisted?
       .infomation
