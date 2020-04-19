@@ -1,27 +1,17 @@
 $(function(){
   if (window.location.href.match(/\/contents\/\d+$/)) {
-// ------------------------------------------------
-  $.when(
-    $('.upperBlock__name').fadeIn(3000)
-  ).done(function(){
-    $('.upperBlock__overview').fadeIn(3000)
-    $('.upperBlock__contentBox').fadeIn(3000)
-    $('.lowerBlock').show();
-    $('#footer').show();
-    console.log("yes"); 
-  });
-
-
-
-
-
-
-
-
-
-
-
-
+// app名、画像が読み込まれてからスクロール可------------------------------------------------
+  $('.upperBlock__name').fadeIn(3000)
+  setTimeout(function(){
+    $.when(
+      $('.upperBlock__name').fadeOut(2000),
+      $('.upperBlock__overview').fadeIn(3000),
+      $('.upperBlock__contentBox').fadeIn(3000)
+    ).done(function(){
+      $('.lowerBlock').show();
+      $('#footer').show();
+    });
+  },3000);
 
 // show moreボタン------------------------------------------------
 $('.linkBtn').hover(
