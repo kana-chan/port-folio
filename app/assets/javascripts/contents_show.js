@@ -15,8 +15,7 @@ $(function(){
   //     $('#footer').show();
   //   });
   // },3000);
-// image関係================================================
-// hover------------------------------------------------
+// image hover================================================
   $('.smallImage').hover(
     function(){
       $(this).children('img').animate({height:'13.5vw'})
@@ -24,12 +23,18 @@ $(function(){
     function(){
       $(this).children('img').animate({height:'13vw'})
     });
-    // click------------------------------------------------
+// click でフィルターの表示等================================================
     $('.smallImage').on('click',function(){
       $('.viewing').hide()
       $('.smallImage').children('img').css('filter','blur(0)')
       $(this).children('.viewing').show();
       $(this).children('img').css('filter','blur(2px)')
+// click でbigDisplayにうつされる------------------------------------------------
+      var imageName = $(this).children('img').attr('class')
+      var tergetPosition = $('.bigImage').children(`.${imageName}`).offset().left;
+      var basePosition = $('.bigImage').children('.image0').offset().left;
+      var imagePosition = basePosition - tergetPosition
+      $('.bigImage').animate({left:imagePosition})
     })
 // show moreボタン================================================
   $('.linkBtn').hover(

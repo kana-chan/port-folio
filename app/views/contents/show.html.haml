@@ -11,7 +11,7 @@
   .lowerBlock
     .lowerBlock__imagesBlock
       .lowerBlock__imagesBlock--bigDisplay
-        .lowerBlock__imagesBlock--bigDisplay--wrapper
+        .lowerBlock__imagesBlock--bigDisplay--wrapper.bigImage
           - @content.infomations.each_with_index do |info,i|
             =image_tag(info.image.to_s,class:"image#{i}")
       .lowerBlock__imagesBlock--smallDisplay
