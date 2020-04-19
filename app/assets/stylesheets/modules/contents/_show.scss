@@ -5,6 +5,7 @@
   width: 100vw;
   position: relative;
   &__name{
+    font-size: 35px;
     @include position-center;
     @include animation-blur;
   }
@@ -31,7 +32,7 @@
 }
 // lower================================================
 .lowerBlock{
-  display: none;
+  // display: none;
   width: 100vw;
   height: 100vh;
   &__imagesBlock{
@@ -74,9 +75,19 @@
         position: relative;
         overflow: hidden;
         img{
-          @include position_center;
+          @include position-center;
           width:auto;
           height: 13vw;
+        }
+        .viewing{
+          @include position-center;
+          display: none;
+          background-color:rgba(white,0.9);
+          border: solid 0.5px $black;
+          text-align: center;
+          line-height: 11vw;
+          width: 11vw;
+          height: 11vw;
         }
       }
     }
@@ -92,8 +103,9 @@
       height: 20vh;
     }
     &__linkBlock{
-      margin: 0 auto;
-      width:60vw;
+      // background-color: blue;
+      margin-left: 30vw;
+      width:45vw;
       height: 20vh;
       display: flex;
         justify-content: space-evenly;
