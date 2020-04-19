@@ -1,38 +1,57 @@
 #show
-  .header
-    .header--name
-      = @content.name
-    =link_to("Link",@content.link,class:"header--link")
-    =link_to("git",@content.git,class:"header--git")
-  .slide
-    =fa_icon "chevron-left",class:"back"
-    =fa_icon "chevron-right",class:"next"
-  %ul.contentBox
-    %li.contentBox__info.active
-      -# .contentBox__info--heading
-      -#   = @content.infomations.first.heading
-      =image_tag(@content.infomations.first.image.to_s)
-    %li.contentBox__info
-      -# .contentBox__info--heading
-      -#   = @content.infomations.second.heading
-      =image_tag(@content.infomations.second.image.to_s)
-    %li.contentBox__info
-      -# .contentBox__info--heading
-      -#   = @content.infomations.third.heading
-      =image_tag(@content.infomations.third.image.to_s)
-    %li.contentBox__info
-      -# .contentBox__info--heading
-      -#   = @content.infomations.fourth.heading
-      =image_tag(@content.infomations.fourth.image.to_s)
-    %li.contentBox__info
-      -# .contentBox__info--heading
-      -#   = @content.infomations.fifth.heading
-      =image_tag(@content.infomations.fifth.image.to_s)
-  %ul.btnWrapper
-    %li.btnWrapper--btn.active
-    %li.btnWrapper--btn
-    %li.btnWrapper--btn
-    %li.btnWrapper--btn
-    %li.btnWrapper--btn
+  .upperBlock
+    .upperBlock__name
+      =@content.name
+    .upperBlock__overview
+      =image_tag(@content.overview.to_s)
+  .middleBlock
+    .middleBlock--contentBox
+      あああああああああああああああああああああああああああああああああああああああああああああああああああ
+  .lowerBlock
+    .lowerBlock__imagesBlock
+      .lowerBlock__imagesBlock--bigDisplay
+        .lowerBlock__imagesBlock--bigDisplay--wrapper
+          - @content.infomations.each do |info|
+            =image_tag(info.image.to_s)
+      .lowerBlock__imagesBlock--smallDisplay
+        .lowerBlock__imagesBlock--smallDisplay--wrapper
+        .lowerBlock__imagesBlock--smallDisplay--wrapper
+        .lowerBlock__imagesBlock--smallDisplay--wrapper
+        .lowerBlock__imagesBlock--smallDisplay--wrapper
+
+
+
+
+
+    -# .slide
+      =fa_icon "chevron-left",class:"back"
+      =fa_icon "chevron-right",class:"next"
+    -# %ul.contentBox
+      %li.contentBox__info.active
+        .contentBox__info--heading
+          = @content.infomations.first.heading
+        =image_tag(@content.infomations.first.image.to_s)
+      %li.contentBox__info
+        .contentBox__info--heading
+          = @content.infomations.second.heading
+        =image_tag(@content.infomations.second.image.to_s)
+      %li.contentBox__info
+        .contentBox__info--heading
+          = @content.infomations.third.heading
+        =image_tag(@content.infomations.third.image.to_s)
+      %li.contentBox__info
+        .contentBox__info--heading
+          = @content.infomations.fourth.heading
+        =image_tag(@content.infomations.fourth.image.to_s)
+      %li.contentBox__info
+        .contentBox__info--heading
+          = @content.infomations.fifth.heading
+        =image_tag(@content.infomations.fifth.image.to_s)
+    -# %ul.btnWrapper
+      %li.btnWrapper--btn.active
+      %li.btnWrapper--btn
+      %li.btnWrapper--btn
+      %li.btnWrapper--btn
+      %li.btnWrapper--btn
   -# ================================================
   =render "/templates/footer"
