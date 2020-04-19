@@ -5,9 +5,11 @@
   width: 100vw;
   position: relative;
   &__name{
-    @include position_center;
+    @include position-center;
+    @include animation-blur;
   }
   &__overview{
+    @include animation-blur;
     position: absolute;
       top: 10vh;
     width: 100vw;
@@ -18,6 +20,7 @@
     }
   }
   &__contentBox{
+    @include animation-blur;
     position: absolute;
       top: 75vh;
       left: 50%;
@@ -28,6 +31,7 @@
 }
 // lower================================================
 .lowerBlock{
+  display: none;
   width: 100vw;
   height: 100vh;
   &__imagesBlock{
