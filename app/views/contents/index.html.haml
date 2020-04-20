@@ -61,14 +61,12 @@
         -if user_signed_in?
           - @categories.each do |category|
             =link_to(edit_category_path(category.id),class:"skills__box__content") do
-              .skills__box__content--name
-                = category.name
-                =image_tag(category.icon)
-        -else
-          - @categories.each do |category|
-            .skills__box__content
-              .skills__box__content--name
-                = category.name
+              =image_tag(category.icon,class:"skills__box__content--icon")
+        -# -else
+        -#   - @categories.each do |category|
+        -#     .skills__box__content
+        -#       .skills__box__content--name
+        -#         = category.name
     -# works================================================
     .works
       .works__hedding

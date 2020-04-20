@@ -79,31 +79,30 @@
   &__box{
     background-color: red;
     margin: 5vh auto 0;
-    width: 70%;
+    width: 101vh;
     display: flex;
       justify-content: left;
       flex-wrap: wrap;
       align-items: center;
     &__content{
-      background-color: blue;
+      background-color: $gray;
       // background-color: white;
-      border: 1px solid $black;
-      color: $black;
-      border-radius: 10px;
+      border-radius: 100%;
       width: 15vh;
       height: 15vh;
-      margin:2.5vh 2.5vh 2.5vh;
-      display: flex;
-        align-items: center;
-      &--name{
-        margin: 0 auto;
-      }
-      &:hover{
-        width: 20vh;
-        height: 20vh;
-        margin: 0;
-        font-size: 4vh;
-        border: 3px solid $black;
+      margin:5vh;
+      position: relative;
+      // &:hover{
+      //   width: 25vh;
+      //   height: 25vh;
+      //   margin: 0;
+      //   border: 3px solid $black;
+      // }
+      img{
+        @include position-center;
+        filter: brightness(0) invert(1);
+        width: 30%;
+        height: 30%;
       }
     }
   }
