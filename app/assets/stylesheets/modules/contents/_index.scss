@@ -77,7 +77,6 @@
     font-size: 2vh;
   }
   &__box{
-    background-color: red;
     margin: 5vh auto 0;
     width: 101vh;
     display: flex;
@@ -85,24 +84,26 @@
       flex-wrap: wrap;
       align-items: center;
     &__content{
-      background-color: $gray;
-      // background-color: white;
+      background-color: gray;
       border-radius: 100%;
       width: 15vh;
       height: 15vh;
       margin:5vh;
       position: relative;
-      // &:hover{
-      //   width: 25vh;
-      //   height: 25vh;
-      //   margin: 0;
-      //   border: 3px solid $black;
-      // }
+      &--filter{
+        @include position-center;
+          z-index: 1;
+        width: 101%;
+        height: 101%;
+        border-radius: 100%;
+        background-color: gray;
+      }
       img{
         @include position-center;
+          z-index: 2;
         filter: brightness(0) invert(1);
-        width: 30%;
-        height: 30%;
+        width: 5vh;
+        height: 5vh;
       }
     }
   }
