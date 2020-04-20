@@ -2,7 +2,7 @@ $(function(){
   if(window.location.href.match(/\/$/)) {
 // topの画像が読み込まれてから、スクロール可================================================
   $.when(
-    $('.top__nameBox').fadeIn(4000)
+    // $('.top__nameBox').fadeIn(4000)
   ).done(function(){
     $('.main').show();
     $('.login').hide();
