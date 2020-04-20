@@ -42,18 +42,15 @@ $(function(){
 // skills================================================
     $('.skills__box__content').hover(
       function(){
-        $(this).animate({width:'25vh',height:'25vh',margin:'0',borderRadius:'10%'},200)
-        $(this).children('.filter')
-          .animate({borderRadius:'10%',opacity:'0'},200)
+        $(this).animate({width:'25vh',height:'25vh',margin:'0',borderRadius:'10px',borderWidth:'3px'},200)
+        $(this).children('.name').animate({right:'10%'})
         $(this).children('img').animate({top:'20%',left:'20%'},200)
       },
       function(){
-        $(this).animate({width:'15vh',height:'15vh',margin:'5vh',borderRadius:'100%'},200)
-        $(this).children('.filter')
-          .animate({borderRadius:'100%',opacity:'1'},200)
+        $(this).animate({width:'15vh',height:'15vh',margin:'5vh',borderRadius:'100px',borderWidth:'0'},200)
+        $(this).children('.name').animate({right:'100%'},0)
         $(this).children('img').animate({top:'50%',left:'50%'},150)
       });
-
 // show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){

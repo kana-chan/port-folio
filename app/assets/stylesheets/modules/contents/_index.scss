@@ -85,26 +85,31 @@
       align-items: center;
     &__content{
       background-color: gray;
+      border-style: solid;
+      border-width: 0;
       border-radius: 100%;
       width: 15vh;
       height: 15vh;
-      margin:5vh;
+      margin: 5vh;
       position: relative;
-      &--filter{
-        @include position-center;
-          z-index: 1;
-        width: 101%;
-        height: 101%;
-        border-radius: 100%;
-        background-color: gray;
+      overflow: hidden;
+      cursor: pointer;
+      &--name{
+        font-size: 3vh;
+        color: white;
+        position: absolute;
+          bottom: 5%;
+          right: 100%;
+          z-index: 3;
       }
       img{
         @include position-center;
-          z-index: 2;
+          z-index: 3;
         filter: brightness(0) invert(1);
         width: 5vh;
         height: 5vh;
       }
+
     }
   }
 }
