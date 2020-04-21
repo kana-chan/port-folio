@@ -151,11 +151,48 @@
         width: 60%;
         height: 90%;
         background-color: white;
-        &--content{
-          width: 100%;
+        &__content{
+          width: 40%;
           height: 5vh;
           line-height: 5vh;
-          // background-color: blue;
+          margin: 1vh auto;
+          // background-color: yellow;
+          position: relative;
+          &--circle{
+            position: absolute;
+              top: 50%;
+              left: 6%;
+              transform: translateY(-50%)translateX(-50%);
+              border-radius: 50%;
+            filter: brightness(0) invert(0.5);
+            width: 1vh;
+            height: 1vh;
+          }
+          &--name{
+            position: absolute;
+              top: 0;
+              left: 5vh;
+            text-align: left;
+            width: 60%;
+            height: 5vh;
+            // background-color: blue;
+          }
+          &--arrow{
+            position: absolute;
+              top: 0;
+              right: 0;
+            width: 6vh;
+            height: 5vh;
+            font-size: 2em;
+            overflow: hidden;
+            i{
+              -webkit-text-stroke: 3.3px white;
+              position: absolute;
+                top: 50%;
+                right: 30%;
+                transform: translateY(-50%);
+            }
+          }
         }
       }
     }

@@ -59,7 +59,7 @@ $(function(){
           $(this).next('.modal').animate({left:'-22.5vw'},300)
         });
       });
-
+// undo btn------------------------------------------------
       $('.modal__undoBtn').hover(
         function(){
           $(this).css('transform','rotate(225deg)')
@@ -78,7 +78,23 @@ $(function(){
             .animate({left:'-125vw'},0)
         });
       })
-// show moreボタン------------------------------------------------
+// ------------------------------------------------
+      $('.modal__linkBox__content a').hover(
+        function(){
+          $(this).prev()
+            .css('filter','none')
+            .animate({width:'1.5vh',height:'1.5vh'},200)
+          $(this).next().children()
+            .animate({right:'-100%'},300)
+            .animate({right:'100%'},0)
+            .animate({right:'30%'},300)
+        },
+        function(){
+          $(this).prev()
+            .css('filter','brightness(0) invert(0.5)')
+            .animate({width:'1vh',height:'1vh'},200)
+        });
+      // show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){
       $(this).children().children()
