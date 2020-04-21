@@ -59,10 +59,20 @@
         %br 実務経験はまだありませんが、現時点での "オカヤマ カナタ" のスキルです。
       .skills__box
         - @categories.each do |category|
-          .skills__box__content{ style: "border-color:#{category.color}" }
+          .skills__box__content
             .skills__box__content--name.name
               =category.name
             =image_tag(category.icon,class:"skills__box__content--icon")
+          .colorLabel{ style: "background-color:#{category.color}" }
+          .modal
+            .modal__topName
+              =category.name
+            .modal__undoBtn
+              =fa_icon "plus"
+            .modal__linkBox
+              -category.contents.each do |content|
+                .modal__linkBox--content
+                  =link_to("#{content.name}",content_path(content.id))
     -# works================================================
     .works
       .works__hedding

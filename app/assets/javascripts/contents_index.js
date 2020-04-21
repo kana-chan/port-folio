@@ -51,6 +51,33 @@ $(function(){
         $(this).children('.name').animate({right:'100%'},0)
         $(this).children('img').animate({top:'50%',left:'50%'},150)
       });
+// modal------------------------------------------------
+      $('.skills__box__content').on('click',function(){
+        $.when(
+          $(this).next('.colorLabel').animate({left:'-22.5vw'},300)
+        ).done(function(){
+          $(this).next('.modal').animate({left:'-22.5vw'},300)
+        });
+      });
+
+      $('.modal__undoBtn').hover(
+        function(){
+          $(this).css('transform','rotate(225deg)')
+        },
+        function(){
+          $(this).css('transform','rotate(45deg)')
+        });
+      $('.modal__undoBtn').on('click',function(){
+        $.when(
+          $(this).parent()
+            .animate({left:'125vw'},300)
+            .animate({left:'-125vw'},0)
+        ).done(function(){
+          $(this).prev('.colorLabel')
+            .animate({left:'125vw'},300)
+            .animate({left:'-125vw'},0)
+        });
+      })
 // show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){
