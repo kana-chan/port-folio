@@ -57,59 +57,39 @@
       .skills__topText
         2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。
         %br 実務経験はまだありませんが、現時点での "オカヤマ カナタ" のスキルです。
-      .skills__box
-        - @categories.each do |category|
-          .skills__box__content
-            .skills__box__content--name.name
-              =category.name
-            =image_tag(category.icon,class:"skills__box__content--icon")
-          .colorLabel{ style: "background-color:#{category.color}" }
-          .modal
-            -if user_signed_in?
-              =link_to(edit_category_path(category.id)) do
-                .modal__topName
-                  =category.name
-            - else
-              .modal__topName
+
+      .skills__wrapper
+        -@categories.each do |category|
+          .skills__wrapper__contentBox
+            .skills__wrapper__contentBox__skillBlock.skillBlock
+              .skills__wrapper__contentBox__skillBlock__sideIcon{style:"background-color: #{category.color}"}
+                =image_tag(category.icon)
+              .skills__wrapper__contentBox__skillBlock__name
                 =category.name
-            .modal__undoBtn
+              .skills__wrapper__contentBox__skillBlock__btn
+                =fa_icon "plus"
+            .skills__wrapper__contentBox__linkBlock.linkBlock
+              -category.contents.each do |apps|
+                .skills__wrapper__contentBox__linkBlock__contentRow
+                  .skills__wrapper__contentBox__linkBlock__contentRow--circle{style:"background-color: #{category.color}"}
+                  .skills__wrapper__contentBox__linkBlock__contentRow--name
+                    =apps.name
+                  .skills__wrapper__contentBox__linkBlock__contentRow--arrow
+                    =fa_icon "long-arrow-right"
+
+        .skills__wrapper__contentBox
+          .skills__wrapper__contentBox__skillBlock.skillBlock
+            .skills__wrapper__contentBox__skillBlock__sideIcon{style:"background-color: black"}
+              =image_tag("icons/git.png")
+            .skills__wrapper__contentBox__skillBlock__name
+              OTHER SKILLS
+            .skills__wrapper__contentBox__skillBlock__btn
               =fa_icon "plus"
-            .modal__linkBox
-              -if category.contents.present?
-                -category.contents.each do |content|
-                  .modal__linkBox__content
-                    .modal__linkBox__content--circle{ style: "background-color:#{category.color}" }
-                    =link_to(content_path(content.id)) do
-                      .modal__linkBox__content--name
-                        =content.name
-                    .modal__linkBox__content--arrow.arrow
-                      =fa_icon "long-arrow-right"
-              -else
-                .modal__linkBox__content
-                  .modal__linkBox__content--circle
-                  .modal__linkBox__content--name
-                    I'm studying and developing now
-
-        .skills__box__content
-          .skills__box__content--name.name
-            ORHERS
-          =image_tag("icons/git.png",class:"skills__box__content--icon")
-        .colorLabel{ style: "background-color:black" }
-        .modal
-          .modal__topName
-            OTHERS
-          .modal__undoBtn
-            =fa_icon "plus"
-          .modal__linkBox
-            .modal__linkBox__content
-              .modal__linkBox__content--circle{ style: "background-color:black" }
-              .modal__linkBox__content--name
-                Git/Github
-            .modal__linkBox__content
-              .modal__linkBox__content--circle{ style: "background-color:black" }
-              .modal__linkBox__content--name
-                SQL
-
+          .skills__wrapper__contentBox__linkBlock.linkBlock
+            .skills__wrapper__contentBox__linkBlock__contentRow
+              .skills__wrapper__contentBox__linkBlock__contentRow--circle
+              .skills__wrapper__contentBox__linkBlock__contentRow--name
+                ruby on rails
     -# works================================================
     .works
       .works__hedding

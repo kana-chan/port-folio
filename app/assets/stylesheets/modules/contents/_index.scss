@@ -1,9 +1,8 @@
 #index{
-  width: 80vw;
-  margin: 0 auto;
 // top-contents================================================================================================
 .top{
-  width: 100%;
+  margin: 0 auto;
+  width: 80vw;
   height: 100vh;
   position: relative;
   &__nameBox{
@@ -24,7 +23,8 @@
   display: none;
 // profile================================================
 .profile{
-  width: 100%;
+  margin: 0 auto;
+  width: 80vw;
   // hedding------------------------------------------------
   &__hedding{
     padding-top: 8vh;
@@ -60,136 +60,118 @@
 // slills================================================
 .skills{
   padding-top: 8vh;
-  width: 100%;
+  margin: 0 auto;
   text-align: center;
   &__hedding{
-    width: 100%;
+    width: 80vw;
+    margin: 0 auto;
     height: 6vh;
     font-size: 5vh;
     line-height: 6vh;
     margin-bottom: 5vh;
   }
   &__topText{
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 2vh;
+    width: 80vw;
+    margin: 0 auto 8vh;
     line-height: 4vh;
     font-size: 2vh;
   }
-  &__box{
-    margin: 5vh auto 0;
-    width: 101vh;
-    display: flex;
-      justify-content: left;
-      flex-wrap: wrap;
-      align-items: center;
-    position: relative;
-    &__content{
-      background-color: gray;
-      border-radius: 100%;
-      width: 15vh;
-      height: 15vh;
-      margin: 5vh;
+  &__wrapper{
+    background-color: $l_gray;
+    width: 100vw;
+    padding: 3vh 0;
+    &__contentBox{
+      width: 100vw;
+      // background-color: red;
+      margin: 3vh 0;
       position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      &--name{
-        font-size: 3vh;
-        color: white;
+      &__skillBlock{
         position: absolute;
-          bottom: 5%;
-          right: 100%;
-          z-index: 3;
-      }
-      img{
-        @include position-center;
-          z-index: 3;
-        filter: brightness(0) invert(1);
-        width: 5vh;
-        height: 5vh;
-      }
-    }
-    .colorLabel{
-      width: 101vw;
-      height: 100%;
-      position: absolute;
-        z-index: 5;
-        left: -125vw;
-    }
-    .modal{
-      width: 101vw;
-      height: 100%;
-      background-color:$l_gray;
-      position: absolute;
-        z-index: 6;
-        left: -125vw;
-      &__topName{
-        position: absolute;
-          top: 12%;
+          top: 0;
           left: 50%;
-          transform: translateX(-50%)translateY(-50%);
-          z-index: 8;
-        font-size: 3vh;
-      }
-      &__undoBtn{
-        position: absolute;
-          top: 6%;
-          left: 67%;
-          transform: translateX(-50%)translateY(-50%);
-          z-index: 8;
-        font-size: 3em;
-        transform: rotate(45deg);
-        transition-duration: 0.5s;
-        -webkit-text-stroke: 7px white;
-      }
-      &__linkBox{
-        position: absolute;
-        padding-top: 10vh;
-          top: 5%;
-          left: 50%;
-          transform: translateX(-50%);
-        width: 40%;
-        height: 90%;
-        background-color: white;
-        &__content{
-          width: 75%;
-          height: 5vh;
-          line-height: 5vh;
-          margin: 1vh auto;
-          position: relative;
-          &--circle{
+          transform:translateX(-50%);
+        width: 70vw;
+        height: 20vh;
+        background-color:white;
+        overflow: hidden;
+        position: relative;
+        &__sideIcon{
+          position: absolute;
+            top: 50%;
+            left:-5%;
+            transform: translateY(-50%)translateX(-50%);
+          background-color: gray;
+          width: 50vh;
+          height: 50vh;
+          border-radius: 50%;
+          img{
             position: absolute;
               top: 50%;
-              left: 6%;
+              left:80%;
               transform: translateY(-50%)translateX(-50%);
-              border-radius: 50%;
-            filter: brightness(0) invert(0.5);
-            width: 1vh;
+            filter: brightness(0) invert(1);
+          }
+        }
+        &__name{
+          position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+        }
+        &__btn{
+          position: absolute;
+            top: 50%;
+            left: 90%;
+            transform: translateY(-50%)translateX(-50%);
+          i{
+            transition-duration: 0.5s;
+            font-size: 3em;
+            -webkit-text-stroke: 8px white;
+          }
+        }
+      }
+      &__linkBlock{
+        display: none;
+        margin: -10vh auto 0;
+        width: 70vw;
+        background-color:$gray;
+        padding: 13vh 0 3vh;
+        &__contentRow{
+          margin: 1vh auto;
+          width: 50%;
+          height: 5vh;
+          position: relative;
+          &--circle{
+            filter: brightness(0) invert(0.8);
+            position: absolute;
+              top:50%;
+              left: 5%;
+              transform: translateY(-50%)translateX(-50%);
+            background-color: black;
+            border-radius: 50%;
             height: 1vh;
+            width: 1vh;
           }
           &--name{
             position: absolute;
-              top: 0;
-              left: 6vh;
-            text-align: left;
-            width: 60%;
+              left: 10%;
+              text-align: left;
+            width: 50%;
             height: 5vh;
-            // background-color: blue;
+            line-height: 5vh;
           }
           &--arrow{
             position: absolute;
-              top: 0;
-              right: 0;
-            width: 6vh;
+              top:50%;
+              left: 90%;
+              transform: translateY(-50%)translateX(-50%);
+              text-align: center;
+            width: 10%;
             height: 5vh;
-            font-size: 2em;
-            overflow: hidden;
             i{
-              -webkit-text-stroke: 3.3px white;
-              position: absolute;
-                top: 50%;
-                right: 30%;
-                transform: translateY(-50%);
+              line-height: 5vh;
+              font-size: 2em;
+              -webkit-text-stroke: 3.3px $gray;
             }
           }
         }
@@ -200,7 +182,8 @@
 // works================================================================================================
 .works{
   padding-top: 8vh;
-  width: 100%;
+  width: 80vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -283,9 +266,9 @@
 
 .linkBtn{
   position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 18vw;
   height: 7.5vh;
   line-height: 7.5vh;
@@ -296,9 +279,9 @@
   }
   .arrow{
     position: absolute;
-      top: 50%;
-      right: 1%;
-      transform:translateY(-50%);
+    top: 50%;
+    right: 1%;
+    transform:translateY(-50%);
     width: 14%;
     height: 100%;
     font-size: 2em;
@@ -309,6 +292,6 @@
         top: 50%;
         right: 30%;
         transform: translateY(-50%);
-    }
+      }
   }
 }

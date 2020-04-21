@@ -2,7 +2,7 @@ $(function(){
   if(window.location.href.match(/\/$/)) {
 // topの画像が読み込まれてから、スクロール可================================================
   $.when(
-    $('.top__nameBox').fadeIn(4000)
+    // $('.top__nameBox').fadeIn(4000)
   ).done(function(){
     $('.main').show();
     $('.login').hide();
@@ -40,61 +40,35 @@ $(function(){
       }
     });
 // skills================================================
-    $('.skills__box__content').hover(
+// hover------------------------------------------------
+    $('.skillBlock').hover(
       function(){
-        $(this).animate({width:'25vh',height:'25vh',margin:'0',borderRadius:'10px',borderWidth:'3px'},200)
-        $(this).children('.name').animate({right:'10%'})
-        $(this).children('img').animate({top:'20%',left:'20%'},200)
+        if ($(this).next('.linkBlock').hasClass('active')){
+        }else{
+        $(this).animate({left:'49%'},200)
+        $(this).children().children('i').css('transform','rotate(180deg)')
+        }
       },
       function(){
-        $(this).animate({width:'15vh',height:'15vh',margin:'5vh',borderRadius:'100px',borderWidth:'0'},200)
-        $(this).children('.name').animate({right:'100%'},0)
-        $(this).children('img').animate({top:'50%',left:'50%'},150)
+        if ($(this).next('.linkBlock').hasClass('active')){
+        }else{
+          $(this).animate({left:'50%'},200)
+          $(this).children().children('i').css('transform','rotate(0)')
+        }
       });
-// modal------------------------------------------------
-      $('.skills__box__content').on('click',function(){
-        $.when(
-          $(this).next('.colorLabel').animate({left:'-22.5vw'},500)
-        ).done(function(){
-          $(this).next('.modal').animate({left:'-22.5vw'},300)
-        });
-      });
-// undo btn------------------------------------------------
-      $('.modal__undoBtn').hover(
-        function(){
-          $(this).css('transform','rotate(225deg)')
-        },
-        function(){
-          $(this).css('transform','rotate(45deg)')
-        });
-      $('.modal__undoBtn').on('click',function(){
-        $.when(
-          $(this).parent()
-            .animate({left:'125vw'},300)
-            .animate({left:'-125vw'},0)
-        ).done(function(){
-          $(this).prev('.colorLabel')
-            .animate({left:'125vw'},500)
-            .animate({left:'-125vw'},0)
-        });
-      })
-// ------------------------------------------------
-      $('.modal__linkBox__content a').hover(
-        function(){
-          $(this).prev()
-            .css('filter','none')
-            .animate({width:'1.5vh',height:'1.5vh'},200)
-          $(this).next().children()
-            .animate({right:'-100%'},300)
-            .animate({right:'100%'},0)
-            .animate({right:'30%'},300)
-        },
-        function(){
-          $(this).prev()
-            .css('filter','brightness(0) invert(0.5)')
-            .animate({width:'1vh',height:'1vh'},200)
-        });
-      // show moreボタン------------------------------------------------
+// click------------------------------------------------
+    $('.skillBlock').on('click',function(){
+      if ($(this).next('.linkBlock').hasClass('active')){
+        $(this).children().children('i').css('transform','rotate(0)')
+      } else {
+        $(this).children().children('i').css('transform','rotate(-45deg)')
+      }
+      $(this).next()
+        .slideToggle()
+        .toggleClass('active')
+    });
+
+// show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){
       $(this).children().children()
