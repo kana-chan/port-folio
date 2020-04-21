@@ -78,30 +78,121 @@
   }
   &__box{
     margin: 5vh auto 0;
-    width: 70%;
+    width: 101vh;
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    align-items: center;
+      justify-content: left;
+      flex-wrap: wrap;
+      align-items: center;
+    position: relative;
     &__content{
-      background-color: white;
-      border: 1px solid $black;
-      color: $black;
-      border-radius: 10px;
+      background-color: gray;
+      border-radius: 100%;
       width: 15vh;
       height: 15vh;
-      margin:2.5vh 2.5vh 2.5vh;
-      display: flex;
-      align-items: center;
+      margin: 5vh;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
       &--name{
-        margin: 0 auto;
+        font-size: 3vh;
+        color: white;
+        position: absolute;
+          bottom: 5%;
+          right: 100%;
+          z-index: 3;
       }
-      &:hover{
-        width: 20vh;
-        height: 20vh;
-        margin: 0;
-        font-size: 4vh;
-        border: 3px solid $black;
+      img{
+        @include position-center;
+          z-index: 3;
+        filter: brightness(0) invert(1);
+        width: 5vh;
+        height: 5vh;
+      }
+    }
+    .colorLabel{
+      width: 101vw;
+      height: 100%;
+      position: absolute;
+        z-index: 5;
+        left: -125vw;
+    }
+    .modal{
+      width: 101vw;
+      height: 100%;
+      background-color:$l_gray;
+      position: absolute;
+        z-index: 6;
+        left: -125vw;
+      &__topName{
+        position: absolute;
+          top: 12%;
+          left: 50%;
+          transform: translateX(-50%)translateY(-50%);
+          z-index: 8;
+        font-size: 3vh;
+      }
+      &__undoBtn{
+        position: absolute;
+          top: 6%;
+          left: 67%;
+          transform: translateX(-50%)translateY(-50%);
+          z-index: 8;
+        font-size: 3em;
+        transform: rotate(45deg);
+        transition-duration: 0.5s;
+        -webkit-text-stroke: 7px white;
+      }
+      &__linkBox{
+        position: absolute;
+        padding-top: 10vh;
+          top: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+        width: 40%;
+        height: 90%;
+        background-color: white;
+        &__content{
+          width: 75%;
+          height: 5vh;
+          line-height: 5vh;
+          margin: 1vh auto;
+          position: relative;
+          &--circle{
+            position: absolute;
+              top: 50%;
+              left: 6%;
+              transform: translateY(-50%)translateX(-50%);
+              border-radius: 50%;
+            filter: brightness(0) invert(0.5);
+            width: 1vh;
+            height: 1vh;
+          }
+          &--name{
+            position: absolute;
+              top: 0;
+              left: 6vh;
+            text-align: left;
+            width: 60%;
+            height: 5vh;
+            // background-color: blue;
+          }
+          &--arrow{
+            position: absolute;
+              top: 0;
+              right: 0;
+            width: 6vh;
+            height: 5vh;
+            font-size: 2em;
+            overflow: hidden;
+            i{
+              -webkit-text-stroke: 3.3px white;
+              position: absolute;
+                top: 50%;
+                right: 30%;
+                transform: translateY(-50%);
+            }
+          }
+        }
       }
     }
   }
