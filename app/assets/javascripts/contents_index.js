@@ -54,7 +54,7 @@ $(function(){
 // modal------------------------------------------------
       $('.skills__box__content').on('click',function(){
         $.when(
-          $(this).next('.colorLabel').animate({left:'-22.5vw'},300)
+          $(this).next('.colorLabel').animate({left:'-22.5vw'},500)
         ).done(function(){
           $(this).next('.modal').animate({left:'-22.5vw'},300)
         });
@@ -74,7 +74,7 @@ $(function(){
             .animate({left:'-125vw'},0)
         ).done(function(){
           $(this).prev('.colorLabel')
-            .animate({left:'125vw'},300)
+            .animate({left:'125vw'},500)
             .animate({left:'-125vw'},0)
         });
       })

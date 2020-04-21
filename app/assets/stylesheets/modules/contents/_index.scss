@@ -125,7 +125,7 @@
         left: -125vw;
       &__topName{
         position: absolute;
-          top: 10%;
+          top: 12%;
           left: 50%;
           transform: translateX(-50%)translateY(-50%);
           z-index: 8;
@@ -133,8 +133,8 @@
       }
       &__undoBtn{
         position: absolute;
-          top: 5%;
-          left: 77%;
+          top: 6%;
+          left: 67%;
           transform: translateX(-50%)translateY(-50%);
           z-index: 8;
         font-size: 3em;
@@ -148,15 +148,14 @@
           top: 5%;
           left: 50%;
           transform: translateX(-50%);
-        width: 60%;
+        width: 40%;
         height: 90%;
         background-color: white;
         &__content{
-          width: 40%;
+          width: 75%;
           height: 5vh;
           line-height: 5vh;
           margin: 1vh auto;
-          // background-color: yellow;
           position: relative;
           &--circle{
             position: absolute;
@@ -171,7 +170,7 @@
           &--name{
             position: absolute;
               top: 0;
-              left: 5vh;
+              left: 6vh;
             text-align: left;
             width: 60%;
             height: 5vh;
