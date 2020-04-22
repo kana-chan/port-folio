@@ -47,6 +47,7 @@ $(function(){
         }else{
         $(this).animate({left:'49%'},200)
         $(this).children().children('i').css('transform','rotate(180deg)')
+        $(this).children('.skills__wrapper__contentBox__skillBlock__sideFilter').css('filter','none')
         }
       },
       function(){
@@ -54,7 +55,23 @@ $(function(){
         }else{
           $(this).animate({left:'50%'},200)
           $(this).children().children('i').css('transform','rotate(0)')
+          $(this).children('.skills__wrapper__contentBox__skillBlock__sideFilter').css('filter',' brightness(0) invert(0.8)')
         }
+      });
+
+      $('.skills__wrapper__contentBox__linkBlock__contentRow').children('a').hover(function(){
+        $(this).prev()
+          .animate({width:'1.5vh',height:'1.5vh'},200)
+          .css('filter','none')
+        $(this).next().children()
+          .animate({left:'120%'},300)
+          .animate({left:'0'},0)
+          .animate({left:'50%'},300)
+      },
+      function(){
+        $(this).prev()
+          .animate({width:'1vh',height:'1vh'},100)
+          .css('filter','brightness(0) invert(0.8)')
       });
 // click------------------------------------------------
     $('.skillBlock').on('click',function(){

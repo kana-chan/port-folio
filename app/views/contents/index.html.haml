@@ -62,7 +62,8 @@
         -@categories.each do |category|
           .skills__wrapper__contentBox
             .skills__wrapper__contentBox__skillBlock.skillBlock
-              .skills__wrapper__contentBox__skillBlock__sideIcon{style:"background-color: #{category.color}"}
+              .skills__wrapper__contentBox__skillBlock__sideFilter{style:"background-color: #{category.color}"}
+              .skills__wrapper__contentBox__skillBlock__sideIcon
                 =image_tag(category.icon)
               .skills__wrapper__contentBox__skillBlock__name
                 =category.name
@@ -72,14 +73,15 @@
               -category.contents.each do |apps|
                 .skills__wrapper__contentBox__linkBlock__contentRow
                   .skills__wrapper__contentBox__linkBlock__contentRow--circle{style:"background-color: #{category.color}"}
-                  .skills__wrapper__contentBox__linkBlock__contentRow--name
-                    =apps.name
+                  =link_to(content_path(apps.id)) do
+                    .skills__wrapper__contentBox__linkBlock__contentRow--name.name
+                      =apps.name
                   .skills__wrapper__contentBox__linkBlock__contentRow--arrow
                     =fa_icon "long-arrow-right"
-
         .skills__wrapper__contentBox
           .skills__wrapper__contentBox__skillBlock.skillBlock
-            .skills__wrapper__contentBox__skillBlock__sideIcon{style:"background-color: black"}
+            .skills__wrapper__contentBox__skillBlock__sideFilter{style:"background-color: black"}
+            .skills__wrapper__contentBox__skillBlock__sideIcon
               =image_tag("icons/git.png")
             .skills__wrapper__contentBox__skillBlock__name
               OTHER SKILLS
@@ -89,7 +91,12 @@
             .skills__wrapper__contentBox__linkBlock__contentRow
               .skills__wrapper__contentBox__linkBlock__contentRow--circle
               .skills__wrapper__contentBox__linkBlock__contentRow--name
-                ruby on rails
+                Git hub
+            .skills__wrapper__contentBox__linkBlock__contentRow
+              .skills__wrapper__contentBox__linkBlock__contentRow--circle
+              .skills__wrapper__contentBox__linkBlock__contentRow--name
+                SQL
+
     -# works================================================
     .works
       .works__hedding
