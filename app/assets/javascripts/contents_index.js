@@ -46,7 +46,7 @@ $(function(){
         if ($(this).next('.linkBlock').hasClass('active')){
         }else{
         $(this).animate({left:'49%'},200)
-        $(this).children().children('i').css('transform','rotate(180deg)')
+        $(this).children().children('i').css('transform','rotate(90deg)')
         $(this).children('.skills__wrapper__contentBox__skillBlock__sideFilter').css('filter','none')
         }
       },
@@ -78,7 +78,7 @@ $(function(){
       if ($(this).next('.linkBlock').hasClass('active')){
         $(this).children().children('i').css('transform','rotate(0)')
       } else {
-        $(this).children().children('i').css('transform','rotate(-45deg)')
+        $(this).children().children('i').css('transform','rotate(-135deg)')
       }
       $(this).next()
         .slideToggle()
