@@ -18,22 +18,24 @@
     .profile__tables
       %table
         %tr
-          %th 岡山 叶太
+          %th{rowspan:2} 岡山 叶太
           %td 1992年6月9日生まれ、B型、双子座。
         %tr
           %td{colspan:2} 大阪府大阪市西成区 出身。
+      %table
         %tr
-          %th 略歴
+          %th{rowspan:3} 略歴
           %td{colspan:2} 2018年 同志社大学心理学部心理学科 卒業。
         %tr
           %td{colspan:3} 2018年 日本郵便株式会社 入社。
         %tr
           %td{colspan:3} 2020年 エンジニアを目指し学習開始。
+      %table
         %tr
-          %th 趣味
+          %th{rowspan:2} 趣味
           %td{colspan:2} コーヒー 抽出だけでなく、焙煎やラテアートも。
         %tr
-          %td{colspan:3} カメラ 最近始めたばかり。現像作業の勉強を開始。
+          %td{colspan:3} カメラ 最近始めたばかり。現像の勉強を開始。
     .profile__moreBtn
       =link_to(profiles_path) do
         .profile__moreBtn--text.linkBtn

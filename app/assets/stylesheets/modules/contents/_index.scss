@@ -50,20 +50,28 @@
     width:100%;
     line-height: 4vh;
     font-size: 2vh;
-    text-align: center;
     // background-color: gray;
     table{
-      width: 40%;
+      // background-color: red;
+      width: 45%;
       margin: 3vh auto;
     }
     th{
+      // background-color: skyblue;
+      padding-right: 5%;
+      width: 23%;
       font-weight: bold;
+      vertical-align: top;
+      text-align-last:justify;
+    }
+    td{
+      padding-left: 5%;
     }
   }
   &__moreBtn{
     width: 18vw;
     height:10vh;
-    margin-left: auto;
+    margin: 5vh auto;
     position: relative;
   }
 }
