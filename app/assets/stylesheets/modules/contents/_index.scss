@@ -5,23 +5,39 @@
   width: 80vw;
   height: 100vh;
   position: relative;
-  &__nameBox{
-    @include position-center;
-    &--engineer{
-      font-size: 20px;
-      color: $gray;
-    }
-    &--myName{
-      margin-top: 10px;
-      h1{
-        font-size: 80px;
-      }
-    }
+  &__text1{
+    position: absolute;
+      transform: translateY(-50%);
+      top: 39%;
+      left: 35%;
+  }
+  &__text2{
+    position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 35%;
+  }
+  &__text3{
+    position: absolute;
+      transform: translateY(-50%);
+      top: 61%;
+      left: 35%;
+  }
+  .underLine{
+    background-color: black;
+    position: absolute;
+      bottom: 0;
+    width: 0%;
+    height: 100%;
+  }
+  h1{
+    color: white;
+    font-size:80px ;
   }
 }
+
 // main================================================================================================
 .main{
-  // display: none;
 // profile================================================
 .profile{
   margin: 0 auto;

@@ -1,13 +1,14 @@
 $(function(){
   if(window.location.href.match(/\/$/)) {
-// topの画像が読み込まれてから、スクロール可================================================
-  // $.when(
-  //   $('.top__nameBox').fadeIn(4000)
-  // ).done(function(){
-  //   $('.main').show();
-  //   $('.login').hide();
-  //   $('#footer').show();
-  // });
+// topテキストのアニメーション================================================
+  $.when(
+    $('.underLine').each(function(i){
+      $(this).delay(100*i).animate({width:'100%'},300)
+    })
+  ).done(function(){
+    $(this).prev('h1').css('color','black')
+    $('.underLine').animate({height:'8%'},300)
+  })
 
 // contents================================================
   $('.works__contentsBox__photoBlock').hover(
