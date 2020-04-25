@@ -1,4 +1,7 @@
+// 日本語アイキャッチ,font-family: 'hare';
 @font-face {
   font-family: 'hare';
   src: asset_url('Harenosora.otf') format('opentype');
 }
+// 英語アイキャッチ,font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
