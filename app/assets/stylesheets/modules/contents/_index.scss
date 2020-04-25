@@ -299,17 +299,14 @@
 
 .linkBtn{
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   width: 18vw;
   height: 7.5vh;
   line-height: 7.5vh;
   padding: 0 1vw;
   border: solid 0.1px $black;
-  p{
-    font-size: 1vh;
-  }
   .arrow{
     position: absolute;
     top: 50%;
