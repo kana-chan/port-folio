@@ -11,7 +11,7 @@
   .main
     .profile
       .profile__hedding
-        PROFILE
+        %h1 PROFILE
       .profile__tables
         %table
           %tr
@@ -47,13 +47,13 @@
       .profile__moreBtn
         =link_to(profiles_path) do
           .profile__moreBtn--text.linkBtn
-            %p SHOW MORE
+            %h2 SHOW MORE
             .profile__moreBtn--icon.arrow
               =fa_icon "long-arrow-right"
     -# skills================================================
     .skills
       .skills__hedding
-        Skills
+        %h1 SKILL
       .skills__topText
         2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。
         %br 実務経験はまだありませんが、現時点での "オカヤマ カナタ" のスキルです。
@@ -100,7 +100,7 @@
     -# works================================================
     .works
       .works__hedding
-        Works
+        %h1 WORKS
       = render @contents
 -# footer================================================
 = render "/templates/footer"
