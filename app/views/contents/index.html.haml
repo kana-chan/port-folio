@@ -63,35 +63,7 @@
     .skills__topText
       2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。実務経験はまだありませんが、現時点での "岡山叶太" のスキルです。
       %br 常に楽しみ、常に突き詰め、常に挑戦し、エンジニアとして成長し続けます。
-    .skills__wrapper
-      %ul.skills__wrapper__left
-        -@categories.each do |category|
-          %li.skills__wrapper__left__category
-            .skills__wrapper__left__category--icon
-              =image_tag(category.icon)
-            .skills__wrapper__left__category--name
-              %h3=category.name
-      %ul.skills__wrapper__right
-        .skillsUnderLine
-        -@categories.each do |category|
-          %li.skills__wrapper__right__info
-            .skills__wrapper__right__info--name
-              %h1=category.name
-            .skills__wrapper__right__info--text
-              初めて学習したプログラミング言語です。そうなんです初めてなんです。
-            -category.contents.each do |content|
-              .skills__wrapper__right__linkBox
-                .skills__wrapper__right__linkBox__nameBox
-                  .skills__wrapper__right__linkBox__nameBox--circle
-                  %h3=content.name
-                .skills__wrapper__right__linkBox--text
-                  =content.catchcopy
-                .skills__wrapper__right__linkBox__moreBtn
-                  =link_to(content_path(content.id)) do
-                    .skills__wrapper__right__linkBox__moreBtn--text.linkBtn
-                      %h2 SHOW MORE
-                      .skills__wrapper__right__linkBox__moreBtn--icon.arrow
-                        =fa_icon "long-arrow-right"
+    = render "category"
   -# works================================================
   .works
     .works__hedding
