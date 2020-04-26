@@ -61,47 +61,33 @@
     .skills__hedding
       %h1 SKILLS
     .skills__topText
-      2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。
-      %br 実務経験はまだありませんが、現時点での "オカヤマ カナタ" のスキルです。
-
+      2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。実務経験はまだありませんが、現時点での "岡山叶太" のスキルです。
+      %br 常に楽しみ、常に突き詰め、常に挑戦し、エンジニアとして成長し続けます。
     .skills__wrapper
-      -@categories.each do |category|
-        .skills__wrapper__contentBox
-          .skills__wrapper__contentBox__skillBlock.skillBlock
-            .skills__wrapper__contentBox__skillBlock__sideFilter{style:"background-color: #{category.color}"}
-            .skills__wrapper__contentBox__skillBlock__sideIcon
+      .skills__wrapper__left
+        -@categories.each do |category|
+          .skills__wrapper__left__category
+            .skills__wrapper__left__category--icon
               =image_tag(category.icon)
-            .skills__wrapper__contentBox__skillBlock__name
-              =category.name
-            .skills__wrapper__contentBox__skillBlock__btn
-              =fa_icon "plus"
-          .skills__wrapper__contentBox__linkBlock.linkBlock
-            -category.contents.each do |apps|
-              .skills__wrapper__contentBox__linkBlock__contentRow
-                .skills__wrapper__contentBox__linkBlock__contentRow--circle{style:"background-color: #{category.color}"}
-                =link_to(content_path(apps.id)) do
-                  .skills__wrapper__contentBox__linkBlock__contentRow--name.name
-                    =apps.name
-                .skills__wrapper__contentBox__linkBlock__contentRow--arrow
+            .skills__wrapper__left__category--name
+              %h3=category.name
+      .skills__wrapper__right
+        .skills__wrapper__right--name
+          %h1 Ruby on Rails
+        .skills__wrapper__right--text
+          初めて学習したプログラミング言語です。そうなんです初めてなんです。
+        .skills__wrapper__right__linkBox
+          .skills__wrapper__right__linkBox__nameBox
+            .skills__wrapper__right__linkBox__nameBox--circle
+            %h3 Furima
+          .skills__wrapper__right__linkBox--text
+            初めてのアプリケーション
+          .skills__wrapper__right__linkBox__moreBtn
+            =link_to(profiles_path) do
+              .skills__wrapper__right__linkBox__moreBtn--text.linkBtn
+                %h2 SHOW MORE
+                .skills__wrapper__right__linkBox__moreBtn--icon.arrow
                   =fa_icon "long-arrow-right"
-      .skills__wrapper__contentBox
-        .skills__wrapper__contentBox__skillBlock.skillBlock
-          .skills__wrapper__contentBox__skillBlock__sideFilter{style:"background-color: black"}
-          .skills__wrapper__contentBox__skillBlock__sideIcon
-            =image_tag("icons/git.png")
-          .skills__wrapper__contentBox__skillBlock__name
-            OTHER SKILLS
-          .skills__wrapper__contentBox__skillBlock__btn
-            =fa_icon "plus"
-        .skills__wrapper__contentBox__linkBlock.linkBlock
-          .skills__wrapper__contentBox__linkBlock__contentRow
-            .skills__wrapper__contentBox__linkBlock__contentRow--circle
-            .skills__wrapper__contentBox__linkBlock__contentRow--name
-              Git hub
-          .skills__wrapper__contentBox__linkBlock__contentRow
-            .skills__wrapper__contentBox__linkBlock__contentRow--circle
-            .skills__wrapper__contentBox__linkBlock__contentRow--name
-              SQL
 
   -# works================================================
   .works

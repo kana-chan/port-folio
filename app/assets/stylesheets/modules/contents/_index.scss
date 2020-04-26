@@ -76,7 +76,6 @@
     }
   }
   &__moreBtn{
-    // background-color: red;
     width: 18vw;
     height:10vh;
     position: absolute;
@@ -98,124 +97,112 @@
   }
   &__topText{
     width: 80vw;
-    margin: 0 auto 8vh;
+    margin: 0 auto 3vh;
     line-height: 4vh;
     font-size: 2vh;
   }
+// ------------------------------------------------
   &__wrapper{
-    background-color: $l_gray;
-    width: 100vw;
-    padding: 3vh 0;
-    &__contentBox{
-      width: 100vw;
-      // background-color: red;
-      margin: 3vh 0;
-      position: relative;
-      &__skillBlock{
-        position: absolute;
-          top: 0;
-          left: 50%;
-          transform:translateX(-50%);
-        width: 70vw;
-        height: 20vh;
-        background-color:white;
-        overflow: hidden;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+      justify-content: space-between;
+    &__left{
+      // background-color: gray;
+      width: 50%;
+      &__category{
+        // background-color: red;
+        width: 100%;
+        height: 10vh;
+        margin: 1vh 0;
         position: relative;
-        &__sideFilter{
+        &--icon{
           position: absolute;
             top: 50%;
-            left:-5%;
-            transform: translateY(-50%)translateX(-50%);
-            z-index: 0;
-          width: 50vh;
-          height: 50vh;
+            left: 8%;
+            transform: translateX(-50%)translateY(-50%);
+          background-color: black;
           border-radius: 50%;
-          filter: brightness(0) invert(0.8);
-          transition-duration: 0.8s;
-        }
-        &__sideIcon{
-          // background-color: red;
-          position: absolute;
-            top: 50%;
-            left:6%;
-            transform: translateY(-50%)translateX(-50%);
-            z-index: 1;
-          width: 5vh;
-          height: 5vh;
+          width: 8vh;
+          height: 8vh;
           img{
-            position: absolute;
-              top: 50%;
-              left:80%;
-              transform: translateY(-50%)translateX(-50%);
+            @include position-center;
             filter: brightness(0) invert(1);
           }
         }
-        &__name{
+        &--name{
           position: absolute;
             top: 50%;
-            left: 20%;
+            left: 18%;
             transform: translateY(-50%);
-        }
-        &__btn{
-          position: absolute;
-            top: 50%;
-            left: 90%;
-            transform: translateY(-50%)translateX(-50%);
-          i{
-            transition-duration: 0.5s;
-            font-size: 3em;
-            -webkit-text-stroke: 8px white;
-          }
+          line-height: 10vh;
+          // background-color:blue;
+          width: 70%;
+          height: 10vh;
         }
       }
-      &__linkBlock{
-        display: none;
-        margin: -10vh auto 0;
-        width: 70vw;
-        background-color:$gray;
-        padding: 13vh 0 3vh;
-        &__contentRow{
-          margin: 1vh auto;
-          width: 50%;
-          height: 5vh;
+    }
+    &__right{
+      background-color: lightgray;
+      margin:2.5vh 0;
+      width: 50%;
+      &--name{
+        // background-color: red;
+        width: 100%;
+        height: 10vh;
+        line-height: 10vh;
+        padding-left: 5%;
+        h1{
+          color: white;
+        }
+      }
+      &--text{
+        // background-color: pink;
+        padding-left: 15%;
+        width: 100%;
+        height: 5vh;
+        line-height: 5vh;
+      }
+      &__linkBox{
+        // background-color: gray;
+        width: 100%;
+        height: 7.5vh;
+        position: relative;
+        padding-left:6%;
+        margin: 2vh 0;
+        &__nameBox{
+          // background-color: green;
+          width: 100%;
+          height: 4.5vh;
+          line-height: 4.5vh;
           position: relative;
           &--circle{
-            filter: brightness(0) invert(0.8);
-            position: absolute;
-              top:50%;
-              left: 5%;
-              transform: translateY(-50%)translateX(-50%);
             background-color: black;
             border-radius: 50%;
-            height: 1vh;
-            width: 1vh;
-          }
-          &--name{
+            width: 1.5vh;
+            height: 1.5vh;
             position: absolute;
-              left: 10%;
-              text-align: left;
-            width: 50%;
-            height: 5vh;
-            line-height: 5vh;
-          }
-          &--arrow{
-            position: absolute;
-              top:50%;
-              left: 90%;
+              top: 50%;
+              left: -3%;
               transform: translateY(-50%)translateX(-50%);
-            width: 10%;
-            height: 5vh;
-            overflow: hidden;
+          }
+        }
+        &--text{
+          // background-color: blue;
+          width: 100%;
+          height: 3vh;
+          line-height: 3vh;
+        }
+        &__moreBtn{
+          // background-color: red;
+          width:18vw;
+          height: 7.5vh;
+          position: absolute;
+            bottom: 0;
+            right: 3%;
             i{
-              position: absolute;
-              top:50%;
-              left: 50%;
-              transform: translateY(-50%)translateX(-50%);
-              line-height: 5vh;
-              font-size: 2em;
-              -webkit-text-stroke: 3.3px $gray;
+              -webkit-text-stroke: 3.5px lightgray;
             }
-          }
         }
       }
     }
