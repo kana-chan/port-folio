@@ -8,11 +8,11 @@
   &__text1,&__text2,&__text3{
     position: absolute;
       transform: translateY(-50%);
-      left: 35%;
+      left: 0;
     .underLine{
       background-color: black;
       position: absolute;
-        bottom: 0;
+        bottom: 5%;
         width: 0%;
       height: 100%;
     }
@@ -35,22 +35,22 @@
 .profile{
   margin: 0 auto;
   width: 80vw;
+  position: relative;
+  // background-color: blue;
   // hedding------------------------------------------------
   &__hedding{
     padding-top: 8vh;
-    text-align: center;
+    margin-bottom: 5vh;
     width: 100%;
     height: 14vh;
     line-height: 6vh;
     font-size: 5vh;
   }
-//text------------------------------------------------
-  &__text{
-    text-align: center;
-    line-height: 5vh;
+  &__topText{
+    width: 80vw;
+    margin: 0 auto 5vh;
+    line-height: 4vh;
     font-size: 2vh;
-    margin: 5vh 0;
-    // background-color:gray;
   }
   // tables------------------------------------------------
   &__tables{
@@ -58,32 +58,36 @@
     line-height: 4vh;
     font-size: 2vh;
     table{
-      width: 45%;
-      margin: 3vh auto;
+      width: 40%;
+      text-align: left;
+      margin: 2vh 0;
     }
     th{
-      padding-right: 5%;
-      width: 23%;
+      width: 20%;
       font-weight: bold;
-      vertical-align: top;
-      text-align-last:justify;
     }
-    td{
-      padding-left: 5%;
+    td:nth-child(1){
+      width: 20%;
+    }
+    td:nth-child(2){
+      text-align: left;
+      padding-left: 10%;
+      widows: 65%;
     }
   }
   &__moreBtn{
+    // background-color: red;
     width: 18vw;
     height:10vh;
-    margin: 5vh auto;
-    position: relative;
+    position: absolute;
+      right: 0;
+      bottom: 0;
   }
 }
 // slills================================================
 .skills{
   padding-top: 8vh;
   margin: 0 auto;
-  text-align: center;
   &__hedding{
     width: 80vw;
     margin: 0 auto;
@@ -226,9 +230,18 @@
   flex-direction: column;
   align-items: center;
   &__hedding{
-    width: 100%;
-    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+    height: 6vh;
     font-size: 5vh;
+    line-height: 6vh;
+    margin-bottom: 5vh;
+  }
+  &__topText{
+    width: 80vw;
+    margin: 0 auto 8vh;
+    line-height: 4vh;
+    font-size: 2vh;
   }
   &__contentsBox{
     margin-top: 8vh;

@@ -1,7 +1,7 @@
 class ContentsController < ApplicationController
   def index
     @contents = Content.all.order("id DESC")
-    @categories = Category.all.order("created_at DESC")
+    @categories = Category.all.order("number ASC")
   end
 
   def show

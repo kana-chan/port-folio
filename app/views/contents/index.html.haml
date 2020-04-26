@@ -15,32 +15,41 @@
   .profile
     .profile__hedding
       %h1 PROFILE
-    .profile__text
-      私のポートフォリオをご覧いただき誠にありがとうございます。
-      %br 2020年、エンジニアとして生きていくことを決意し、プログラミング学習を開始いたしました。
-      その想いの根幹は、「自らの手でつくりあげたい」という強い想いです。
-      %br エンジニアとして常に、楽しみ、挑戦し、突き詰めて、成長し続けたいと思います。
+    .profile__topText
+      2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。
+      %br 実務経験はまだありませんが、現時点での "オカヤマ カナタ" のスキルです。
     .profile__tables
       %table
         %tr
-          %th{rowspan:2} 岡山 叶太
-          %td 1992年6月9日生まれ、B型、双子座。
+          %th KANATA OKAYAMA
         %tr
-          %td{colspan:2} 大阪府大阪市西成区 出身。
+          %td 　1992年6月9日生まれ、B型、双子座。
+        %tr
+          %td 　大阪府大阪市西成区 出身。
       %table
         %tr
-          %th{rowspan:3} 略歴
-          %td{colspan:2} 2018年 同志社大学心理学部心理学科 卒業。
+          %th{colspan:2} CAREER & EXPERIENCE
         %tr
-          %td{colspan:3} 2018年 日本郵便株式会社 入社。
+          %td 　2018年 
+          %td 同志社大学心理学部心理学科 卒業。
         %tr
-          %td{colspan:3} 2020年 エンジニアを目指し学習開始。
+          %td 　2018年
+          %td 日本郵便株式会社 入社。
+        %tr
+          %td 　2020年
+          %td エンジニアを目指し学習開始。
       %table
         %tr
-          %th{rowspan:2} 趣味
-          %td{colspan:2} コーヒー 抽出だけでなく、焙煎やラテアートも。
+          %th{colspan:2} HOBBIES & INTERESTS
         %tr
-          %td{colspan:3} カメラ 最近始めたばかり。現像の勉強を開始。
+          %td 　COFFEE
+          %td 抽出だけでなく、焙煎やラテアートも。
+        %tr
+          %td 　CAMERA
+          %td 最近始めたばかり。現像の勉強を開始。
+        %tr
+          %td 　FASSION
+          %td 衣食住。完全に衣に振り切っています。
     .profile__moreBtn
       =link_to(profiles_path) do
         .profile__moreBtn--text.linkBtn
@@ -98,6 +107,9 @@
   .works
     .works__hedding
       %h1 WORKS
+    .works__topText
+      2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。
+      %br 実務経験はまだありませんが、現時点での "オカヤマ カナタ" のスキルです。
     = render @contents
 -# footer================================================
 = render "/templates/footer"
