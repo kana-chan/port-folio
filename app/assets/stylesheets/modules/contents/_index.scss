@@ -107,13 +107,14 @@
     margin: 0 auto;
     display: flex;
       justify-content: space-between;
+// ------------------------------------------------
     &__left{
       // background-color: gray;
       width: 50%;
       &__category{
         // background-color: red;
         width: 100%;
-        height: 10vh;
+        height: 8vh;
         margin: 1vh 0;
         position: relative;
         &--icon{
@@ -121,13 +122,14 @@
             top: 50%;
             left: 8%;
             transform: translateX(-50%)translateY(-50%);
-          background-color: black;
           border-radius: 50%;
-          width: 8vh;
-          height: 8vh;
+          width: 7vh;
+          height: 7vh;
+          transition-duration: 0.5s;
           img{
             @include position-center;
-            filter: brightness(0) invert(1);
+            filter: brightness(0) invert(0.5);
+            transition-duration: 0.5s;
           }
         }
         &--name{
@@ -142,26 +144,38 @@
         }
       }
     }
+// links------------------------------------------------
     &__right{
-      background-color: lightgray;
       margin:2.5vh 0;
       width: 50%;
-      &--name{
-        // background-color: red;
-        width: 100%;
-        height: 10vh;
-        line-height: 10vh;
-        padding-left: 5%;
-        h1{
-          color: white;
-        }
+      position: relative;
+      .skillsUnderLine{
+        position: absolute;
+          bottom: 0;
+          z-index: 1;
+        background-color: black;
+        height: 100%;
       }
-      &--text{
-        // background-color: pink;
-        padding-left: 15%;
-        width: 100%;
-        height: 5vh;
-        line-height: 5vh;
+      &__info{
+        display:none;
+        padding-bottom: 5vh;
+        &--name{
+          // background-color: red;
+          width: 100%;
+          height: 10vh;
+          line-height: 10vh;
+          padding-left: 5%;
+          h1{
+            color: white;
+          }
+        }
+        &--text{
+          // background-color: pink;
+          padding-left: 15%;
+          width: 100%;
+          height: 5vh;
+          line-height: 5vh;
+        }
       }
       &__linkBox{
         // background-color: gray;

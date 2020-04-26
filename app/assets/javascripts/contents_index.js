@@ -7,7 +7,7 @@ $(function(){
     })
   ).done(function(){
     $(this).prev('h1').css('color','black')
-    $('.underLine').animate({height:'8%'},300)
+    $('.underLine').animate({height:'5%'},300)
   })
 
 // contents================================================
@@ -41,51 +41,21 @@ $(function(){
       }
     });
 // skills================================================
-// hover------------------------------------------------
-    $('.skillBlock').hover(
-      function(){
-        if ($(this).next('.linkBlock').hasClass('active')){
-        }else{
-        $(this).animate({left:'49%'},200)
-        $(this).children().children('i').css('transform','rotate(90deg)')
-        $(this).children('.skills__wrapper__contentBox__skillBlock__sideFilter').css('filter','none')
-        }
-      },
-      function(){
-        if ($(this).next('.linkBlock').hasClass('active')){
-        }else{
-          $(this).animate({left:'50%'},200)
-          $(this).children().children('i').css('transform','rotate(0)')
-          $(this).children('.skills__wrapper__contentBox__skillBlock__sideFilter').css('filter',' brightness(0) invert(0.8)')
-        }
-      });
-
-      $('.skills__wrapper__contentBox__linkBlock__contentRow').children('a').hover(function(){
-        $(this).prev()
-          .animate({width:'1.5vh',height:'1.5vh'},200)
-          .css('filter','none')
-        $(this).next().children()
-          .animate({left:'120%'},300)
-          .animate({left:'0'},0)
-          .animate({left:'50%'},300)
-      },
-      function(){
-        $(this).prev()
-          .animate({width:'1vh',height:'1vh'},100)
-          .css('filter','brightness(0) invert(0.8)')
-      });
-// click------------------------------------------------
-    $('.skillBlock').on('click',function(){
-      if ($(this).next('.linkBlock').hasClass('active')){
-        $(this).children().children('i').css('transform','rotate(0)')
-      } else {
-        $(this).children().children('i').css('transform','rotate(-135deg)')
-      }
-      $(this).next()
-        .slideToggle()
-        .toggleClass('active')
-    });
-
+    $('.skills__wrapper__left__category').on('click',function(){
+      var index = $(this).index();
+      $.when(
+        $('.skillsUnderLine')
+          .animate({width:'100%'},300)
+      ).done(function(){
+        $('.skills__wrapper__right').css('backgroundColor','lightGray')
+        $('.skills__wrapper__right__info')
+          .hide()
+          .eq(index).show()
+        $('.skillsUnderLine')
+          .animate({height:'0'},300)
+          .animate({width:'0',height:'100%'},0)
+      })
+    })
 // show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){
