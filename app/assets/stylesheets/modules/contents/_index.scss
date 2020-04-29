@@ -60,11 +60,12 @@
       height: 28vh;
       width: 28vh;
     }
-    &__btnNext,&__btnPrev{
+    &__btn{
       border: solid 1px $base1;
       border-radius: 50%;
       height: 8vh;
       width: 8vh;
+      overflow: hidden;
       position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -75,10 +76,10 @@
         -webkit-text-stroke: 3.5px $base3;
       }
     }
-    &__btnNext{
+    .next{
       right: 2%;
     }
-    &__btnPrev{
+    .prev{
       left: 2%;
     }
     &__textHeader{
@@ -89,6 +90,7 @@
       height: 8vh;
       line-height: 8vh;
       li{
+        display: none;
         color: $base2;
         font-family: "roboto";
         font-size: 40px;
@@ -103,12 +105,15 @@
       width: 70%;
       height: 30vh;
       &__wrapper{
-        display: flex;
-        justify-content: space-around;
-        &__introduce{
-          font-family: "roboto";
-          height: 30vh;
-          width: 32vh;
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-family: "roboto";
+        &__introduceA1,&__introduceA2,&__introduceB1,&__introduceB2,&__introduceB3{
+          position: absolute;
+            top: 50%;
+            transform: translateX(-50%)translateY(-50%);
           &--heading{
             font-weight: 500;
             font-size: 18px;
@@ -120,12 +125,34 @@
           }
           &--text{
             font-weight: 400;
-            // background-color: white;
             margin-top: 2vh;
             width: 100%;
             height: 12vh;
             line-height: 4vh;
           }
+        }
+        &__introduceA1,&__introduceA2{
+          height: 30vh;
+          width: 40%;
+        }
+        &__introduceA1{
+          left: 25%;
+        }
+        &__introduceA2{
+          left: 75%;
+        }
+        &__introduceB1,&__introduceB2,&__introduceB3{
+          height: 30vh;
+          width: 28%;
+        }
+        &__introduceB1{
+          left: 15%;
+        }
+        &__introduceB2{
+          left: 50%;
+        }
+        &__introduceB3{
+          left: 85%;
         }
       }
     }
