@@ -34,11 +34,10 @@
 // profile================================================
 .profile{
   margin: 0 auto;
-  width: 80vw;
+  width: 90vw;
   position: relative;
 // hedding------------------------------------------------
   &__hedding{
-    // background-color: white;
     width: 100%;
     height: 15vh;
     line-height: 15vh;
@@ -58,14 +57,14 @@
         transform: translateX(-50%);
       background-color: $base1;
       border-radius: 50%;
-      height: 30vh;
-      width: 30vh;
+      height: 28vh;
+      width: 28vh;
     }
     &__btnNext,&__btnPrev{
-      // border: solid 1px $base1;
+      border: solid 1px $base1;
       border-radius: 50%;
-      height: 10vh;
-      width: 10vh;
+      height: 8vh;
+      width: 8vh;
       position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -77,14 +76,84 @@
       }
     }
     &__btnNext{
-      right: 0%;
+      right: 2%;
     }
     &__btnPrev{
-      left: 0%;
+      left: 2%;
+    }
+    &__textHeader{
+      position: absolute;
+        top: 35%;
+        left: 13%;
+      width: 80%;
+      height: 8vh;
+      line-height: 8vh;
+      li{
+        color: $base2;
+        font-family: "roboto";
+        font-size: 40px;
+      }
+    }
+// contents------------------------------------------------
+    &__lowerBox{
+      position: absolute;
+        top: 72%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+      width: 70%;
+      height: 30vh;
+      &__wrapper{
+        display: flex;
+        justify-content: space-around;
+        &__introduce{
+          font-family: "roboto";
+          height: 30vh;
+          width: 32vh;
+          &--heading{
+            font-weight: 500;
+            font-size: 18px;
+            width: 100%;
+            line-height: 4vh;
+            span{
+              color: $base1;
+            }
+          }
+          &--text{
+            font-weight: 400;
+            // background-color: white;
+            margin-top: 2vh;
+            width: 100%;
+            height: 12vh;
+            line-height: 4vh;
+          }
+        }
+      }
+    }
+// circles------------------------------------------------
+    &__circleBox{
+      position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      width: 8%;
+      height: 10vh;
+      display: flex;
+        justify-content: space-around;
+        align-items: center;
+      &--circle{
+        border-radius: 50%;
+        height: 1vh;
+        width: 1vh;
+        background-color: $base1;
+      }
+      .active{
+        height: 1.5vh;
+        width: 1.5vh;
+        background-color: $base3;
+        border: 2px solid $base1;
+      }
     }
   }
-
-  
   // tables------------------------------------------------
   &__tables{
     width:100%;

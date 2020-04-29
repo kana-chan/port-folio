@@ -22,45 +22,35 @@
       .profile__main__btnPrev
         =fa_icon "long-arrow-left"
       %ul.profile__main__textHeader
-        %li ABOUT ME
-    -# .profile__tables
-      %table
-        %tr
-          %th KANATA OKAYAMA
-        %tr
-          %td 　1992年6月9日生まれ、B型、双子座。
-        %tr
-          %td 　大阪府大阪市西成区 出身。
-      %table
-        %tr
-          %th{colspan:2} CAREER & EXPERIENCE
-        %tr
-          %td 　2018年 
-          %td 同志社大学心理学部心理学科 卒業。
-        %tr
-          %td 　2018年
-          %td 日本郵便株式会社 入社。
-        %tr
-          %td 　2020年
-          %td エンジニアを目指し学習開始。
-      %table
-        %tr
-          %th{colspan:2} HOBBIES & INTERESTS
-        %tr
-          %td 　COFFEE
-          %td 抽出だけでなく、焙煎やラテアートも。
-        %tr
-          %td 　CAMERA
-          %td 最近始めたばかり。現像の勉強を開始。
-        %tr
-          %td 　FASSION
-          %td 衣食住。完全に衣に振り切っています。
-    -# .profile__moreBtn
-      =link_to(profiles_path) do
-        .profile__moreBtn--text.linkBtn
-          %h2 SHOW MORE
-          .profile__moreBtn--icon.arrow
-            =fa_icon "long-arrow-right"
+        %li CARRER
+      %ul.profile__main__lowerBox
+        %li.profile__main__lowerBox__wrapper
+          .profile__main__lowerBox__wrapper__introduce
+            .profile__main__lowerBox__wrapper__introduce--heading
+              同志社大学
+              %br 心理学部心理学科卒業
+              %span 2018
+            .profile__main__lowerBox__wrapper__introduce--text
+              自らの主張や論理を組み立てる力、現象を客観的に観察・分析する力、そして、得られた実証データについて主体的に発信する力を身につけました。
+          .profile__main__lowerBox__wrapper__introduce
+            .profile__main__lowerBox__wrapper__introduce--heading
+              日本郵便株式会社
+              %br 窓口職員として入社
+              %span 2018 - 2020
+            .profile__main__lowerBox__wrapper__introduce--text
+              郵便局の窓口職員として、郵便・銀行・保険の3事業に幅広く従事していました。いずれも、些細なミスも許されない環境でスピーディーな仕事を求められました。
+          .profile__main__lowerBox__wrapper__introduce
+            .profile__main__lowerBox__wrapper__introduce--heading
+              エンジニア転職を志し
+              %br TECH::CAMPにて学習を開始
+              %span 2020
+            .profile__main__lowerBox__wrapper__introduce--text
+              「自らの手で創り上げたい」という想いのもと、エンジニアとして生きることを決意いたしました。日々の学習が、「楽しい」と感じることができています。
+      %ul.profile__main__circleBox
+        %li.profile__main__circleBox--circle
+        %li.profile__main__circleBox--circle.active
+        %li.profile__main__circleBox--circle
+        %li.profile__main__circleBox--circle
   -# skills================================================
   .skills
     .skills__hedding
