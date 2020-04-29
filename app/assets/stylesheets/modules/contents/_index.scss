@@ -1,4 +1,5 @@
 #index{
+  background-color: $base1;
 // top-contents================================================================================================
 .top{
   margin: 0 auto;
@@ -17,7 +18,6 @@
       height: 100%;
     }
     h1{
-      color: white;
       font-size:80px ;
     }
   }
@@ -36,22 +36,55 @@
   margin: 0 auto;
   width: 80vw;
   position: relative;
-  // background-color: blue;
-  // hedding------------------------------------------------
+// hedding------------------------------------------------
   &__hedding{
-    padding-top: 8vh;
-    margin-bottom: 5vh;
+    // background-color: white;
     width: 100%;
-    height: 14vh;
-    line-height: 6vh;
+    height: 15vh;
+    line-height: 15vh;
     font-size: 5vh;
   }
-  &__topText{
-    width: 80vw;
-    margin: 0 auto 5vh;
-    line-height: 4vh;
-    font-size: 2vh;
+// main------------------------------------------------
+  &__main{
+    background-color: $base3;
+    border-radius: 20px;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    &__imageWrapper{
+      position: absolute;
+        left: 50%;
+        top: 5%;
+        transform: translateX(-50%);
+      background-color: $base1;
+      border-radius: 50%;
+      height: 30vh;
+      width: 30vh;
+    }
+    &__btnNext,&__btnPrev{
+      // border: solid 1px $base1;
+      border-radius: 50%;
+      height: 10vh;
+      width: 10vh;
+      position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      i{
+        @include position-center;
+        color: $base1;
+        font-size: 3em;
+        -webkit-text-stroke: 3.5px $base3;
+      }
+    }
+    &__btnNext{
+      right: 0%;
+    }
+    &__btnPrev{
+      left: 0%;
+    }
   }
+
+  
   // tables------------------------------------------------
   &__tables{
     width:100%;
