@@ -31,7 +31,7 @@
       top: 60%;
   }
 }
-// profile================================================
+// profile================================================================================================
 .profile{
   margin: 0 auto;
   width: 90vw;
@@ -62,7 +62,7 @@
       img{
         @include position-center;
         border-radius: 50%;
-        height: 98%;
+        height: 99%;
       }
     }
     &__btn{
@@ -187,38 +187,8 @@
       }
     }
   }
-  // tables------------------------------------------------
-  &__tables{
-    width:100%;
-    line-height: 4vh;
-    font-size: 2vh;
-    table{
-      width: 40%;
-      text-align: left;
-      margin: 2vh 0;
-    }
-    th{
-      width: 20%;
-      font-weight: bold;
-    }
-    td:nth-child(1){
-      width: 20%;
-    }
-    td:nth-child(2){
-      text-align: left;
-      padding-left: 10%;
-      widows: 65%;
-    }
-  }
-  &__moreBtn{
-    width: 18vw;
-    height:10vh;
-    position: absolute;
-      right: 0;
-      bottom: 0;
-  }
 }
-// slills================================================
+// slills================================================================================================
 .skills{
   padding-top: 8vh;
   margin: 0 auto;
