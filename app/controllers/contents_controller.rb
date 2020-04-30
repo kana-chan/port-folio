@@ -45,6 +45,7 @@ class ContentsController < ApplicationController
       :topImage,
       :topText,
       :catchcopy,
+      :date,
       category_ids:[],
       infomations_attributes:[:image,:text,:heading,:destroy,:id]
     )
