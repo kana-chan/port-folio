@@ -70,8 +70,8 @@
       cursor: pointer;
       border: solid 1px $base1;
       border-radius: 50%;
-      height: 8vh;
-      width: 8vh;
+      height: 7vh;
+      width: 7vh;
       overflow: hidden;
       position: absolute;
         top: 50%;
@@ -282,7 +282,6 @@
             top: 50%;
             left: 4vh;
             transform: translateY(-50%);
-          // background-color: red;
           width: 50%;
           height: 7vh;
           line-height: 7vh;
@@ -310,7 +309,6 @@
             width: 6vh;
             height: 6vh;
             border-radius: 50%;
-            // background-color: $base3;
             border: solid 1px $base2;
             overflow: hidden;
             i{
