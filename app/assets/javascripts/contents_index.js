@@ -14,6 +14,7 @@ $(function(){
   $('.profile__main__textHeader').children().eq(0).show();
   $('.profile__main__circleBox--circle').eq(0).addClass('active');
   $('.profile__main__lowerBox__wrapper').eq(0).show();
+  $('.prev').hide();
   
 // btnの矢印アニメ------------------------------------------------
   $('.profile__main__btn').on('mouseenter',function(){
@@ -35,19 +36,28 @@ $(function(){
     nowActive.removeClass('active');
     $('.profile__main__textHeader').children().hide();
     $('.profile__main__lowerBox').children().hide();
-
     if ($(this).hasClass('prev')){
       // 丸の切り替え------------------------------------------------
       nowActive.prev().addClass('active');
       // 見出しの切り替え------------------------------------------------
       $('.profile__main__textHeader').children().eq(index).prev().fadeIn();
       $('.profile__main__lowerBox').children().eq(index).prev().fadeIn();
+      if(index==1){
+        $(this).hide()
+      }else if(index==3){
+        $('.next').show();
+      }
     }else{
       // 丸の切り替え------------------------------------------------
       nowActive.next().addClass('active');
       // 見出しの切り替え------------------------------------------------
       $('.profile__main__textHeader').children().eq(index).next().fadeIn();
       $('.profile__main__lowerBox').children().eq(index).next().fadeIn();
+      if(index==2){
+        $(this).hide()
+      }else if(index==0){
+        $('.prev').show();
+      }
     }
   })
 // contents================================================
