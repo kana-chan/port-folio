@@ -91,21 +91,27 @@ $(function(){
       }
     });
 // skills================================================
-    $('.skills__wrapper__left__category').on('click',function(){
-      var index = $(this).index();
-      $.when(
-        $('.skillsUnderLine')
-          .animate({width:'100%'},300)
-      ).done(function(){
-        $('.skills__wrapper__right').css('backgroundColor','lightGray')
-        $('.skills__wrapper__right__info')
-          .hide()
-          .eq(index).show()
-        $('.skillsUnderLine')
-          .animate({height:'0'},300)
-          .animate({width:'0',height:'100%'},0)
+// otherBlock ホバーでname表示------------------------------------------------
+    $('.skills__main__otherBlock__contentBox__content').hover(
+      function(){
+        $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeIn();
+      },
+      function(){
+        $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeOut();
       })
-    })
+// lowerBlock ホバー- -----------------------------------------------
+      $('.skills__main__lowerBlock__content').hover(
+        function(){
+          $(this).children('.skills__main__lowerBlock__content--leftCircle').animate({width:'1.5vh',height:'1.5vh'});
+          $(this).find('i')
+            .animate({left:'150%'},300)
+            .animate({left:'-50%'},0)
+            .animate({left:'50%'},300)
+        },
+        function(){
+          $(this).children('.skills__main__lowerBlock__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'});
+        })
+  
 // show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){

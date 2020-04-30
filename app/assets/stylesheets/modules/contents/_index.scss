@@ -206,6 +206,7 @@
     width: 100%;
     height: 65vh;
     position: relative;
+// upper------------------------------------------------
     &__upperBlock{
       // background-color: red;
       position: absolute;
@@ -242,7 +243,88 @@
         }
       }
     }
+// lower------------------------------------------------
     &__lowerBlock{
+      // display:none;
+      position: absolute;
+        top: 95%;
+        left: 68%;
+        transform:translateX(-50%)translateY(-50%);
+      width: 55vw;
+      height: 40vh;
+      border-radius: 20px;
+      background-color: $base2;
+      &--name{
+        // background-color: white;
+        margin: 1vh 0 0 2vh;
+        height: 10vh;
+        line-height: 10vh;
+      }
+      &__content{
+        // background-color: #fff;
+        margin: 0 auto 1vh;
+        width: 80%;
+        height: 8vh;
+        position: relative;
+        &--leftCircle{
+          position: absolute;
+            top: 50%;
+            left: 2vh;
+            transform: translateX(-50%)translateY(-50%);
+          width: 0.5vh;
+          height: 0.5vh;
+          border-radius: 50%;
+          background-color: $base2;
+          border: solid 2px $base3;
+        }
+        &--centerName{
+          position: absolute;
+            top: 50%;
+            left: 4vh;
+            transform: translateY(-50%);
+          // background-color: red;
+          width: 50%;
+          height: 7vh;
+          line-height: 7vh;
+          font-size: 2vh;
+          font-family: "roboto";
+          font-weight: 400;
+          color:$base3;
+        }
+        &__rightBtn{
+          border-radius: 4vh;
+          position: absolute;
+            right: 0;
+          height: 7vh;
+          width: 18vw;
+          background-color: $base3;
+          &--text{
+            line-height: 7vh;
+            margin-left: 1.5vw;
+          }
+          &--icon{
+            position: absolute;
+              top: 50%;
+              right: 0.5vh;
+              transform:translateY(-50%);
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            // background-color: $base3;
+            border: solid 1px $base2;
+            overflow: hidden;
+            i{
+              @include position-center;
+              color: $base2;
+              font-size: 3em;
+              -webkit-text-stroke: 3.5px $base3;
+            }
+          }
+        }
+      }
+    }
+// other------------------------------------------------
+    &__otherBlock{
       position: absolute;
         bottom: 10%;
         left: 15%;
@@ -297,7 +379,7 @@
   align-items: center;
   &__hedding{
     width: 80vw;
-    margin: 0 auto;
+    margin: 40vh auto;
     height: 6vh;
     font-size: 5vh;
     line-height: 6vh;
@@ -370,6 +452,7 @@
     }
   }
 }
+
 .separateLine{
   width: 100vw;
   height: 1px;
@@ -379,32 +462,3 @@
 // ================================================
 }
 // ================================================
-
-.linkBtn{
-  position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  width: 18vw;
-  height: 7.5vh;
-  line-height: 7.5vh;
-  padding: 0 1vw;
-  border: solid 0.1px $black;
-  .arrow{
-    position: absolute;
-    top: 50%;
-    right: 1%;
-    transform:translateY(-50%);
-    width: 14%;
-    height: 100%;
-    font-size: 3em;
-    overflow: hidden;
-    i{
-    -webkit-text-stroke: 3.5px white;
-    position: absolute;
-      top: 50%;
-      right: 30%;
-      transform: translateY(-50%);
-    }
-  }
-}
