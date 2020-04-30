@@ -53,12 +53,17 @@
     &__imageWrapper{
       position: absolute;
         left: 50%;
-        top: 5%;
+        top: 3%;
         transform: translateX(-50%);
       background-color: $base1;
       border-radius: 50%;
-      height: 28vh;
-      width: 28vh;
+      height: 30vh;
+      width: 30vh;
+      img{
+        @include position-center;
+        border-radius: 50%;
+        height: 98%;
+      }
     }
     &__btn{
       cursor: pointer;
