@@ -84,10 +84,10 @@
       }
     }
     .next{
-      right: 2%;
+      right: 3%;
     }
     .prev{
-      left: 2%;
+      left: 3%;
     }
     &__textHeader{
       position: absolute;
@@ -245,10 +245,9 @@
     }
 // lower------------------------------------------------
     &__lowerBlock{
-      // display:none;
       position: absolute;
         top: 95%;
-        left: 68%;
+        left: 150%;
         transform:translateX(-50%)translateY(-50%);
       width: 55vw;
       height: 40vh;

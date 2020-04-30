@@ -111,7 +111,17 @@ $(function(){
         function(){
           $(this).children('.skills__main__lowerBlock__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'});
         })
-  
+// skillIcon click横からlowerBlock表示------------------------------------------------
+      $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
+        var index = $(this).parents().index();
+        if($(this).hasClass('active')){
+        }else{
+          $('.skills__main__upperBlock__contentBox--icon').removeClass('active');
+          $(this).addClass('active')
+          $('.skills__main__lowerBlock').animate({left:'150%'})
+          $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
+        }
+      })
 // show moreボタン------------------------------------------------
   $('.linkBtn').hover(
     function(){
