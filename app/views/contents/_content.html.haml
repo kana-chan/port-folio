@@ -1,21 +1,28 @@
-.works__main
-  .works__main__contentsBox
-    .works__main__contentsBox__upperBlock
-      .works__main__contentsBox__upperBlock__textBox
-        %h2 FURIMA
-      .works__main__contentsBox__upperBlock__imageBox
-        =image_tag("/uploads/content/overview/2/overview.png")
-    .works__main__contentsBox__lowerBlock
-      .works__main__contentsBox__lowerBlock--topText
-        初めてのアプリケーション。
-      %table.works__main__contentsBox__lowerBlock__infomations
-        %tr
-          %th DATE
-          %td 2020.04
-        %tr
-          %th LANGUAGE
-          %td ruby,HTML
+.works__main__contentsBox
+  .works__main__contentsBox__upperBlock
+    -# .works__main__contentsBox__upperBlock__textBox
+    -#   %h2=content.name
+    .works__main__contentsBox__upperBlock__imageBox
+      =image_tag(content.topImage.to_s)
+  .works__main__contentsBox__lowerBlock
+    .works__main__contentsBox__lowerBlock--topText
+      =content.catchcopy
+    %table.works__main__contentsBox__lowerBlock__infomations
+      %tr
+        %th DATE
+        %td=content.date
+      %tr
+        %th LANGUAGE
+        %td 
+          -content.categories.each do |skill|
+            ="#{skill.name}, "
+    =link_to(content_path(content.id)) do
       .works__main__contentsBox__lowerBlock__linkBtn
-  .works__main__contentsBox
-    .works__main__contentsBox__upperBlock
-    .works__main__contentsBox__lowerBlock
+        %h2.works__main__contentsBox__lowerBlock__linkBtn--text 
+          SHOW MORE
+        .works__main__contentsBox__lowerBlock__linkBtn--icon 
+          =fa_icon "long-arrow-right"
+  .works__main__contentsBox--underLine
+
+
+

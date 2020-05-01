@@ -426,25 +426,17 @@
     margin-bottom: 10vh;
     border-radius: 20px;
     width: 100%;
-    height: 200vh;
     padding: 10vh 0 0;
     position: relative;
     &__contentsBox{
-      margin: 0 auto;
+      margin: 0 auto ;
       width: 75%;
-      border-bottom: 1px solid $base1;
       &__upperBlock{
         width: 100%;
         height: 45vh;
-        display: flex;
-        &__textBox{
-          width: 20%;
-          height: 45vh;
-          line-height: 45vh;
-        }
         &__imageBox{
           height: 45vh;
-          width: 80%;
+          width: 100%;
           position: relative;
           img{
             @include position-center;
@@ -454,13 +446,12 @@
         }
       }
       &__lowerBlock{
-        // display: none;
+        display: none;
         // background-color: gray;
         margin:0 auto;
         width: 100%;
         height: 20vh;
         position: relative;
-        margin-bottom: 3vh;
         &--topText{
           // background-color: #fff;
           width: 100%;
@@ -484,7 +475,44 @@
             }
           }
         }
-        &__linkBtn{}
+        &__linkBtn{
+          border-radius: 4vh;
+          position: absolute;
+            bottom: 0;
+            right: 0;
+          height: 7vh;
+          width: 18vw;
+          background-color: $base3;
+          border: solid 1px $base2;
+          &--text{
+            line-height: 7vh;
+            margin-left: 1.5vw;
+          }
+          &--icon{
+            position: absolute;
+              top: 50%;
+              right: 0.5vh;
+              transform:translateY(-50%);
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            border: solid 1px $base2;
+            // background-color: $base1;
+            overflow: hidden;
+            i{
+              @include position-center;
+              color: $base2;
+              font-size: 3em;
+              -webkit-text-stroke: 3.5px $base3;
+            }
+          }
+        }
+      }
+      &--underLine{
+        width:90%;
+        height: 3px;
+        background-color: $base1;
+        margin: 5vh auto 5vh;
       }
     }
   }
