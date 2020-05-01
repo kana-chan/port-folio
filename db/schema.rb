@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_041825) do
     t.string "topImage", null: false
     t.string "topText", null: false
     t.string "catchcopy", null: false
-    t.integer "date", null: false
+    t.string "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

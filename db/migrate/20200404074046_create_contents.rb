@@ -7,7 +7,7 @@ class CreateContents < ActiveRecord::Migration[5.0]
       t.string :topImage,               null: false
       t.string :topText,                null: false
       t.string :catchcopy,              null: false
-      t.integer :date,                  null: false
+      t.string :date,                   null: false
       t.timestamps
     end
   end
