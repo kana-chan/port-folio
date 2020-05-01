@@ -2,107 +2,32 @@
 #index
   -# top================================================
   .top
-    .top__nameBox
-      .top__nameBox--engineer
-        engineer
-      .top__nameBox--myName
-        オカヤマ カナタ
-  -# main================================================
-  .main
-    .profile
-      .profile__hedding
-        Profile
-      .profile__tables
-        %table
-          %tr
-            %th オカヤマ カナタ
-          %tr
-            %td 1992年6月9日生まれ、B型、双子座。
-        %table
-          %tr
-            %th 出身
-          %tr
-            %td 大阪府大阪市西成区
-        %table
-          %tr
-            %th{colspan:2} 略歴
-          %tr
-            %td 2018年
-            %td 同志社大学心理学部心理学科 卒業。
-          %tr
-            %td 2018年
-            %td 日本郵便株式会社 入社。
-          %tr
-            %td 2020年
-            %td エンジニアを目指し学習開始。
-        %table
-          %tr
-            %th{colspan:2} 趣味
-          %tr
-            %td コーヒー
-            %td 抽出だけでなく、焙煎やラテアートも。
-          %tr
-            %td カメラ
-            %td 最近始めたばかり。現像作業の勉強を開始。
-      .profile__moreBtn
-        =link_to(profiles_path) do
-          .profile__moreBtn--text.linkBtn
-            %p SHOW MORE
-            .profile__moreBtn--icon.arrow
-              =fa_icon "long-arrow-right"
-    -# skills================================================
-    .skills
-      .skills__hedding
-        Skills
-      .skills__topText
-        2020年。エンジニア転職を決意しプログラミング学習に取り組んできました。
-        %br 実務経験はまだありませんが、現時点での "オカヤマ カナタ" のスキルです。
-
-      .skills__wrapper
-        -@categories.each do |category|
-          .skills__wrapper__contentBox
-            .skills__wrapper__contentBox__skillBlock.skillBlock
-              .skills__wrapper__contentBox__skillBlock__sideFilter{style:"background-color: #{category.color}"}
-              .skills__wrapper__contentBox__skillBlock__sideIcon
-                =image_tag(category.icon)
-              .skills__wrapper__contentBox__skillBlock__name
-                =category.name
-              .skills__wrapper__contentBox__skillBlock__btn
-                =fa_icon "plus"
-            .skills__wrapper__contentBox__linkBlock.linkBlock
-              -category.contents.each do |apps|
-                .skills__wrapper__contentBox__linkBlock__contentRow
-                  .skills__wrapper__contentBox__linkBlock__contentRow--circle{style:"background-color: #{category.color}"}
-                  =link_to(content_path(apps.id)) do
-                    .skills__wrapper__contentBox__linkBlock__contentRow--name.name
-                      =apps.name
-                  .skills__wrapper__contentBox__linkBlock__contentRow--arrow
-                    =fa_icon "long-arrow-right"
-        .skills__wrapper__contentBox
-          .skills__wrapper__contentBox__skillBlock.skillBlock
-            .skills__wrapper__contentBox__skillBlock__sideFilter{style:"background-color: black"}
-            .skills__wrapper__contentBox__skillBlock__sideIcon
-              =image_tag("icons/git.png")
-            .skills__wrapper__contentBox__skillBlock__name
-              OTHER SKILLS
-            .skills__wrapper__contentBox__skillBlock__btn
-              =fa_icon "plus"
-          .skills__wrapper__contentBox__linkBlock.linkBlock
-            .skills__wrapper__contentBox__linkBlock__contentRow
-              .skills__wrapper__contentBox__linkBlock__contentRow--circle
-              .skills__wrapper__contentBox__linkBlock__contentRow--name
-                Git hub
-            .skills__wrapper__contentBox__linkBlock__contentRow
-              .skills__wrapper__contentBox__linkBlock__contentRow--circle
-              .skills__wrapper__contentBox__linkBlock__contentRow--name
-                SQL
-
-    -# works================================================
-    .works
-      .works__hedding
-        Works
+    .top__text1
+      %h1 I'M
+      .underLine
+    .top__text2
+      %h1 KANATA
+      .underLine
+    .top__text3
+      %h1 OKAYAMA
+      .underLine
+  -# profile================================================
+  .profile
+    .profile__hedding
+      %h1 PROFILE
+    = render "profile"
+  -# skills================================================
+  .skills
+    .skills__hedding
+      %h1 SKILLS
+    = render "category"
+  -# works================================================
+  .works
+    .works__hedding
+      %h1 WORKS
+    .works__main
       = render @contents
 -# footer================================================
-= render "/templates/footer"
+= render "/templates/menu"
 
 

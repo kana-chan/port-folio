@@ -4,15 +4,15 @@
       .skill--name
         %p スキル
         = f.text_field :name,placeholder:"スキル名"
+      .skill--text
+        %p 説明
+        = f.text_area :text,placeholder:"テキスト"
       .skill--number
         %p 番号
         = f.number_field :number,placeholder:"半角数字"
       .skill--icon
         %p アイコン
-        = f.text_field :icon, placeholder:"アイコンクラス"
-      .skill--color
-        %p カラー
-        = f.color_field :color
+        = f.text_field :icon, placeholder:"svgファイル"
     .submit
       = f.submit
     -if @category.persisted?

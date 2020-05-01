@@ -1,26 +1,26 @@
-.works__contentsBox
-  .works__contentsBox__photoBlock
-    =image_tag(content.topImage.to_s)
-    .works__contentsBox__photoBlock--filter.filter
-      =content.name
-  .works__contentsBox__textBlock
-    .works__contentsBox__textBlock__left
-      .works__contentsBox__textBlock__left--name
-        =content.catchcopy
-      %table.works__contentsBox__textBlock__left__info
-        %tr
-          %th DATE
-          %td="#{content.created_at.strftime('%Y.%m')}"
-        %tr
-          %th LANGUAGE
-          %td 
-            -content.categories.each do|language|
-              ="#{language.name}"
-    .works__contentsBox__textBlock__right
-      =link_to(content_path(content.id)) do
-        .works__contentsBox__textBlock__right__moreBtn.linkBtn
-          %p DITAIL
-          .works__contentsBox__textBlock__right__moreBtn--icon.arrow
-            =fa_icon "long-arrow-right"
-.separateLine
+.works__main__contentsBox
+  .works__main__contentsBox__upperBlock
+    .works__main__contentsBox__upperBlock__imageBox
+      =image_tag(content.topImage.to_s)
+  .works__main__contentsBox__lowerBlock
+    .works__main__contentsBox__lowerBlock--topText
+      =content.catchcopy
+    %table.works__main__contentsBox__lowerBlock__infomations
+      %tr
+        %th DATE
+        %td=content.date
+      %tr
+        %th LANGUAGE
+        %td 
+          -content.categories.each do |skill|
+            ="#{skill.name}, "
+    =link_to(content_path(content.id)) do
+      .works__main__contentsBox__lowerBlock__linkBtn
+        %h2.works__main__contentsBox__lowerBlock__linkBtn--text 
+          SHOW MORE
+        .works__main__contentsBox__lowerBlock__linkBtn--icon 
+          =fa_icon "long-arrow-right"
+  .works__main__contentsBox--underLine
+
+
 

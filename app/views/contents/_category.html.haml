@@ -1,0 +1,64 @@
+.skills__main
+  .skills__main--message
+    CLICK ICON for more info
+  %ul.skills__main__upperBlock
+    -@categories.each do |skill|
+      %li.skills__main__upperBlock__contentBox
+        .skills__main__upperBlock__contentBox--icon
+          =embedded_svg(skill.icon,class:"svgIcon")
+        .skills__main__upperBlock__contentBox--name
+          %h2=skill.name
+  -@categories.each do |skill|
+    .skills__main__lowerBlock
+      .skills__main__lowerBlock--name
+        =skill.name
+      .skills__main__lowerBlock--text
+        =skill.text
+      .skills__main__lowerBlock--deleteBtn
+        =fa_icon "plus"
+      .skills__main__lowerBlock__wrapper
+        -if skill.contents.present?
+          -skill.contents.each do |content|
+            .skills__main__lowerBlock__wrapper__content
+              .skills__main__lowerBlock__wrapper__content--leftCircle
+              .skills__main__lowerBlock__wrapper__content--centerName
+                =content.name
+              =link_to(content_path(content.id)) do
+                .skills__main__lowerBlock__wrapper__content__rightBtn
+                  %h2.skills__main__lowerBlock__wrapper__content__rightBtn--text 
+                    SHOW MORE
+                  .skills__main__lowerBlock__wrapper__content__rightBtn--icon 
+                    =fa_icon "long-arrow-right"
+        - else
+          .skills__main__lowerBlock__wrapper__content
+            .skills__main__lowerBlock__wrapper__content--centerName
+              NOW STUDYING ...
+  .skills__main__otherBlock
+    .skills__main__otherBlock--heading
+      %h2 THE OTHERS
+    .skills__main__otherBlock__contentBox
+      .skills__main__otherBlock__contentBox__content
+        .skills__main__otherBlock__contentBox__content--icon
+          =embedded_svg("icons/database.svg",class:"svgIcon")
+        .skills__main__otherBlock__contentBox__content--name
+          %h2 SQL
+      .skills__main__otherBlock__contentBox__content
+        .skills__main__otherBlock__contentBox__content--icon
+          =embedded_svg("icons/git.svg",class:"svgIcon")
+        .skills__main__otherBlock__contentBox__content--name
+          %h2 GIT
+      .skills__main__otherBlock__contentBox__content
+        .skills__main__otherBlock__contentBox__content--icon
+          =embedded_svg("icons/terminal.svg",class:"svgIcon")
+        .skills__main__otherBlock__contentBox__content--name
+          %h2 TERMINAL
+      .skills__main__otherBlock__contentBox__content
+        .skills__main__otherBlock__contentBox__content--icon
+          =embedded_svg("icons/trello.svg",class:"svgIcon")
+        .skills__main__otherBlock__contentBox__content--name
+          %h2 TRELLO
+      .skills__main__otherBlock__contentBox__content
+        .skills__main__otherBlock__contentBox__content--icon
+          =embedded_svg("icons/visualstudio.svg",class:"svgIcon")
+        .skills__main__otherBlock__contentBox__content--name
+          %h2 VS CODE

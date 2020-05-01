@@ -5,6 +5,9 @@
         .top__left--topImage
           %p トップ画像
           = f.file_field :topImage
+        .top__left--date
+          %p 日付
+          = f.text_field :date ,placeholder:"2020.04"
         .top__left--topText
           %p トップテキスト
           = f.text_area :topText ,placeholder:"トップテキスト"
