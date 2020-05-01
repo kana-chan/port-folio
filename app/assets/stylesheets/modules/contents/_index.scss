@@ -230,7 +230,7 @@
         top: 20%;
         left: 50%;
         transform: translateX(-50%);
-      width: 72vw;
+      width: 75vw;
       height: 26vh;
       overflow-x: scroll;
       overflow-y: hidden;
@@ -238,8 +238,7 @@
       &__contentBox{
         display: inline-block;
         cursor: pointer;
-        width: 13vw;
-        margin-right: 1vw;
+        width: 12vw;
         &--icon{
           background-color: $base1;
           border-radius: 50%;
@@ -254,7 +253,7 @@
           }
         }
         &--name{
-          width: 13vw;
+          width: 12vw;
           height: 5vh;
           line-height: 5vh;
           text-align: center;
