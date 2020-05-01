@@ -11,7 +11,9 @@
   -@categories.each do |skill|
     .skills__main__lowerBlock
       .skills__main__lowerBlock--name
-        %h1=skill.name
+        =skill.name
+      .skills__main__lowerBlock--text
+        =skill.text
       .skills__main__lowerBlock--deleteBtn
         =fa_icon "plus"
       -if skill.contents.present?

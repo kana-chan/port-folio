@@ -225,7 +225,6 @@
     }
 // upper------------------------------------------------
     &__upperBlock{
-      // background-color: red;
       position: absolute;
         top: 20%;
         left: 50%;
@@ -271,10 +270,22 @@
       border-radius: 20px;
       background-color: $base2;
       &--name{
-        // background-color: white;
-        margin: 1vh 0 0 2vh;
-        height: 10vh;
-        line-height: 10vh;
+        margin: 2vh 0 0 2vh;
+        height: 5vh;
+        line-height: 5vh;
+        color: $base3;
+        font-weight: 500;
+        font-size: 5vh;
+        font-family: "roboto";
+      }
+      &--text{
+        margin: 1vh 0 1vh 4vh;
+        height: 3vh;
+        line-height: 3vh;
+        color: $base3;
+        font-weight: 400;
+        font-size: 1.5vh;
+        font-family: "roboto";
       }
       &--deleteBtn{
         cursor: pointer;
@@ -293,7 +304,6 @@
         }
       }
       &__content{
-        // background-color: #fff;
         margin: 0 auto 1vh;
         width: 80%;
         height: 8vh;
