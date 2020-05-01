@@ -4,7 +4,7 @@
   margin: 1vh auto;
 // ================================================
   .top{
-    background-color: $l_gray;
+    background-color: gray;
     height: 40vh;
     padding: 2vh 0;
     display: flex;
@@ -12,7 +12,7 @@
     &__left{
       width: 40%;
       height: 100%;
-      background-color: $gray;
+      background-color: gray;
       &--topText,&--topImage{
         input{
           width: 100%;
@@ -65,7 +65,7 @@
   padding:2vh 0;
   width: 100%;
   height: 50vh;
-  background-color: $l_gray;
+  background-color: gray;
   margin-bottom: 2vh;
   &__previewBox{
     width: 100%;
@@ -75,7 +75,7 @@
     &--display{
       width: 18%;
       height: 95%;
-      background-color: $gray;
+      background-color: gray;
     }
   }
   &__inputBox{

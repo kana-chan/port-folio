@@ -6,7 +6,7 @@ $(function(){
       $(this).delay(100*i).animate({width:'100%'},300)
     })
   ).done(function(){
-    $(this).prev('h1').css('color','black')
+    $(this).prev('h1').css('color','rgb(247, 238, 224)')
     $('.underLine').animate({height:'5%'},300)
   })
 // profile================================================================================================
@@ -61,42 +61,25 @@ $(function(){
     }
   })
 // contents================================================================================================
-  $('.works__contentsBox__photoBlock').hover(
+// image をクリックで、info------------------------------------------------
+  $('.works__main__contentsBox__upperBlock').on('click',function(){
+    $(this).next().slideToggle();
+  })
+// ------------------------------------------------
+  $('.works__main__contentsBox__lowerBlock__linkBtn').hover(
     function(){
-      $(this).children('img')
-        .animate({width:'102%',height:'102%'})
-        .css('filter','blur(2px)')
-      $(this).children('.filter')
-        .fadeIn();
-    },
-    function(){
-      $(this).children('img')
-        .animate({width:'100%',height:'100%'})
-        .css('filter','blur(0)')
-      $(this).children('.filter')
-        .fadeOut();
-    });
-// filer------------------------------------------------
-    $('.filter').on('click',function(){
-      var $terget = $(this).parents().siblings('.works__contentsBox__textBlock')
-      if ($terget.hasClass('open')){
-        $terget
-          .removeClass('open')
-          .slideUp(300);
-      }else{
-        $terget
-          .addClass('open')
-          .slideDown(300)
-          .css('display','flex');
-      }
-    });
+      $(this).children().children('i')
+        .animate({left:'150%'},300)
+        .animate({left:'-50%'},0)
+        .animate({left:'50%'},300)
+    },function(){
+    })
 // skills================================================================================================
 // otherBlock ホバーでname表示------------------------------------------------
-    $('.skills__main__otherBlock__contentBox__content').hover(
+    $('.works__main__contentsBox__lowerBlock__linkBtn').hover(
       function(){
         $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeIn();
-      },
-      function(){
+      },function(){
         $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeOut();
       })
 // lowerBlock ホバー- -----------------------------------------------
@@ -107,8 +90,7 @@ $(function(){
             .animate({left:'150%'},300)
             .animate({left:'-50%'},0)
             .animate({left:'50%'},300)
-        },
-        function(){
+        },function(){
           $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'},200);
         })
 // skillIcon click横からlowerBlock表示------------------------------------------------

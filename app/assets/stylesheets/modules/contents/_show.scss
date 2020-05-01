@@ -83,7 +83,7 @@
           @include position-center;
           display: none;
           background-color:rgba(white,0.9);
-          border: solid 0.5px $black;
+          border: solid 0.5px black;
           text-align: center;
           line-height: 11vw;
           width: 11vw;
@@ -145,7 +145,7 @@ td{
   vertical-align: top;
   text-align: left;
   width: 60%;
-  color: $gray;
+  color: gray;
 }
 // ================================================
 }
