@@ -12,17 +12,22 @@
         %h1=skill.name
       .skills__main__lowerBlock--deleteBtn
         =fa_icon "plus"
-      -skill.contents.each do |content|
+      -if skill.contents.present?
+        -skill.contents.each do |content|
+          .skills__main__lowerBlock__content
+            .skills__main__lowerBlock__content--leftCircle
+            .skills__main__lowerBlock__content--centerName
+              =content.name
+            =link_to(content_path(content.id)) do
+              .skills__main__lowerBlock__content__rightBtn
+                %h2.skills__main__lowerBlock__content__rightBtn--text 
+                  SHOW MORE
+                .skills__main__lowerBlock__content__rightBtn--icon 
+                  =fa_icon "long-arrow-right"
+      - else
         .skills__main__lowerBlock__content
-          .skills__main__lowerBlock__content--leftCircle
           .skills__main__lowerBlock__content--centerName
-            =content.name
-          =link_to(content_path(content.id)) do
-            .skills__main__lowerBlock__content__rightBtn
-              %h2.skills__main__lowerBlock__content__rightBtn--text 
-                SHOW MORE
-              .skills__main__lowerBlock__content__rightBtn--icon 
-                =fa_icon "long-arrow-right"
+            NOW STUDYING...
   .skills__main__otherBlock
     .skills__main__otherBlock--heading
       %h2 THE OTHERS
