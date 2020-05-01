@@ -1,7 +1,7 @@
 #index{
   background-color: $base1;
   width: 100vw;
-  overflow: hidden;
+  // overflow: hidden;
 // top-contents================================================================================================
 .top{
   margin: 0 auto;
@@ -223,6 +223,7 @@
       white-space: nowrap;
       &__contentBox{
         display: inline-block;
+        cursor: pointer;
         width: 13vw;
         margin-right: 1vw;
         &--icon{
@@ -261,6 +262,22 @@
         margin: 1vh 0 0 2vh;
         height: 10vh;
         line-height: 10vh;
+      }
+      &--deleteBtn{
+        cursor: pointer;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        position: absolute;
+          top: 3vh;
+          right: 4vh;
+          transform:rotate(45deg);
+        i{
+          @include position-center;
+          color: $base3;
+          font-size: 3.5em;
+          -webkit-text-stroke: 6px $base2;
+        }
       }
       &__content{
         // background-color: #fff;
