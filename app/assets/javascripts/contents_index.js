@@ -118,7 +118,7 @@ $(function(){
         }else{
           $('.skills__main__upperBlock__contentBox--icon').removeClass('active');
           $(this).addClass('active')
-          $('.skills__main__lowerBlock').animate({left:'150%'})
+          $('.skills__main__lowerBlock').animate({left:'140%'})
           $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
         }
       })

@@ -1,5 +1,7 @@
 #index{
   background-color: $base1;
+  width: 100vw;
+  overflow: hidden;
 // top-contents================================================================================================
 .top{
   margin: 0 auto;
@@ -202,6 +204,7 @@
 // ------------------------------------------------
   &__main{
     background-color: $base3;
+    margin-bottom: 10vh;
     border-radius: 20px;
     width: 100%;
     height: 65vh;
@@ -247,7 +250,7 @@
     &__lowerBlock{
       position: absolute;
         top: 95%;
-        left: 150%;
+        left: 140%;
         transform:translateX(-50%)translateY(-50%);
       width: 55vw;
       height: 40vh;
@@ -325,17 +328,14 @@
       position: absolute;
         bottom: 10%;
         left: 15%;
-      // background-color: white;
       width:20%;
       &--heading{
-        // background-color: gray;
         height: 8vh;
         line-height: 8vh;
       }
       &__contentBox{
         display: flex;
         &__content{
-          // background-color: red;
           width: 100%;
           height: 10vh;
           position: relative;
@@ -368,28 +368,16 @@
 }
 // works================================================================================================
 .works{
-  padding-top: 8vh;
-  width: 80vw;
+  width:90vw;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   &__hedding{
-    width: 80vw;
-    margin: 40vh auto;
-    height: 6vh;
+    width: 100%;
+    height: 15vh;
+    line-height: 15vh;
     font-size: 5vh;
-    line-height: 6vh;
-    margin-bottom: 5vh;
-  }
-  &__topText{
-    width: 80vw;
-    margin: 0 auto 8vh;
-    line-height: 4vh;
-    font-size: 2vh;
   }
   &__contentsBox{
-    margin-top: 8vh;
+    margin:0 auto;
     width: 85%;
     // photoblock------------------------------------------------
     &__photoBlock{
