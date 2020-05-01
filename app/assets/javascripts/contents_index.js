@@ -76,7 +76,7 @@ $(function(){
     })
 // skills================================================================================================
 // otherBlock ホバーでname表示------------------------------------------------
-    $('.works__main__contentsBox__lowerBlock__linkBtn').hover(
+    $('.skills__main__otherBlock__contentBox__content').hover(
       function(){
         $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeIn();
       },function(){
