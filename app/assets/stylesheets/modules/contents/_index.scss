@@ -262,11 +262,11 @@
 // lower------------------------------------------------
     &__lowerBlock{
       position: absolute;
-        top: 95%;
+        top: 64%;
         left: 140%;
-        transform:translateX(-50%)translateY(-50%);
+        transform:translateX(-50%);
       width: 55vw;
-      height: 40vh;
+      max-height: 39vh;
       border-radius: 20px;
       background-color: $base2;
       &--name{
