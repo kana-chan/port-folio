@@ -100,16 +100,16 @@ $(function(){
         $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeOut();
       })
 // lowerBlock ホバー- -----------------------------------------------
-      $('.skills__main__lowerBlock__content').hover(
+      $('.skills__main__lowerBlock__wrapper__content').hover(
         function(){
-          $(this).children('.skills__main__lowerBlock__content--leftCircle').animate({width:'1.5vh',height:'1.5vh'},200);
+          $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'1.5vh',height:'1.5vh'},200);
           $(this).find('i')
             .animate({left:'150%'},300)
             .animate({left:'-50%'},0)
             .animate({left:'50%'},300)
         },
         function(){
-          $(this).children('.skills__main__lowerBlock__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'},200);
+          $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'},200);
         })
 // skillIcon click横からlowerBlock表示------------------------------------------------
       $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
