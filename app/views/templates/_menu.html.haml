@@ -3,23 +3,15 @@
     .menuBtn--topBar
     .menuBtn--centerBar
     .menuBtn--underBar
-    .menuBtn__modal
-
--# #footer
--#   -if request.path == root_path 
--#     .footerLinks
--#       .footerLinks--profile.jumpBtn
--#         %h3 PROFILE
--#         .footerLinks--line
--#       .footerLinks--skills.jumpBtn
--#         %h3 SKILLS
--#         .footerLinks--line
--#       .footerLinks--works.jumpBtn
--#         %h3 WORKS
--#         .footerLinks--line
--#   - else
--#     .footerLinks
--#       .footerLinks--back.jumpBtn
--#         %h3=link_to("BACK",root_path)
--#         .footerLinks--line
-
+  -if request.path == root_path 
+    .menuModal
+      .menuModal--profile
+        %h2 PROFILE
+      .menuModal--skills
+        %h2 SKILLS
+      .menuModal--works
+        %h2 WORKS
+  -else
+    .menuModal
+      .menuModal--top
+        %h2=link_to("TOP",root_path)

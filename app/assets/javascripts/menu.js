@@ -10,7 +10,7 @@ $(function(){
         .css('top','50%')
         .css('transform','rotate(-225deg)')
       $('.menuBtn--centerBar').css('transform','rotate(135deg)')
-      $('.menuBtn__modal').animate({right:'0'})
+      $('.menuModal').animate({right:'0'})
     }else{
       $('.menuBtn--topBar')
         .css('top','30%')
@@ -19,9 +19,22 @@ $(function(){
         .css('top','70%')
         .css('transform','rotate(0)')
       $('.menuBtn--centerBar').css('transform','rotate(0)')
-      $('.menuBtn__modal').animate({right:'-50vw'})
+      $('.menuModal').animate({right:'-50vw'})
     }
-
+// 各項目をクリックで、ジャンプ------------------------------------------------
+    $('.menuModal--profile').on('click',function(){
+      var position = $('.profile').offset().top;
+      $('html,body').animate({scrollTop:position})
+    })
+    $('.menuModal--skills').on('click',function(){
+      var position = $('.skills').offset().top;
+      $('html,body').animate({scrollTop:position})
+    })
+    $('.menuModal--works').on('click',function(){
+      var position = $('.works').offset().top;
+      $('html,body').animate({scrollTop:position})
+    })
+// ================================================
   })
 
 
@@ -54,12 +67,4 @@ $('.footerLinks--works').on('click',function(){
   $('html,body').animate({scrollTop:works})
 });
 
-// hover で================================================
-  $('.jumpBtn').hover(
-    function(){
-      $(this).children('.footerLinks--line').animate({width:'5vw'},200)
-    },
-    function(){
-      $(this).children('.footerLinks--line').animate({width:'2vw'},200)
-    });
 });
