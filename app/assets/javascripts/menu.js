@@ -10,6 +10,7 @@ $(function(){
         .css('top','50%')
         .css('transform','rotate(-225deg)')
       $('.menuBtn--centerBar').css('transform','rotate(135deg)')
+      $('.menuBtn__modal').animate({right:'0'})
     }else{
       $('.menuBtn--topBar')
         .css('top','30%')
@@ -18,6 +19,7 @@ $(function(){
         .css('top','70%')
         .css('transform','rotate(0)')
       $('.menuBtn--centerBar').css('transform','rotate(0)')
+      $('.menuBtn__modal').animate({right:'-50vw'})
     }
 
   })
