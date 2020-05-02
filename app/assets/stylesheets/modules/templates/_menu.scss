@@ -5,25 +5,21 @@
       right: 0;
     height: 10vh;
     width: 10vh;
-    background-color:$base2;
     &--topBar,&--centerBar,&--underBar{
+      background-color: $base3;
+      transition-duration: 0.5s;
       position: absolute;
-        left: 50%;
-        transform: translateX(-50%)translateY(-50%);
-        transform-origin: 50% 50%;
+        left: 25%;
       width: 5vh;
       height: 0.5vh;
     }
     &--topBar{
-      background-color:black;
       top: 30%;
     }
     &--centerBar{
-      background-color: yellow;
       top: 50%;
     }
     &--underBar{
-      background-color: red;
       top: 70%;
     }
   }
