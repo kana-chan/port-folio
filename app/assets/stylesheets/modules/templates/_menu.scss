@@ -1,0 +1,74 @@
+#menu{
+  .menuBtn{
+    position: fixed;
+      top: 0;
+      right: 0;
+    height: 10vh;
+    width: 10vh;
+    background-color:$base2;
+    &--topBar,&--centerBar,&--underBar{
+      position: absolute;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        transform-origin: 50% 50%;
+      width: 5vh;
+      height: 0.5vh;
+    }
+    &--topBar{
+      background-color:black;
+      top: 30%;
+    }
+    &--centerBar{
+      background-color: yellow;
+      top: 50%;
+    }
+    &--underBar{
+      background-color: red;
+      top: 70%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// #footer{
+//   background-color: black;
+//   padding-top: 8vh;
+//   width: 100vw;
+//   height: 20vh;
+//   position: relative;
+//   color: white;
+//   // ================================================
+// .footerLinks{
+//   width: 100%;
+//   height: 5vh;
+//   font-size: 2.5vh;
+//   position: relative;
+//   &--profile{
+//     position: absolute;
+//       left: 40%;
+//   }
+//   &--skills,&--back{
+//     position: absolute;
+//       left: 50%;
+//   }
+//   &--works{
+//     position: absolute;
+//       left: 60%;
+//   }
+//   &--line{
+//     margin-top: 1vh;
+//     background-color: white;
+//     width: 2vw;
+//     height: 2px;
+//   }
+// }
+//   // ================================================
+// }

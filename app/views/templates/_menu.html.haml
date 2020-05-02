@@ -1,18 +1,25 @@
-#footer
-  -if request.path == root_path 
-    .footerLinks
-      .footerLinks--profile.jumpBtn
-        %h3 PROFILE
-        .footerLinks--line
-      .footerLinks--skills.jumpBtn
-        %h3 SKILLS
-        .footerLinks--line
-      .footerLinks--works.jumpBtn
-        %h3 WORKS
-        .footerLinks--line
-  - else
-    .footerLinks
-      .footerLinks--back.jumpBtn
-        %h3=link_to("BACK",root_path)
-        .footerLinks--line
+#menu
+  .menuBtn
+    .menuBtn--topBar
+    .menuBtn--centerBar
+    .menuBtn--underBar
+  .menuModal
+
+-# #footer
+-#   -if request.path == root_path 
+-#     .footerLinks
+-#       .footerLinks--profile.jumpBtn
+-#         %h3 PROFILE
+-#         .footerLinks--line
+-#       .footerLinks--skills.jumpBtn
+-#         %h3 SKILLS
+-#         .footerLinks--line
+-#       .footerLinks--works.jumpBtn
+-#         %h3 WORKS
+-#         .footerLinks--line
+-#   - else
+-#     .footerLinks
+-#       .footerLinks--back.jumpBtn
+-#         %h3=link_to("BACK",root_path)
+-#         .footerLinks--line
 
