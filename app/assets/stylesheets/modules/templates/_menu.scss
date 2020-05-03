@@ -1,16 +1,17 @@
 #menu{
+  position: fixed;
+    z-index: 1;
+    top: 1.5%;
+    right: 1.5%;
   .menuBtn{
     cursor: pointer;
-    position: fixed;
-      z-index: 2;
-      top: 1.5%;
-      right: 1.5%;
     height: 40px;
     width: 30px;
     &--topBar,&--centerBar,&--underBar{
       background-color: $base3;
       transition-duration: 0.5s;
       position: absolute;
+        z-index: 2;
       width: 30px;
       height: 3px;
     }
