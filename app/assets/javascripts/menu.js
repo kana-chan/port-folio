@@ -26,9 +26,9 @@ $(function(){
 // 各項目をクリックで、ジャンプ------------------------------------------------
 // pulldownメニュー------------------------------------------------
     $('.menuModal').children().children('h2').on('click',function(){
-      $(this).parents().toggleClass('active')
-      $(this).siblings('li').slideToggle(200)
-      if($(this).parents().hasClass('active')){
+      $(this).siblings('li').stop().slideToggle(200)
+      $(this).parents('ul').toggleClass('active')
+      if($(this).parents('ul').hasClass('active')){
         $(this).siblings('i').css('transform','rotate(180deg)')
       }else{
         $(this).siblings('i').css('transform','rotate(0deg)')
@@ -41,7 +41,7 @@ $(function(){
       $('.profile__main__textHeader').children().hide();
       $('.profile__main__lowerBox').children().hide();
       $('.profile__main__circleBox--circle').removeClass('active');
-      $('html,body').animate({scrollTop:position})
+      $('html,body').animate({scrollTop:position});
       $('.profile__main__textHeader').children().eq(index).fadeIn();
       $('.profile__main__lowerBox').children().eq(index).fadeIn();
       $('.profile__main__circleBox--circle').eq(index).addClass('active');

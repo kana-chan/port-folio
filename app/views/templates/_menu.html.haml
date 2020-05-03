@@ -24,7 +24,7 @@
         -@categories.each do |skill|
           %li.menuModal__skills--list
             =skill.name
-      .menuModal__works
+      %ul.menuModal__works
         %h2.menuModal__works--heading
           WORKS
         =fa_icon "angle-down"
@@ -55,7 +55,7 @@
           -@categories.each do |skill|
             %li.menuModal__categories--list
               =link_to(skill.name ,edit_category_path(skill.id))
-        .menuModal__contents
+        %ul.menuModal__contents
           %h2.menuModal__contents--heading
             \- EDIT WORKS
           =fa_icon "angle-down"
