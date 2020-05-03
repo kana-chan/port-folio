@@ -7,6 +7,7 @@
     .menuModal
       %ul.menuModal__profile
         %h2 PROFILE
+        =fa_icon "angle-down"
         %li.menuModal__profile--list
           ABOUT ME
         %li.menuModal__profile--list
@@ -17,11 +18,13 @@
           HOBBY
       %ul.menuModal__skills
         %h2 SKILLS
+        =fa_icon "angle-down"
         -@categories.each do |skill|
           %li.menuModal__skills--list
             =skill.name
       .menuModal__works
         %h2 WORKS
+        =fa_icon "angle-down"
         -@contents.each do |content|
           %li.menuModal__works--list
             =content.name

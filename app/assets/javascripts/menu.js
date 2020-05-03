@@ -24,6 +24,16 @@ $(function(){
       $('.menuModal').animate({right:'-50vw'})
     }
 // 各項目をクリックで、ジャンプ------------------------------------------------
+    $('.menuModal').children().on('click',function(){
+      $(this).toggleClass('active')
+      $(this).children('li').slideToggle(200)
+      if($(this).hasClass('active')){
+        $(this).children('i').css('transform','rotate(180deg)')
+      }else{
+        $(this).children('i').css('transform','rotate(0deg)')
+      }
+    })
+
     $('.menuModal__profile--list').on('click',function(){
       var position = $('.profile').offset().top;
       var index = $(this).index() - 1;
@@ -61,8 +71,8 @@ $(function(){
     })
 // ------------------------------------------------
     $('.menuModal__works--list').on('click',function(){
-      var position = $('.works').offset().top;
       var index = $(this).index() - 1;
+      var position = $('.works__main__contentsBox').eq(index).offset().top;
       console.log(index);
       $('html,body').animate({scrollTop:position})
     })
