@@ -15,10 +15,16 @@
           EXPERIENCE
         %li.menuModal__profile--list
           HOBBY
-      .menuModal__skills
+      %ul.menuModal__skills
         %h2 SKILLS
+        -@categories.each do |skill|
+          %li.menuModal__skills--list
+            =skill.name
       .menuModal__works
         %h2 WORKS
+        -@contents.each do |content|
+          %li.menuModal__works--list
+            =content.name
   -else
     .menuModal
       .menuModal--top

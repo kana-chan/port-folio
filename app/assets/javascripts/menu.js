@@ -45,12 +45,25 @@ $(function(){
         $('.next').show();
       }
     })
-    $('.menuModal__skills').on('click',function(){
+// ------------------------------------------------
+    $('.menuModal__skills--list').on('click',function(){
       var position = $('.skills').offset().top;
+      var index = $(this).index() - 1;
+      console.log(index);
       $('html,body').animate({scrollTop:position})
+      if($('.skills__main__upperBlock__contentBox--icon').eq(index).hasClass('active')){
+      }else{
+        $('.skills__main__upperBlock__contentBox--icon').removeClass('active');
+        $('.skills__main__upperBlock__contentBox--icon').eq(index).addClass('active')
+        $('.skills__main__lowerBlock').animate({left:'140%'})
+        $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
+      }
     })
-    $('.menuModal__works').on('click',function(){
+// ------------------------------------------------
+    $('.menuModal__works--list').on('click',function(){
       var position = $('.works').offset().top;
+      var index = $(this).index() - 1;
+      console.log(index);
       $('html,body').animate({scrollTop:position})
     })
 // ================================================
