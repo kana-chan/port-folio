@@ -61,7 +61,7 @@
           =fa_icon "angle-down"
           -@contents.each do |content|
             %li.menuModal__contents--list
-              =link_to(content.name ,edit_category_path(content.id))
+              =link_to(content.name ,edit_content_path(content.id))
   -else
     .menuModal
       .menuModal--home
