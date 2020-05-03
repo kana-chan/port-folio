@@ -1,4 +1,6 @@
 class ContentsController < ApplicationController
+  before_action :move_index, only: [:new,:create,:update,:edit,:destroy]
+
   def index
     @contents = Content.all.order("id DESC")
     @categories = Category.all.order("number ASC")
@@ -34,7 +36,12 @@ class ContentsController < ApplicationController
     content.destroy
     redirect_to root_path
   end
-
+  # ================================================
+  def move_index
+    if !user_signed_in? || current_user.id != 1
+      redirect_to root_path
+    end
+  end
 # ================================================
   private
   def content_params

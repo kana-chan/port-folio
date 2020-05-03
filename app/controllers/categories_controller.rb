@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :move_index, only: [:new,:create,,:edit,:update,:destroy]
+
   def new
     @category = Category.new
   end
@@ -25,6 +27,12 @@ class CategoriesController < ApplicationController
     redirect_to root_path
   end
 
+  # ================================================
+  def move_index
+    if !user_signed_in? || current_user.id != 1
+      redirect_to root_path
+    end
+  end
   # ================================================
   private
   def category_params
