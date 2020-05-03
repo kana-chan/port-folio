@@ -25,10 +25,10 @@ $(function(){
     }
 // 各項目をクリックで、ジャンプ------------------------------------------------
 // pulldownメニュー------------------------------------------------
-    $('.menuModal__profile--heading').on('click',function(){
-      $(this).toggleClass('active')
+    $('.menuModal').children().children('h2').on('click',function(){
+      $(this).parents().toggleClass('active')
       $(this).siblings('li').slideToggle(200)
-      if($(this).hasClass('active')){
+      if($(this).parents().hasClass('active')){
         $(this).siblings('i').css('transform','rotate(180deg)')
       }else{
         $(this).siblings('i').css('transform','rotate(0deg)')

@@ -18,19 +18,50 @@
         %li.menuModal__profile--list
           HOBBY
       %ul.menuModal__skills
-        %h2.menuModal__profile--heading
+        %h2.menuModal__skills--heading
           SKILLS
         =fa_icon "angle-down"
         -@categories.each do |skill|
           %li.menuModal__skills--list
             =skill.name
       .menuModal__works
-        %h2.menuModal__profile--heading
+        %h2.menuModal__works--heading
           WORKS
         =fa_icon "angle-down"
         -@contents.each do |content|
           %li.menuModal__works--list
             =content.name
+      -if !User.exists?
+        =link_to(new_user_registrasion_path) do
+          .menuModal--signup
+      -elsif !user_signed_in?
+        =link_to(new_user_session_path) do
+          .menuModal--signup
+      -if user_signed_in?
+        =link_to(destroy_user_session_path,method: :delete) do
+          .menuModal--signup
+        %ul.menuModal__new
+          %h2.menuModal__new--heading 
+            \- NEW
+          =fa_icon "angle-down"
+          %li.menuModal__new--list
+            =link_to("content",new_content_path)
+          %li.menuModal__new--list
+            =link_to("skill",new_category_path)
+        %ul.menuModal__categories
+          %h2.menuModal__categories--heading
+            \- EDIT SKILLS
+          =fa_icon "angle-down"
+          -@categories.each do |skill|
+            %li.menuModal__categories--list
+              =link_to(skill.name ,edit_category_path(skill.id))
+        .menuModal__contents
+          %h2.menuModal__contents--heading
+            \- EDIT WORKS
+          =fa_icon "angle-down"
+          -@contents.each do |content|
+            %li.menuModal__contents--list
+              =link_to(content.name ,edit_category_path(content.id))
   -else
     .menuModal
       .menuModal--home
