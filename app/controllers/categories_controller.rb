@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :move_index, only: [:new,:create,,:edit,:update,:destroy]
+  before_action :move_index, only: [:new,:create,:edit,:update,:destroy]
 
   def new
     @category = Category.new
