@@ -27,25 +27,22 @@
   }
   .menuModal{
     background-color: $base2;
+    color: $base3;
     padding:8vh 0 3vh 5vh ;
     width: 15vw;
     border-radius: 20px 0 20px 20px;
     position: fixed;
-      // z-index: 1;
       top: 0;
       right: -50vw;
     &__profile,&__skills,&__works,&--top{
       cursor: pointer;
-      // height: 5vh;
       line-height: 5vh;
       margin-bottom: 1vh;
       position: relative;
       h2{
         font-size: 2vh;
-        color: $base3;
       }
       i{
-        color: $base3;
         font-size: 2em;
         position: absolute;
           top: 1.5vh;
@@ -59,7 +56,6 @@
         margin: 0.5vh 3vh 0;
         font-size: 1vh;
         font-family: "roboto";
-        color: $base3;
       }
     }
   }
