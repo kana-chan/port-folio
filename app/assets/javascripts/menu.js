@@ -73,7 +73,7 @@ $(function(){
 // worksへジャンプ------------------------------------------------
     $('.menuModal__works--list').on('click',function(){
       var index = $('.menuModal__works--list').index(this);
-      var position = $('.works__main__contentsBox').eq(index).offset().top;
+      var position = $('.works__main__contentsBox').eq(index).offset().top - 80;
       console.log(index);
       $('html,body').animate({scrollTop:position})
     })
