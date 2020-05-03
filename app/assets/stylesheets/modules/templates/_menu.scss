@@ -1,6 +1,5 @@
 #menu{
   .menuBtn{
-    // background-color: #fff;
     cursor: pointer;
     position: fixed;
       z-index: 2;
@@ -31,9 +30,10 @@
     padding:8vh 0 3vh 5vh ;
     width: 15vw;
     border-radius: 20px 0 20px 20px;
+    overflow-y: scroll;
     position: fixed;
-    top: 0;
-    right: -50vw;
+      top: 0;
+      right: -50vw;
     &__profile,&__skills,&__works,&__new,&__categories,&__contents,&--home{
       cursor: pointer;
       line-height: 5vh;
