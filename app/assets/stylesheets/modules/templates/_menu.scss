@@ -1,0 +1,79 @@
+#menu{
+  .menuBtn{
+    // background-color: #fff;
+    cursor: pointer;
+    position: fixed;
+      z-index: 2;
+      top: 1.5%;
+      right: 1.5%;
+    height: 40px;
+    width: 30px;
+    &--topBar,&--centerBar,&--underBar{
+      background-color: $base3;
+      transition-duration: 0.5s;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+    }
+    &--topBar{
+      top: 20%;
+    }
+    &--centerBar{
+      top: 50%;
+    }
+    &--underBar{
+      top: 80%;
+    }
+  }
+  .menuModal{
+    background-color: $base2;
+    color: $base3;
+    padding:8vh 0 3vh 5vh ;
+    width: 15vw;
+    border-radius: 20px 0 20px 20px;
+    position: fixed;
+    top: 0;
+    right: -50vw;
+    &__profile,&__skills,&__works,&__new,&__categories,&__contents,&--home{
+      cursor: pointer;
+      line-height: 5vh;
+      margin-bottom: 1vh;
+      position: relative;
+      h2{
+        font-size: 2vh;
+      }
+      i{
+        font-size: 2em;
+        position: absolute;
+          top: 1.5vh;
+          left: 75%;
+        transition-duration: 0.3s;
+      }
+      &--list{
+        display: none;
+        height: 3vh;
+        line-height: 3vh;
+        margin: 0.5vh 3vh 0;
+        font-size: 1vh;
+        font-family: "roboto";
+      }
+    }
+    &--signup{
+      cursor: auto;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+        top: 0;
+        left: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
