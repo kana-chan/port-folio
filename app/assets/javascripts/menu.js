@@ -26,12 +26,12 @@ $(function(){
 // 各項目をクリックで、ジャンプ------------------------------------------------
 // pulldownメニュー------------------------------------------------
     $('.menuModal__profile--heading').on('click',function(){
-      $(this).parents().toggleClass('active')
+      $(this).toggleClass('active')
       $(this).siblings('li').slideToggle(200)
       if($(this).hasClass('active')){
-        $(this).children('i').css('transform','rotate(180deg)')
+        $(this).siblings('i').css('transform','rotate(180deg)')
       }else{
-        $(this).children('i').css('transform','rotate(0deg)')
+        $(this).siblings('i').css('transform','rotate(0deg)')
       }
     })
 //profileの表示切り替え・ジャンプ ------------------------------------------------
