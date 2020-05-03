@@ -15,9 +15,9 @@ $(function(){
     }else{
       $('.menuBtn--topBar')
         .css('transform','rotate(0)')
-        .css('top','30%')
+        .css('top','20%')
       $('.menuBtn--underBar')
-        .css('top','70%')
+        .css('top','80%')
         .css('transform','rotate(0)')
       $('.menuBtn--centerBar')
         .css('transform','rotate(0)')

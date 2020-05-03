@@ -1,31 +1,28 @@
 #menu{
   .menuBtn{
+    // background-color: #fff;
     cursor: pointer;
     position: fixed;
       z-index: 2;
-      top: 0;
-      right: 0;
-    height: 10vh;
-    width: 10vh;
+      top: 1.5%;
+      right: 1.5%;
+    height: 40px;
+    width: 30px;
     &--topBar,&--centerBar,&--underBar{
       background-color: $base3;
       transition-duration: 0.5s;
       position: absolute;
-        left: 25%;
-      width: 5vh;
-      height: 0.5vh;
+      width: 30px;
+      height: 3px;
     }
     &--topBar{
-      top: 30%;
+      top: 20%;
     }
     &--centerBar{
-      background-color: $base1;
-      border: 0.25vh solid $base3;
       top: 50%;
-      z-index: -1;
     }
     &--underBar{
-      top: 70%;
+      top: 80%;
     }
   }
   .menuModal{
