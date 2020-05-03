@@ -5,11 +5,19 @@
     .menuBtn--underBar
   -if request.path == root_path 
     .menuModal
-      .menuModal--profile
+      %ul.menuModal__profile
         %h2 PROFILE
-      .menuModal--skills
+        %li.menuModal__profile--list
+          ABOUT ME
+        %li.menuModal__profile--list
+          CARRER
+        %li.menuModal__profile--list
+          EXPERIENCE
+        %li.menuModal__profile--list
+          HOBBY
+      .menuModal__skills
         %h2 SKILLS
-      .menuModal--works
+      .menuModal__works
         %h2 WORKS
   -else
     .menuModal

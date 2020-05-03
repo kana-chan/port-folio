@@ -24,15 +24,32 @@ $(function(){
       $('.menuModal').animate({right:'-50vw'})
     }
 // 各項目をクリックで、ジャンプ------------------------------------------------
-    $('.menuModal--profile').on('click',function(){
+    $('.menuModal__profile--list').on('click',function(){
       var position = $('.profile').offset().top;
+      var index = $(this).index() - 1;
+      $('.profile__main__textHeader').children().hide();
+      $('.profile__main__lowerBox').children().hide();
+      $('.profile__main__circleBox--circle').removeClass('active');
       $('html,body').animate({scrollTop:position})
+      $('.profile__main__textHeader').children().eq(index).fadeIn();
+      $('.profile__main__lowerBox').children().eq(index).fadeIn();
+      $('.profile__main__circleBox--circle').eq(index).addClass('active');
+      if(index==0){
+        $('.prev').hide();
+        $('.next').show();
+      }else if(index == 3){
+        $('.prev').show();
+        $('.next').hide();
+      }else{
+        $('.prev').show();
+        $('.next').show();
+      }
     })
-    $('.menuModal--skills').on('click',function(){
+    $('.menuModal__skills').on('click',function(){
       var position = $('.skills').offset().top;
       $('html,body').animate({scrollTop:position})
     })
-    $('.menuModal--works').on('click',function(){
+    $('.menuModal__works').on('click',function(){
       var position = $('.works').offset().top;
       $('html,body').animate({scrollTop:position})
     })
