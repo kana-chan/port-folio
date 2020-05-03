@@ -19,7 +19,10 @@
       top: 30%;
     }
     &--centerBar{
+      background-color: $base1;
+      border: 0.25vh solid $base3;
       top: 50%;
+      z-index: -1;
     }
     &--underBar{
       top: 70%;

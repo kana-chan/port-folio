@@ -9,16 +9,18 @@ $(function(){
       $('.menuBtn--underBar')
         .css('top','50%')
         .css('transform','rotate(-225deg)')
-      $('.menuBtn--centerBar').css('transform','rotate(135deg)')
+      $('.menuBtn--centerBar')
+        .css('transform','rotate(135deg)')
       $('.menuModal').animate({right:'0'})
     }else{
       $('.menuBtn--topBar')
-        .css('top','30%')
         .css('transform','rotate(0)')
+        .css('top','30%')
       $('.menuBtn--underBar')
         .css('top','70%')
         .css('transform','rotate(0)')
-      $('.menuBtn--centerBar').css('transform','rotate(0)')
+      $('.menuBtn--centerBar')
+        .css('transform','rotate(0)')
       $('.menuModal').animate({right:'-50vw'})
     }
 // 各項目をクリックで、ジャンプ------------------------------------------------
