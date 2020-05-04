@@ -22,6 +22,12 @@ $(function(){
       $('.menuBtn--centerBar')
         .css('transform','rotate(0)')
       $('.menuModal').animate({right:'-50vw'})
+      $('.menuModal').children('ul')
+        .removeClass('active')
+      $('.menuModal').children('ul').children('li')
+        .stop().slideUp()
+      $('.menuModal').children('ul').children('i')
+        .css('transform','rotate(0deg)')
     }
 // 各項目をクリックで、ジャンプ------------------------------------------------
 // pulldownメニュー------------------------------------------------
@@ -79,35 +85,5 @@ $(function(){
     })
 // ================================================
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// skillへ------------------------------------------------
-$('.footerLinks--skills').on('click',function(){
-  var skills = $('.skills').offset().top;
-  $('html,body').animate({scrollTop:skills})
-});
-// profileへ------------------------------------------------
-$('.footerLinks--profile').on('click',function(){
-  var profile = $('.profile').offset().top;
-  $('html,body').animate({scrollTop:profile})
-});
-// worksへ------------------------------------------------
-$('.footerLinks--works').on('click',function(){
-  var works = $('.works').offset().top;
-  $('html,body').animate({scrollTop:works})
-});
-
+// ================================================
 });

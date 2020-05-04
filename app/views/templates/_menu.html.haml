@@ -3,6 +3,7 @@
     .menuBtn--topBar
     .menuBtn--centerBar
     .menuBtn--underBar
+  -# ================================================
   -if request.path == root_path 
     .menuModal
       %ul.menuModal__profile
@@ -31,6 +32,7 @@
         -@contents.each do |content|
           %li.menuModal__works--list
             =content.name
+      -# ------------------------------------------------
       -if !User.exists?
         =link_to(new_user_registrasion_path) do
           .menuModal--signup
