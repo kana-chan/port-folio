@@ -42,7 +42,7 @@ $(function(){
     })
 //profileの表示切り替え・ジャンプ ------------------------------------------------
     $('.menuModal__profile--list').on('click',function(){
-      var position = $('.profile').offset().top;
+      var position = $('.profile__heading').offset().top -30;
       var index = $('.menuModal__profile--list').index(this);
       $('.profile__main__textHeader').children().hide();
       $('.profile__main__lowerBox').children().hide();
@@ -64,14 +64,20 @@ $(function(){
     })
 //skillの表示切り替え・ジャンプ ------------------------------------------------
     $('.menuModal__skills--list').on('click',function(){
-      var position = $('.skills').offset().top;
+      var position = $('.skills__heading').offset().top -30;
       var index = $('.menuModal__skills--list').index(this);
       console.log(index);
       $('html,body').animate({scrollTop:position})
       if($('.skills__main__upperBlock__contentBox--icon').eq(index).hasClass('active')){
       }else{
-        $('.skills__main__upperBlock__contentBox--icon').removeClass('active');
-        $('.skills__main__upperBlock__contentBox--icon').eq(index).addClass('active')
+        $('.skills__main__upperBlock__contentBox--icon')
+          .removeClass('active')
+          .css('backgroundColor','rgb(213, 214, 217)')
+          .css('boxShadow','none')
+        $('.skills__main__upperBlock__contentBox--icon').eq(index)
+          .addClass('active')
+          .css('backgroundColor','rgb(224, 68, 60)')
+          .css('boxShadow','.5vh .5vh rgb(62, 60, 65)')
         $('.skills__main__lowerBlock').animate({left:'140%'})
         $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
       }

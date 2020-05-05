@@ -1,14 +1,14 @@
 $(function(){
   if(window.location.href.match(/\/$/)) {
 // topテキストのアニメーション================================================
-  $.when(
-    $('.underLine').each(function(i){
-      $(this).delay(100*i).animate({width:'100%'},300)
-    })
-  ).done(function(){
-    $(this).prev('h1').css('color','rgb(247, 238, 224)')
-    $('.underLine').animate({height:'5%'},300)
-  })
+  // $.when(
+  //   $('.underLine').each(function(i){
+  //     $(this).delay(100*i).animate({width:'100%'},300)
+  //   })
+  // ).done(function(){
+  //   // $(this).prev('h1').css('color','rgb(247, 238, 224)')
+  //   $('.underLine').animate({height:'5%'},300)
+  // })
 // profile================================================================================================
 // 初期値------------------------------------------------
   $('.profile__main__textHeader').children().eq(0).show();
@@ -60,6 +60,84 @@ $(function(){
       }
     }
   })
+// skills================================================================================================
+// otherBlock ホバーでname表示------------------------------------------------
+  $('.skills__main__otherBlock__contentBox__content').hover(
+    function(){
+      $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeIn();
+      $(this).children('.skills__main__otherBlock__contentBox__content--icon').css('backgroundColor','rgb(62, 60, 65)')
+    },function(){
+      $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeOut();
+      $(this).children('.skills__main__otherBlock__contentBox__content--icon').css('backgroundColor','rgb(213, 214, 217)')
+    })
+// lowerBlock ホバー- -----------------------------------------------
+$('.skills__main__lowerBlock__wrapper__content').hover(
+  function(){
+    $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'1.5vh',height:'1.5vh'},200);
+    $(this).find('i')
+      .animate({left:'150%'},300)
+      .animate({left:'-50%'},0)
+      .animate({left:'50%'},300)
+    },function(){
+    $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'},200);
+  })
+  // skillIcon click横からlowerBlock表示------------------------------------------------
+$('.skills__main__upperBlock__contentBox--icon').on('click',function(){
+  var index = $(this).parents().index();
+  if($(this).hasClass('active')){
+  }else{
+    $('.skills__main__upperBlock__contentBox--icon')
+      .removeClass('active')
+      .css('backgroundColor','rgb(213, 214, 217)')
+      .css('boxShadow','none')
+    $(this)
+      .addClass('active')
+      .css('backgroundColor','rgb(224, 68, 60)')
+      .css('boxShadow','.5vh .5vh rgb(62, 60, 65)')
+    $('.skills__main__lowerBlock').animate({left:'140%'})
+    $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
+  }
+})
+// ------------------------------------------------
+$('.skills__main__upperBlock__contentBox--icon').hover(
+  function(){
+    if($(this).hasClass('active')){
+    }else{
+      $(this).css('backgroundColor','rgb(62, 60, 65)')
+    }
+  },function(){
+    if($(this).hasClass('active')){
+    }else{
+      $(this).css('backgroundColor','rgb(213, 214, 217)')
+    }
+  })
+
+// deletebtn================================================================================================
+//hoverで大きく ------------------------------------------------
+$('.skills__main__lowerBlock--deleteBtn').hover(
+  function(){
+    $(this).children().animate({fontSize:'4em'},200)
+  },
+  function(){
+    $(this).children().animate({fontSize:'3.5em'},200)
+  })
+  //clickでブロックを元に戻す------------------------------------------------
+  $('.skills__main__lowerBlock--deleteBtn').on('click',function(){
+    $('.skills__main__lowerBlock').animate({left:'140%'})
+    $('.skills__main__upperBlock__contentBox--icon')
+      .removeClass('active')
+      .css('backgroundColor','rgb(213, 214, 217)')
+      .css('boxShadow','none')
+  })
+  // show moreボタン------------------------------------------------
+  $('.linkBtn').hover(
+    function(){
+      $(this).children().children()
+      .animate({right:'-100%'},300)
+      .animate({right:'100%'},0)
+      .animate({right:'30%'},300)
+    },
+    function(){});
 // contents================================================================================================
 // image をクリックで、info------------------------------------------------
   $('.works__main__contentsBox__upperBlock').on('click',function(){
@@ -74,59 +152,6 @@ $(function(){
         .animate({left:'50%'},300)
     },function(){
     })
-// skills================================================================================================
-// otherBlock ホバーでname表示------------------------------------------------
-    $('.skills__main__otherBlock__contentBox__content').hover(
-      function(){
-        $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeIn();
-      },function(){
-        $(this).children('.skills__main__otherBlock__contentBox__content--name').fadeOut();
-      })
-// lowerBlock ホバー- -----------------------------------------------
-      $('.skills__main__lowerBlock__wrapper__content').hover(
-        function(){
-          $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'1.5vh',height:'1.5vh'},200);
-          $(this).find('i')
-            .animate({left:'150%'},300)
-            .animate({left:'-50%'},0)
-            .animate({left:'50%'},300)
-        },function(){
-          $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'},200);
-        })
-// skillIcon click横からlowerBlock表示------------------------------------------------
-      $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
-        var index = $(this).parents().index();
-        if($(this).hasClass('active')){
-        }else{
-          $('.skills__main__upperBlock__contentBox--icon').removeClass('active');
-          $(this).addClass('active')
-          $('.skills__main__lowerBlock').animate({left:'140%'})
-          $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
-        }
-      })
-// deletebtn================================================================================================
-//hoverで大きく ------------------------------------------------
-      $('.skills__main__lowerBlock--deleteBtn').hover(
-        function(){
-          $(this).children().animate({fontSize:'4em'},200)
-        },
-        function(){
-          $(this).children().animate({fontSize:'3.5em'},200)
-        })
-//clickでブロックを元に戻す------------------------------------------------
-      $('.skills__main__lowerBlock--deleteBtn').on('click',function(){
-        $('.skills__main__lowerBlock').animate({left:'140%'})
-        $('.skills__main__upperBlock__contentBox--icon').removeClass('active');
-      })
-// show moreボタン------------------------------------------------
-  $('.linkBtn').hover(
-    function(){
-      $(this).children().children()
-        .animate({right:'-100%'},300)
-        .animate({right:'100%'},0)
-        .animate({right:'30%'},300)
-    },
-      function(){});
 // ================================================
   }
 });

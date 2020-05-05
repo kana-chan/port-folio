@@ -2,32 +2,33 @@
 #index
   -# top================================================
   .top
-    .top__text1
-      %h1 I'M
-      .underLine
-    .top__text2
-      %h1 KANATA
-      .underLine
-    .top__text3
-      %h1 OKAYAMA
-      .underLine
+    .top__textBox
+      %h1.top__textBox__text1
+        I'M
+        .underLine
+      %h1.top__textBox__text2
+        KANATA
+        .underLine
+      %h1.top__textBox__text3
+        OKAYAMA
+        .underLine
   -# profile================================================
   .profile
-    .profile__hedding
-      %h1 PROFILE
+    %h1.profile__heading
+      PROFILE
     = render "profile"
   -# skills================================================
   .skills
-    .skills__hedding
-      %h1 SKILLS
+    %h1.skills__heading
+      SKILLS
     = render "category"
   -# works================================================
   .works
-    .works__hedding
-      %h1 WORKS
+    %h1.works__heading
+      WORKS
     .works__main
       = render @contents
   -# footer================================================
   .last
-    .last--message
+    %h3.last--message
       THANK YOU 

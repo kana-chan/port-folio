@@ -3,5 +3,25 @@
   font-family: 'hare';
   src: asset_url('Harenosora.otf') format('opentype');
 }
-// 英語アイキャッチ,font-family: 'Roboto', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+// 英語アイキャッチ,font-family: 'Roboto', sans-serif; font-family: 'Noto Sans JP'
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Roboto:wght@100;300&display=swap');
+h1{
+  @include h1;
+}
+h2{
+  @include h2;
+}
+h3{
+  @include h3;
+}
+h4{
+  @include h4;
+}
+th{
+  font-family: 'Roboto';
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+p{
+  @include p;
+}
