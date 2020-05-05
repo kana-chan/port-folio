@@ -31,7 +31,7 @@ $(function(){
     }
 // 各項目をクリックで、ジャンプ------------------------------------------------
 // pulldownメニュー------------------------------------------------
-    $('.menuModal').children().children('h2').on('click',function(){
+    $('.menuModal').children().children('h3').on('click',function(){
       $(this).siblings('li').stop().slideToggle(200)
       $(this).parents('ul').toggleClass('active')
       if($(this).parents('ul').hasClass('active')){

@@ -5,13 +5,11 @@
       z-index: 2;
       top: 1.5%;
       right: 1.5%;
-      height: 40px;
-      width: 30px;
-    cursor: pointer;
     height: 40px;
     width: 30px;
+    cursor: pointer;
     &--topBar,&--centerBar,&--underBar{
-      background-color: $base3;
+      background-color: $black;
       transition-duration: 0.5s;
       position: absolute;
       width: 30px;
@@ -29,8 +27,8 @@
   }
   // ------------------------------------------------
   .menuModal{
-    background-color: $base2;
-    color: $base3;
+    background-color: $dgray;
+    box-shadow: 1vh 1vh $black;
     padding:8vh 0 3vh 5vh ;
     width: 15vw;
     max-height: 95vh;
@@ -45,9 +43,6 @@
       line-height: 5vh;
       margin-bottom: 1vh;
       position: relative;
-      h2{
-        font-size: 2vh;
-      }
       i{
         font-size: 2em;
         position: absolute;
@@ -60,8 +55,7 @@
         height: 3vh;
         line-height: 3vh;
         margin: 0.5vh 3vh 0;
-        font-size: 1vh;
-        font-family: "roboto";
+        @include h4;
       }
     }
     &--signup{

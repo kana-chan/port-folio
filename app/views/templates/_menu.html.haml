@@ -7,7 +7,7 @@
   -if request.path == root_path 
     .menuModal
       %ul.menuModal__profile
-        %h2.menuModal__profile--heading 
+        %h3.menuModal__profile--heading 
           PROFILE
         =fa_icon "angle-down"
         %li.menuModal__profile--list
@@ -19,14 +19,14 @@
         %li.menuModal__profile--list
           HOBBY
       %ul.menuModal__skills
-        %h2.menuModal__skills--heading
+        %h3.menuModal__skills--heading
           SKILLS
         =fa_icon "angle-down"
         -@categories.each do |skill|
           %li.menuModal__skills--list
             =skill.name
       %ul.menuModal__works
-        %h2.menuModal__works--heading
+        %h3.menuModal__works--heading
           WORKS
         =fa_icon "angle-down"
         -@contents.each do |content|
@@ -43,7 +43,7 @@
         =link_to(destroy_user_session_path,method: :delete) do
           .menuModal--signup
         %ul.menuModal__new
-          %h2.menuModal__new--heading 
+          %h3.menuModal__new--heading 
             \- NEW
           =fa_icon "angle-down"
           %li.menuModal__new--list
@@ -51,14 +51,14 @@
           %li.menuModal__new--list
             =link_to("skill",new_category_path)
         %ul.menuModal__categories
-          %h2.menuModal__categories--heading
+          %h3.menuModal__categories--heading
             \- EDIT SKILLS
           =fa_icon "angle-down"
           -@categories.each do |skill|
             %li.menuModal__categories--list
               =link_to(skill.name ,edit_category_path(skill.id))
         %ul.menuModal__contents
-          %h2.menuModal__contents--heading
+          %h3.menuModal__contents--heading
             \- EDIT WORKS
           =fa_icon "angle-down"
           -@contents.each do |content|
@@ -67,4 +67,4 @@
   -else
     .menuModal
       .menuModal--home
-        %h2=link_to("HOME",root_path)
+        %h3=link_to("HOME",root_path)
