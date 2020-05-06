@@ -66,7 +66,6 @@ $(function(){
     $('.menuModal__skills--list').on('click',function(){
       var position = $('.skills__heading').offset().top -30;
       var index = $('.menuModal__skills--list').index(this);
-      console.log(index);
       $('html,body').animate({scrollTop:position})
       if($('.skills__main__upperBlock__contentBox--icon').eq(index).hasClass('active')){
       }else{
@@ -86,8 +85,8 @@ $(function(){
     $('.menuModal__works--list').on('click',function(){
       var index = $('.menuModal__works--list').index(this);
       var position = $('.works__main__contentsBox').eq(index).offset().top - 80;
-      console.log(index);
-      $('html,body').animate({scrollTop:position})
+      $('html,body').animate({scrollTop:position});
+      $('.works__main__contentsBox__lowerBlock').eq(index).slideDown();
     })
 // ================================================
   })
