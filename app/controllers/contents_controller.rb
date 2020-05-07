@@ -2,8 +2,8 @@ class ContentsController < ApplicationController
   before_action :move_index, only: [:new,:create,:update,:edit,:destroy]
 
   def index
-    @contents = Content.all.order("id DESC")
-    @categories = Category.all.order("number ASC")
+    @contents = Content.includes(:categories,:infomations).order("id DESC")
+    @categories = Category.includes(:contents).order("number ASC")
   end
 
   def show
