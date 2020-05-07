@@ -2,3 +2,18 @@
   0% {filter: blur(15px);}
   100% {filter: blur(0);}
 }
+
+.fadeIn{
+  opacity: 0;
+  transform: translateY(30vh);
+  transition-duration: 2s;
+}
+.slideIn{
+  opacity: 0;
+  transform: translateX(-20vw);
+  transition-duration: 2s;
+}
+.scrollIn{
+  opacity: 1;
+  transform: translateY(0);
+}

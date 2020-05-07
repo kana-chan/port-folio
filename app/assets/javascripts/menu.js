@@ -76,7 +76,7 @@ $(function(){
         $('.skills__main__upperBlock__contentBox--icon').eq(index)
           .addClass('active')
           .css('backgroundColor','rgb(224, 68, 60)')
-          .css('boxShadow','.5vh .5vh rgb(62, 60, 65)')
+          .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
         $('.skills__main__lowerBlock').animate({left:'140%'})
         $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
       }

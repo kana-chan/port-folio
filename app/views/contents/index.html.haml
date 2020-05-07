@@ -14,19 +14,19 @@
         .underLine
   -# profile================================================
   .profile
-    %h1.profile__heading
+    %h1.profile__heading.slideIn
       PROFILE
     = render "profile"
   -# skills================================================
   .skills
-    %h1.skills__heading
+    %h1.skills__heading.slideIn
       SKILLS
     = render "category"
   -# works================================================
   .works
-    %h1.works__heading
+    %h1.works__heading.slideIn
       WORKS
-    .works__main
+    .works__main.fadeIn
       = render @contents
   -# footer================================================
   .last

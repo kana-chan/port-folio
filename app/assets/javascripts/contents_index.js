@@ -1,14 +1,9 @@
 $(function(){
   if(window.location.href.match(/\/$/)) {
 // topテキストのアニメーション================================================
-  // $.when(
-  //   $('.underLine').each(function(i){
-  //     $(this).delay(100*i).animate({width:'100%'},300)
-  //   })
-  // ).done(function(){
-  //   // $(this).prev('h1').css('color','rgb(247, 238, 224)')
-  //   $('.underLine').animate({height:'5%'},300)
-  // })
+  $('.top')
+    .css('opacity','1')
+    .css('transform','translateX(0)')
 // profile================================================================================================
 // 初期値------------------------------------------------
   $('.profile__main__textHeader').children().eq(0).show();
@@ -93,7 +88,7 @@ $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
     $(this)
       .addClass('active')
       .css('backgroundColor','rgb(224, 68, 60)')
-      .css('boxShadow','.5vh .5vh rgb(62, 60, 65)')
+      .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
     $('.skills__main__lowerBlock').animate({left:'140%'})
     $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
   }

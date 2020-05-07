@@ -4,6 +4,9 @@
   overflow: hidden;
 // top-contents================================================================================================
 .top{
+  opacity: 0;
+  transform: translateX(-20vw);
+  transition-duration: 2s;
   margin: 0 auto;
   width: 80vw;
   height: 100vh;
@@ -14,7 +17,7 @@
     height: 60vh;
     width: 60vh;
     background-color:$white;
-    box-shadow: 1vh 1vh $black;
+    box-shadow: 0 0 10px $dgray;
     &__text1,&__text2,&__text3{
       position: absolute;
         transform: translateY(-50%);
@@ -51,7 +54,7 @@
       z-index: 1;
     background-color: $white;
     border-radius: 15px;
-    box-shadow: 1vh 1vh $black;
+    box-shadow: 0 0 10px $dgray;
     height: 15vh;
     width: 25vw;
     line-height: 15vh;
@@ -60,7 +63,7 @@
 // main------------------------------------------------
   &__main{
     background-color: $white;
-    box-shadow: 1vh 1vh $black;
+    box-shadow: 0 0 10px $dgray;
     border-radius: 20px;
     width: 100%;
     height: 70vh;
@@ -82,8 +85,8 @@
     }
     &__btn{
       cursor: pointer;
-      box-shadow: .3vh .3vh $black;
-      background-color: $gray;
+      box-shadow: 0 0 5px $gray;
+      background-color: $white;
       border-radius: 50%;
       height: 7vh;
       width: 7vh;
@@ -95,7 +98,7 @@
         @include position-center;
         color: $black;
         font-size: 3em;
-        -webkit-text-stroke: 3.5px $gray;
+        -webkit-text-stroke: 3.5px $white;
       }
     }
     .next{
@@ -207,7 +210,7 @@
       z-index: 1;
     background-color: $white;
     border-radius: 15px;
-    box-shadow: 1vh 1vh $black;
+    box-shadow: 0 0 10px $dgray;
     height: 15vh;
     width: 25vw;
     line-height: 15vh;
@@ -216,7 +219,7 @@
 // ------------------------------------------------
   &__main{
     background-color: $white;
-    box-shadow: 1vh 1vh $black;
+    box-shadow: 0 0 10px $dgray;
     border-radius: 15px;
     width: 100%;
     height: 65vh;
@@ -275,7 +278,7 @@
       max-height: 39vh;
       border-radius:15px;
       background-color:$red;
-      box-shadow: 1vh 1vh $black;
+      box-shadow: 0 0 10px $dgray;
       &--name{
         margin: 2vh 0 0 2vh;
         height: 5vh;
@@ -419,7 +422,7 @@
     z-index: 1;
   background-color: $white;
   border-radius: 15px;
-  box-shadow: 1vh 1vh $black;
+  box-shadow: 0 0 10px $dgray;
   height: 15vh;
   width: 25vw;
   line-height: 15vh;
@@ -429,7 +432,7 @@
   &__main{
     background-color: $white;
     border-radius: 15px;
-    box-shadow: 1vh 1vh $black;
+    box-shadow: 0 0 10px $dgray;
     width: 100%;
     padding: 15vh 0 0.1px;
     position: relative;
