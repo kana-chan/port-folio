@@ -1,4 +1,9 @@
 $(function(){
+// ================================================
+  $('.top')
+    .css('opacity','1')
+    .css('transform','translateX(0)')
+// ------------------------------------------------
   $(window).scroll(function(){
     $('.fadeIn,.slideIn').each(function(){
       let viewHeight = $(window).height();
@@ -9,4 +14,5 @@ $(function(){
       }
     })
   })
+// ================================================
 })
