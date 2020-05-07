@@ -32,18 +32,11 @@
     }
     &__text1{
         top: 35%;
-      &::before{
-        content:"'";
-        position: absolute;
-          top: 0;
-          left: 25%;
-        color: $red;
-      }
       &::after{
         content:"engeneer";
         font-size: 15px;
         position: absolute;
-          bottom: -15%;
+          bottom: -17%;
           left: 110%;
         color: $red;
       }
@@ -53,13 +46,6 @@
     }
     &__text3{
         top: 65%;
-      &::after{
-        content:".";
-        position: absolute;
-          bottom: 0;
-          right: -10%;
-        color: $red;
-      }
     }
   }
 }
