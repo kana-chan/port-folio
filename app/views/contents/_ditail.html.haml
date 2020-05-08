@@ -1,0 +1,38 @@
+.ditail__main.fadeIn
+  -# upper block------------------------------------------------
+  .ditail__main__upperBlock
+    .ditail__main__upperBlock--textHeading
+      =@content.catchcopy
+    .ditail__main__upperBlock--text
+      %p=@content.topText
+    %h4.ditail__main__upperBlock--language
+      -@content.categories.each do |skill|
+        ="#{skill.name}, "
+    =link_to(@content.git) do
+      .ditail__main__upperBlock__gitLinkBtn.arrowBtn
+        %h4.ditail__main__upperBlock__gitLinkBtn--text
+          GIT HUB
+        .ditail__main__upperBlock__gitLinkBtn--icon
+          =fa_icon "long-arrow-right"
+    =link_to(@content.link) do
+      .ditail__main__upperBlock__appLinkBtn.arrowBtn
+        %h4.ditail__main__upperBlock__appLinkBtn--text
+          APP SITE
+        .ditail__main__upperBlock__appLinkBtn--icon
+          =fa_icon "long-arrow-right"
+  -# lower block------------------------------------------------
+  .ditail__main__lowerBlock
+    -@content.infomations.each do |info|
+      .ditail__main__lowerBlock__contentBox
+        %h3.ditail__main__lowerBlock__contentBox--name
+          =info.heading
+        .ditail__main__lowerBlock__contentBox--image
+          =image_tag(info.image.to_s)
+        .ditail__main__lowerBlock__contentBox__textBox
+          .ditail__main__lowerBlock__contentBox__textBox--heading
+            %h3=info.heading
+          .ditail__main__lowerBlock__contentBox__textBox--text
+            %p=info.text
+
+
+
