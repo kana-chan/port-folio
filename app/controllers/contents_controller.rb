@@ -7,7 +7,7 @@ class ContentsController < ApplicationController
   end
 
   def show
-    @content = Content.find(params[:id])
+    @content = Content.includes(:infomations,categories: :content_categories).find(params[:id])
   end
 
   def new
@@ -18,7 +18,7 @@ class ContentsController < ApplicationController
   def create
     @content = Content.new(content_params)
     @content.save
-    redirect_to root_path
+      redirect_to root_path
   end
 
   def edit
