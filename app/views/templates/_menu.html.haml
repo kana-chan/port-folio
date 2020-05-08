@@ -34,7 +34,7 @@
             =content.name
       -# ------------------------------------------------
       -if !User.exists?
-        =link_to(new_user_registrasion_path) do
+        =link_to(new_user_registration_path) do
           .menuModal--signup
       -elsif !user_signed_in?
         =link_to(new_user_session_path) do
