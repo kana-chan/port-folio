@@ -89,7 +89,7 @@
       height: 7vh;
       width: 18vw;
       background-color: $white;
-      border: solid 0.5px $black;
+      box-shadow: 0 3px 6px $dgray;
       &--text{
         line-height: 7vh;
         margin-left: 1.5vw;
