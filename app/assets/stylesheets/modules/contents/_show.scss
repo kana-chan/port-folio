@@ -165,7 +165,8 @@
         transform: translate(0 , -50%);
         width: 27%;
         height: 90%;
-        h3,p{
+        h2,p{
+          display: none;
           color:$white ;
         }
         &--heading{

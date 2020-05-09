@@ -24,13 +24,13 @@
   .ditail__main__lowerBlock
     -@content.infomations.each do |info|
       .ditail__main__lowerBlock__contentBox
-        %h3.ditail__main__lowerBlock__contentBox--name
+        %h4.ditail__main__lowerBlock__contentBox--name
           =info.heading
         .ditail__main__lowerBlock__contentBox--image
           =image_tag(info.image.to_s)
         .ditail__main__lowerBlock__contentBox__textBox
           .ditail__main__lowerBlock__contentBox__textBox--heading
-            %h3=info.heading
+            %h2=info.heading
           .ditail__main__lowerBlock__contentBox__textBox--text
             %p=info.text
 
