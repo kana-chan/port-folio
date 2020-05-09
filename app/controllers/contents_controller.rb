@@ -17,8 +17,11 @@ class ContentsController < ApplicationController
 
   def create
     @content = Content.new(content_params)
-    @content.save
+    if @content.save
+      redirect_to content_path(params[:id])
+    else
       redirect_to root_path
+    end
   end
 
   def edit
@@ -27,8 +30,11 @@ class ContentsController < ApplicationController
 
   def update
     @content = Content.find(params[:id])
-    @content.update(content_params)
-    redirect_to root_path
+    if @content.update(content_params)
+      redirect_to content_path(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def destroy
