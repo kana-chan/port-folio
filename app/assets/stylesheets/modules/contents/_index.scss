@@ -71,6 +71,11 @@
     width: 25vw;
     line-height: 15vh;
     text-align: center;
+    @media (max-width:560px){
+      width: 50vw;
+      height:10vh;
+      line-height: 10vh;
+    }
   }
 // main------------------------------------------------
   &__main{
@@ -227,6 +232,11 @@
     width: 25vw;
     line-height: 15vh;
     text-align: center;
+    @media (max-width:560px){
+      width: 50vw;
+      height:10vh;
+      line-height: 10vh;
+    }
   }
 // ------------------------------------------------
   &__main{
@@ -439,6 +449,11 @@
   width: 25vw;
   line-height: 15vh;
   text-align: center;
+  @media (max-width:560px){
+    width: 50vw;
+    height:10vh;
+    line-height: 10vh;
+  }
   }
   // ================================================
   &__main{
