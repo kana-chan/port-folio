@@ -18,6 +18,10 @@
     width: 60vh;
     background-color:$white;
     box-shadow: 0 5px 10px $dgray;
+    @media (max-width:560px){
+      height: 40vh;
+      width: 40vh;
+    }
     &__text1,&__text2,&__text3{
       position: absolute;
         transform: translateY(-50%);
