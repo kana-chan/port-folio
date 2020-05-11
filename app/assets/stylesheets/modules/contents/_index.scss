@@ -549,17 +549,25 @@
     width: 100%;
     padding: 15vh 0 0.1px;
     position: relative;
+    @media(max-width:560px){
+      padding: 5vh 0 0.1px;
+    }
     &__contentsBox{
       margin: 1vh auto 0;
       width: 75%;
+      @media(max-width:560px){
+        width: 90%;
+      }
       &__upperBlock{
         width: 100%;
-        height: 45vh;
         cursor: pointer;
         &__imageBox{
           height: 45vh;
           width: 100%;
           position: relative;
+          @media(max-width:560px){
+            height: 20vh;
+          }
           img{
             @include position-center;
             width: 100%;
@@ -573,11 +581,17 @@
         margin:0 auto;
         width: 100%;
         position: relative;
+        @media (max-width:560px) {
+          margin: 3vh auto 0;
+        }
         &--topText{
           @include cc;
           width: 100%;
           height:10vh;
           line-height: 10vh;
+          @media(max-width:560px){
+            display:none;
+          }
         }
         &__infomations{
           width: 50%;
@@ -593,6 +607,11 @@
               width: 70%;
             }
           }
+          @media(max-width:560px){
+            tr:nth-child(3){
+              display: none;
+            }
+          }
         }
         &__linkBtn{
           border-radius: 4vh;
@@ -603,9 +622,16 @@
           width: 18vw;
           background-color: $white;
           box-shadow: 0 3px 6px $dgray;
+          @media(max-width:560px){
+            width: 25vh;
+            top: 2vh;
+          }
           &--text{
             line-height: 7vh;
             margin-left: 1.5vw;
+            @media(max-width:560px){
+              // display: none;
+            }
           }
           &--icon{
             position: absolute;
