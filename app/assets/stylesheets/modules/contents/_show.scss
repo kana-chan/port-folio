@@ -95,6 +95,7 @@
       height: 12vh;
       line-height: 4vh;
       @media (max-width:560px) {
+        line-height: 3vh;
         width: 100%;
         height: auto;
       }
