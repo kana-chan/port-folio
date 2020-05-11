@@ -26,6 +26,9 @@
       position: absolute;
         transform: translateY(-50%);
         left: 25%;
+      @media(max-width:560px){
+        left:20%;
+      }
       .underLine{
         background-color: $red;
         position: absolute;
