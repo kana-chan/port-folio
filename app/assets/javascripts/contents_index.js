@@ -70,7 +70,7 @@ $('.skills__main__lowerBlock__wrapper__content').hover(
     $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'},200);
   })
 // skillIcon click横からlowerBlock表示 PCスケール------------------------------------------------
-if(window.matchMedia('(max-width:560px)')){
+if(window.matchMedia('(max-width:560px)').matches){
   $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
     var index = $(this).parents().index();
     if($(this).hasClass('active')){
