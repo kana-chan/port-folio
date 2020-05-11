@@ -69,21 +69,10 @@ $('.skills__main__lowerBlock__wrapper__content').hover(
     },function(){
     $(this).children('.skills__main__lowerBlock__wrapper__content--leftCircle').animate({width:'0.5vh',height:'0.5vh'},200);
   })
-  // skillIcon click横からlowerBlock表示------------------------------------------------
-$('.skills__main__upperBlock__contentBox--icon').on('click',function(){
-  var index = $(this).parents().index();
-  if(window.matchMedia('(max-width:560px)')){
-    $('.skills__main__upperBlock__contentBox--icon')
-      .removeClass('active')
-      .css('backgroundColor','rgb(213, 214, 217)')
-      .css('boxShadow','none')
-    $(this)
-      .addClass('active')
-      .css('backgroundColor','rgb(224, 68, 60)')
-      .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
-    $('.skills__main__lowerBlock').animate({left:'150%'})
-    $('.skills__main__lowerBlock').eq(index).animate({left:'50%'})
-  }else{
+// skillIcon click横からlowerBlock表示 PCスケール------------------------------------------------
+if(window.matchMedia('(max-width:560px)')){
+  $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
+    var index = $(this).parents().index();
     if($(this).hasClass('active')){
     }else{
       $('.skills__main__upperBlock__contentBox--icon')
@@ -94,9 +83,33 @@ $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
         .addClass('active')
         .css('backgroundColor','rgb(224, 68, 60)')
         .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
-      $('.skills__main__lowerBlock').animate({left:'140%'})
-      $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
+      $('.skills__main__lowerBlock').animate({left:'150%'})
+      $('.skills__main__lowerBlock').eq(index).animate({left:'50%'})
     }
+  })
+
+  $('.skills__main__lowerBlock--deleteBtn').on('click',function(){
+    $('.skills__main__lowerBlock').animate({left:'150%'})
+    $('.skills__main__upperBlock__contentBox--icon')
+      .removeClass('active')
+      .css('backgroundColor','rgb(213, 214, 217)')
+      .css('boxShadow','none')
+  })
+}else{
+$('.skills__main__upperBlock__contentBox--icon').on('click',function(){
+  var index = $(this).parents().index();
+  if($(this).hasClass('active')){
+  }else{
+    $('.skills__main__upperBlock__contentBox--icon')
+      .removeClass('active')
+      .css('backgroundColor','rgb(213, 214, 217)')
+      .css('boxShadow','none')
+    $(this)
+      .addClass('active')
+      .css('backgroundColor','rgb(224, 68, 60)')
+      .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
+    $('.skills__main__lowerBlock').animate({left:'140%'})
+    $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
   }
 })
 // ------------------------------------------------
@@ -130,6 +143,9 @@ $('.skills__main__lowerBlock--deleteBtn').hover(
       .css('backgroundColor','rgb(213, 214, 217)')
       .css('boxShadow','none')
   })
+}
+
+
 // contents================================================================================================
 // image をクリックで、info------------------------------------------------
   $('.works__main__contentsBox__upperBlock').on('click',function(){
