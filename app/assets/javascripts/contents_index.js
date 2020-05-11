@@ -8,49 +8,50 @@ $(function(){
   $('.prev').hide();
   
 // btnの矢印アニメ------------------------------------------------
-  $('.profile__main__btn').on('mouseenter',function(){
-    if ($(this).hasClass('prev')){
-      $(this).children('i')
-        .animate({left:'-50%'},300)
-        .animate({left:'150%'},0)
-        .animate({left:'50%'},300)
-    }else{
-      $(this).children('i')
-        .animate({left:'150%'},300)
-        .animate({left:'-50%'},0)
-        .animate({left:'50%'},300)}
-  })
+$('.profile__main__btn').on('mouseenter',function(){
+  if ($(this).hasClass('prev')){
+    $(this).children('i')
+      .animate({left:'-50%'},300)
+      .animate({left:'150%'},0)
+      .animate({left:'50%'},300)
+  }else{
+    $(this).children('i')
+      .animate({left:'150%'},300)
+      .animate({left:'-50%'},0)
+      .animate({left:'50%'},300)
+  }
+})
 // 矢印を押したら、画面が切り替わる------------------------------------------------
-  $('.profile__main__btn').on('click',function(){
-    var nowActive = $('.profile__main__circleBox--circle.active');
-    var index = nowActive.index();
-    nowActive.removeClass('active');
-    $('.profile__main__textHeader').children().hide();
-    $('.profile__main__lowerBox').children().hide();
-    if ($(this).hasClass('prev')){
-      // 丸の切り替え------------------------------------------------
-      nowActive.prev().addClass('active');
-      // 見出しの切り替え------------------------------------------------
-      $('.profile__main__textHeader').children().eq(index).prev().fadeIn();
-      $('.profile__main__lowerBox').children().eq(index).prev().fadeIn();
-      if(index==1){
-        $(this).hide()
-      }else if(index==3){
-        $('.next').show();
-      }
-    }else{
-      // 丸の切り替え------------------------------------------------
-      nowActive.next().addClass('active');
-      // 見出しの切り替え------------------------------------------------
-      $('.profile__main__textHeader').children().eq(index).next().fadeIn();
-      $('.profile__main__lowerBox').children().eq(index).next().fadeIn();
-      if(index==2){
-        $(this).hide()
-      }else if(index==0){
-        $('.prev').show();
-      }
+$('.profile__main__btn').on('click',function(){
+  var nowActive = $('.profile__main__circleBox--circle.active');
+  var index = nowActive.index();
+  nowActive.removeClass('active');
+  $('.profile__main__textHeader').children().hide();
+  $('.profile__main__lowerBox').children().hide();
+  if ($(this).hasClass('prev')){
+    // 丸の切り替え------------------------------------------------
+    nowActive.prev().addClass('active');
+    // 見出しの切り替え------------------------------------------------
+    $('.profile__main__textHeader').children().eq(index).prev().fadeIn();
+    $('.profile__main__lowerBox').children().eq(index).prev().fadeIn();
+    if(index==1){
+      $(this).hide()
+    }else if(index==3){
+      $('.next').show();
     }
-  })
+  }else{
+    // 丸の切り替え------------------------------------------------
+    nowActive.next().addClass('active');
+    // 見出しの切り替え------------------------------------------------
+    $('.profile__main__textHeader').children().eq(index).next().fadeIn();
+    $('.profile__main__lowerBox').children().eq(index).next().fadeIn();
+    if(index==2){
+      $(this).hide()
+    }else if(index==0){
+      $('.prev').show();
+    }
+  }
+})
 // skills================================================================================================
 // otherBlock ホバーでname表示------------------------------------------------
   $('.skills__main__otherBlock__contentBox__content').hover(
@@ -71,8 +72,7 @@ $('.skills__main__lowerBlock__wrapper__content').hover(
   // skillIcon click横からlowerBlock表示------------------------------------------------
 $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
   var index = $(this).parents().index();
-  if($(this).hasClass('active')){
-  }else{
+  if(window.matchMedia('(max-width:560px)')){
     $('.skills__main__upperBlock__contentBox--icon')
       .removeClass('active')
       .css('backgroundColor','rgb(213, 214, 217)')
@@ -81,8 +81,22 @@ $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
       .addClass('active')
       .css('backgroundColor','rgb(224, 68, 60)')
       .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
-    $('.skills__main__lowerBlock').animate({left:'140%'})
-    $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
+    $('.skills__main__lowerBlock').animate({left:'150%'})
+    $('.skills__main__lowerBlock').eq(index).animate({left:'50%'})
+  }else{
+    if($(this).hasClass('active')){
+    }else{
+      $('.skills__main__upperBlock__contentBox--icon')
+        .removeClass('active')
+        .css('backgroundColor','rgb(213, 214, 217)')
+        .css('boxShadow','none')
+      $(this)
+        .addClass('active')
+        .css('backgroundColor','rgb(224, 68, 60)')
+        .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
+      $('.skills__main__lowerBlock').animate({left:'140%'})
+      $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
+    }
   }
 })
 // ------------------------------------------------
