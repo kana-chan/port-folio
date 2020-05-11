@@ -225,7 +225,7 @@
           text-align: center;
           position: static;
           transform: translate(0,0);
-          width: 100%;
+          width: 90%;
         }
         h2,p{
           display: none;
@@ -235,6 +235,10 @@
           height: 20%;
           width: 100%;
           line-height: 6vh;
+          @media (max-width:560px){
+            margin-bottom: 2vh;
+            text-align: center;
+          }
         }
         &--text{
           line-height: 4vh;
