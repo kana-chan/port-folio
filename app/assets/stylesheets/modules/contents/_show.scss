@@ -85,8 +85,9 @@
       line-height: 10vh;
       @media (max-width:560px) {
         width: 90%;
-        line-height: 5vh;
+        line-height: 3vh;
         height: auto;
+        margin: -2vh 0 2vh;
         @include s-cc;
       }
     }
@@ -95,7 +96,6 @@
       height: 12vh;
       line-height: 4vh;
       @media (max-width:560px) {
-        line-height: 3vh;
         width: 100%;
         height: auto;
       }
@@ -246,6 +246,9 @@
           line-height: 4vh;
           height: 80%;
           width: 100%;
+          @media (max-width:560px){
+            line-height: 3vh;
+          }
         }
       }
     }
