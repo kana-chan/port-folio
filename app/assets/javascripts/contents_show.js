@@ -49,7 +49,7 @@ $(function(){
           terget.children('.ditail__main__lowerBlock__contentBox--image')
             .animate({width:'55vh',height:'33vh'})
           terget.children('.ditail__main__lowerBlock__contentBox__textBox').animate({right:'3%'})
-          terget.children().children().children('h2,p').fadeIn(1300);
+          terget.children().children().children('h2,p').fadeIn(2000);
 
           notTerget
             .removeClass('active')
