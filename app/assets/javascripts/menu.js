@@ -63,24 +63,45 @@ $(function(){
       }
     })
 //skillの表示切り替え・ジャンプ ------------------------------------------------
-    $('.menuModal__skills--list').on('click',function(){
-      var position = $('.skills__heading').offset().top -30;
-      var index = $('.menuModal__skills--list').index(this);
-      $('html,body').animate({scrollTop:position})
-      if($('.skills__main__upperBlock__contentBox--icon').eq(index).hasClass('active')){
-      }else{
-        $('.skills__main__upperBlock__contentBox--icon')
-          .removeClass('active')
-          .css('backgroundColor','rgb(213, 214, 217)')
-          .css('boxShadow','none')
-        $('.skills__main__upperBlock__contentBox--icon').eq(index)
-          .addClass('active')
-          .css('backgroundColor','rgb(224, 68, 60)')
-          .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
-        $('.skills__main__lowerBlock').animate({left:'140%'})
-        $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
-      }
-    })
+if (window.matchMedia('(max-width:560px)').matches){
+  $('.menuModal__skills--list').on('click',function(){
+    var position = $('.skills__heading').offset().top;
+    var index = $('.menuModal__skills--list').index(this);
+    $('html,body').animate({scrollTop:position})
+    if($('.skills__main__upperBlock__contentBox--icon').eq(index).hasClass('active')){
+    }else{
+      $('.skills__main__upperBlock__contentBox--icon')
+        .removeClass('active')
+        .css('backgroundColor','rgb(213, 214, 217)')
+        .css('boxShadow','none')
+      $('.skills__main__upperBlock__contentBox--icon').eq(index)
+        .addClass('active')
+        .css('backgroundColor','rgb(224, 68, 60)')
+        .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
+      $('.skills__main__lowerBlock').animate({left:'150%'})
+      $('.skills__main__lowerBlock').eq(index).animate({left:'50%'})
+    }
+  })
+}else{
+  $('.menuModal__skills--list').on('click',function(){
+    var position = $('.skills__heading').offset().top -30;
+    var index = $('.menuModal__skills--list').index(this);
+    $('html,body').animate({scrollTop:position})
+    if($('.skills__main__upperBlock__contentBox--icon').eq(index).hasClass('active')){
+    }else{
+      $('.skills__main__upperBlock__contentBox--icon')
+        .removeClass('active')
+        .css('backgroundColor','rgb(213, 214, 217)')
+        .css('boxShadow','none')
+      $('.skills__main__upperBlock__contentBox--icon').eq(index)
+        .addClass('active')
+        .css('backgroundColor','rgb(224, 68, 60)')
+        .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
+      $('.skills__main__lowerBlock').animate({left:'140%'})
+      $('.skills__main__lowerBlock').eq(index).animate({left:'68%'})
+    }
+  })
+}
 // worksへジャンプ------------------------------------------------
     $('.menuModal__works--list').on('click',function(){
       var index = $('.menuModal__works--list').index(this);

@@ -38,6 +38,9 @@
       z-index: 1;
       top: 0;
       right: -50vw;
+    @media (max-width:560px){
+      width: 40vw;
+    }
     &__profile,&__skills,&__works,&__new,&__categories,&__contents,&--home{
       cursor: pointer;
       line-height: 5vh;

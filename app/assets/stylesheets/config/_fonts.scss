@@ -5,6 +5,7 @@
 }
 // 英語アイキャッチ,font-family: 'Roboto', sans-serif; font-family: 'Noto Sans JP'
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Roboto:wght@100;300&display=swap');
+
 h1{
   @include h1;
 }
@@ -17,11 +18,24 @@ h3{
 h4{
   @include h4;
 }
-th{
-  font-family: 'Roboto';
-  font-size: 10px;
-  letter-spacing: 1px;
-}
 p{
   @include p;
+}
+
+@media (max-width:560px){
+  h1{
+    @include s-h1;
+  }
+  h2{
+    @include s-h2;
+  }
+  h3{
+    @include s-h3;
+  }
+  h4{
+    @include s-h4;
+  }
+  p{
+    @include s-p;
+  }
 }
