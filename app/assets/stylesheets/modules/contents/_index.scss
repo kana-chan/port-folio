@@ -590,7 +590,7 @@
           height:10vh;
           line-height: 10vh;
           @media(max-width:560px){
-            display:none;
+            display: none;
           }
         }
         &__infomations{
@@ -624,14 +624,11 @@
           box-shadow: 0 3px 6px $dgray;
           @media(max-width:560px){
             width: 25vh;
-            top: 2vh;
+            top: 1vh;
           }
           &--text{
             line-height: 7vh;
             margin-left: 1.5vw;
-            @media(max-width:560px){
-              // display: none;
-            }
           }
           &--icon{
             position: absolute;

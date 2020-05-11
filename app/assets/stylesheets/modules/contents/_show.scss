@@ -18,6 +18,10 @@
     width: 60vh;
     background-color:$white;
     box-shadow: 0 5px 10px $dgray;
+    @media (max-width:560px){
+      height: 40vh;
+      width: 40vh;
+    }
     &--name{
       font-size: 30px;
       position: absolute;
@@ -52,6 +56,11 @@
     width: 25vw;
     line-height: 15vh;
     text-align: center;
+    @media (max-width:560px){
+      width: 50vw;
+      height:10vh;
+      line-height: 10vh;
+    }
   }
 // main------------------------------------------------
 &__main{
@@ -65,22 +74,39 @@
     margin: 0 auto;
     border-bottom: 2px solid $dgray;
     position: relative;
+    @media (max-width:560px) {
+      width: 100%;
+      padding-bottom: 10vh;
+    }
     &--textHeading{
       @include cc;
       width:65%;
       height: 10vh;
       line-height: 10vh;
+      @media (max-width:560px) {
+        width: 90%;
+        line-height: 3vh;
+        height: auto;
+        @include s-cc;
+      }
     }
     &--text{
       width: 65%;
       height: 12vh;
       line-height: 4vh;
+      @media (max-width:560px) {
+        width: 100%;
+        height: auto;
+      }
     }
     &--language{
       width: 65%;
       height: 4vh;
       margin-bottom: 2vh;
       line-height: 4vh;
+      @media (max-width:560px) {
+        display: none;
+      }
     }
     &__gitLinkBtn,&__appLinkBtn{
       border-radius: 4vh;
@@ -108,15 +134,26 @@
           color: $black;
           font-size: 3em;
           -webkit-text-stroke: 3.5px $white;
-        }
+        } 
       }
     }
     &__appLinkBtn{
       bottom: 10%;
+      @media (max-width:560px) {
+        width: 20vh;
+        bottom: 1.5vh;
+        left: -8%;
+        }
     }
     &__gitLinkBtn{
       bottom: 40%;
+      @media (max-width:560px) {
+        width: 20vh;
+        bottom: 1.5vh;
+        right: -8%;
+        }
     }
+
   }
 //lower------------------------------------------------ 
   &__lowerBlock{
@@ -126,6 +163,11 @@
     margin: 0 auto;
     display: flex;
       justify-content: space-between;
+    @media (max-width:560px){
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+    }
     &__contentBox{
       cursor: pointer;
       transition-duration: 0.5s;
@@ -135,11 +177,22 @@
       height: 25vh;
       width: 25vh;
       position: relative;
+      @media (max-width:560px) {
+        width: 100%;
+        height: 8vh;
+        margin: 1vh 0;
+        overflow: hidden;
+        }
       &--name{
         position: absolute;
+        text-align: center;
+        width: 100%;
           bottom: -5vh;
           left: 50%;
-          transform: translate(-50%, 0);
+          transform: translate(-50%,0);
+          @media (max-width:560px) {
+            top: 35%;
+            }
       }
       &--image{
         transition-duration: 0.5s;
@@ -151,6 +204,9 @@
         height: 23vh;
         border-radius: 15px;
         overflow: hidden;
+        @media (max-width:560px) {
+          display: none;
+          }
         img{
           @include position-center;
           height: 100%;
@@ -165,6 +221,12 @@
         transform: translate(0 , -50%);
         width: 27%;
         height: 90%;
+        @media (max-width:560px) {
+          text-align: center;
+          position: static;
+          transform: translate(0,0);
+          width: 100%;
+        }
         h2,p{
           display: none;
           color:$white ;
