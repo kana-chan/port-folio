@@ -71,15 +71,15 @@ $('.skills__main__lowerBlock__wrapper__content').hover(
   })
 // skillIcon click横からlowerBlock表示 PCスケール------------------------------------------------
 if(window.matchMedia('(max-width:560px)').matches){
-  $('.skills__main__upperBlock__contentBox--icon').on('click',function(){
-    var index = $(this).parents().index();
-    if($(this).hasClass('active')){
+  $('.skills__main__upperBlock__contentBox').on('click',function(){
+    var index = $(this).index();
+    if($(this).children('.skills__main__upperBlock__contentBox--icon').hasClass('active')){
     }else{
       $('.skills__main__upperBlock__contentBox--icon')
         .removeClass('active')
         .css('backgroundColor','rgb(213, 214, 217)')
         .css('boxShadow','none')
-      $(this)
+      $(this).children('.skills__main__upperBlock__contentBox--icon')
         .addClass('active')
         .css('backgroundColor','rgb(224, 68, 60)')
         .css('boxShadow','5px 5px 10px rgb(213, 214, 217)')
